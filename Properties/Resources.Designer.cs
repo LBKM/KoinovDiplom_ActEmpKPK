@@ -63,6 +63,16 @@ namespace KoinovDiplom_ActEmpKPK.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK {
+            get {
+                object obj = ResourceManager.GetObject("360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _lock {
             get {
                 object obj = ResourceManager.GetObject("lock", resourceCulture);

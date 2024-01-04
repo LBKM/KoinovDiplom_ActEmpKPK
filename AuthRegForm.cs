@@ -15,9 +15,15 @@ namespace KoinovDiplom_ActEmpKPK
 {
     public partial class AuthRegForm : Form
     {
+        private Timer timer;
         public AuthRegForm()
         {
             InitializeComponent();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            helpLabel.Visible = true;
+            timer.Stop();
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -56,7 +62,7 @@ namespace KoinovDiplom_ActEmpKPK
                         UnsuccesDialogcs dialog1 = new UnsuccesDialogcs();
                         dialog1.ShowDialog();
                         MessageBox.Show("Неверное имя пользователя или пароль.");
-                        MessageBox.Show("admin, adminpass");
+                        MessageBox.Show("подсказка админа: admin, adminpass");
                     }
                 }
             }
@@ -66,10 +72,7 @@ namespace KoinovDiplom_ActEmpKPK
         {
             if (CheckBoxKeyGen.Checked)
             {
-                // Генерация пароля
                 string generatedPassword = GeneratePassword();
-
-                // Установка сгенерированного пароля в TextBoxRegPassword
                 TextBoxRegPassword.Text = generatedPassword;
             }
         }
@@ -125,6 +128,34 @@ namespace KoinovDiplom_ActEmpKPK
         {
             FormAboutProgram dialog1 = new FormAboutProgram();
             dialog1.ShowDialog();
+        }
+        private async void ShowHelpLabelAsync()
+        {
+            // Отображение Label
+            helpLabel.Visible = true;
+
+            // Ожидание 3 секунд
+            await Task.Delay(3000);
+
+            // Скрытие Label после ожидания
+            helpLabel.Visible = false;
+        }
+
+        private void AuthRegForm_Load(object sender, EventArgs e)
+        {
+            // Инициализация компонентов и добавление Label на вашу форму
+            helpLabel.Text = "справка о приложении ->";
+            helpLabel.AutoSize = true;
+            helpLabel.Visible = false;
+            this.Controls.Add(helpLabel);
+
+            // Запуск асинхронного метода
+            ShowHelpLabelAsync();
+        }
+
+        private void ButtonVerification_Click(object sender, EventArgs e)
+        {
+            guna2TextBox1.Enabled = true;
         }
     }
 }

@@ -279,6 +279,18 @@
         Yiz0uzjs7YMzCOMcAs7Ofw3Mxx0GeK0z9KMUYzWpJ//Z
 </value>
   </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Добрый бобрый день\ночь!
+
+Приветствуем вас в нашем приложении! 
+
+Надеемся, что данное приложение сможет удовлетворить ваши потребности. 
+
+Если у вас возникнут вопросы по использованию приложения или вам потребуется помощь, не стесняйтесь обращаться к разделу справки. 
+ты чо, тупая 
+
+Желаем вам приятного использования моего приложения!</value>
+  </data>
   <metadata name="user2DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 17</value>
   </metadata>

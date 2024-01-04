@@ -12,6 +12,7 @@ using System.Windows.Media;
 using Color = System.Drawing.Color;
 using static KoinovDiplom_ActEmpKPK.DarkOverlayForm;
 using Guna.UI2.WinForms;
+using KoinovDiplom_ActEmpKPK.MenuForms;
 
 namespace KoinovDiplom_ActEmpKPK
 {
@@ -34,6 +35,19 @@ namespace KoinovDiplom_ActEmpKPK
         //неактивная кнопка
         private Color defaultbackgroundcolor = Color.FromArgb(75, 0, 130);
         private Color defaultforegroundcolor = Color.FromArgb(159, 159, 173);
+
+        private Form acriveForm = null;
+        private void openForm(Form childForm)
+        {
+            if (acriveForm != null)
+                acriveForm.Close();
+            acriveForm = childForm;
+            childForm.TopLevel = false; childForm.FormBorderStyle = FormBorderStyle.None; childForm.Dock = DockStyle.Fill;
+            GradientPanel1.Controls.Add(childForm);
+            GradientPanel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void SetButtonColors(IconButton button, Color backColor, Color foreColor)
         {
@@ -68,9 +82,6 @@ namespace KoinovDiplom_ActEmpKPK
             // TODO: данная строка кода позволяет загрузить данные в таблицу "user2DataSet.ACCESS_LEVEL". При необходимости она может быть перемещена или удалена.
             this.aCCESS_LEVELTableAdapter.Fill(this.user2DataSet.ACCESS_LEVEL);
 
-            ComboBoxEducationForm.Items.Clear();
-            foreach (DataRow Row_WP in user2DataSet.EDUCATION_FORM.Rows) ComboBoxEducationForm.Items.Add(Row_WP["Education_Form"]);
-
             PanelLeft2.Visible = false;
             PanelLeft3.Visible = false;
             PanelLeft4.Visible = false;
@@ -79,48 +90,12 @@ namespace KoinovDiplom_ActEmpKPK
             SetButtonColors(iconButton2, defaultbackgroundcolor, defaultforegroundcolor);
             SetButtonColors(iconButton3, defaultbackgroundcolor, defaultforegroundcolor);
 
-            FillActEmpList();
-
         }
-        void FillActEmpList()
-        {
-            ListViewActEmp.Items.Clear();
-            foreach (DataRow Row in user2DataSet.ACTIVITY_EMPLOYEE.Rows)
-            {
-                string[] items = new string[10];
-                DataRow TempRow;
-                TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_DISCIPLINE");
-                items[1] = TempRow[1].ToString();
-                TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_WORKER");
-                items[2] = TempRow["Name"].ToString();
-                items[3] = TempRow["Surname"].ToString();
-                items[4] = TempRow["Lastname"].ToString();
-                TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EDUCATION_FORM");
-                items[5] = TempRow["Education_Form"].ToString();
-                TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_SPECIALITY");
-                items[6] = TempRow["Name"].ToString();
-                items[7] = Row[4].ToString();
-                TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EVENT");
-                items[8] = TempRow["Name"].ToString();
-                ListViewItem it = new ListViewItem();
-                it.Text = Row["ActEmp_ID"].ToString();
-                it.SubItems.AddRange(items);
-                ListViewActEmp.Items.Add(it);
-            }
-            Countlabel.Text = $"{ListViewActEmp.Items.Count} из {user2DataSet.ACTIVITY_EMPLOYEE.Rows.Count}";
-        }
+        
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void aCCESS_LEVELBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.aCCESS_LEVELBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.user2DataSet);
-
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -169,11 +144,7 @@ namespace KoinovDiplom_ActEmpKPK
             PanelLeft3.Visible = false;
             PanelLeft4.Visible = false;
 
-            guna2Button1.Visible = false;
-            guna2Button2.Visible = false;
-            guna2Button4.Visible = false;
-            guna2GradientPanel3.Visible = true;
-            guna2Button3.Visible = false;
+            openForm(new FormFilter());
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
@@ -190,13 +161,10 @@ namespace KoinovDiplom_ActEmpKPK
             PanelLeft3.Visible = false;
             PanelLeft4.Visible = false;
 
-            guna2Button1.Visible = true;
-            guna2Button2.Visible = true;
-            guna2Button4.Visible = true;
-            guna2GradientPanel3.Visible = false;
-            guna2Button3.Visible = false;
 
+            openForm(new FormMainWindow());
         }
+
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
@@ -214,11 +182,7 @@ namespace KoinovDiplom_ActEmpKPK
             PanelLeft2.Visible = false;
             PanelLeft4.Visible = false;
 
-            guna2Button1.Visible = false;
-            guna2Button2.Visible = false;
-            guna2Button4.Visible = false;
-            guna2GradientPanel3.Visible = false;
-            guna2Button3.Visible = true;
+            openForm(new FormReportsNCharts());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
@@ -237,11 +201,8 @@ namespace KoinovDiplom_ActEmpKPK
             PanelLeft3.Visible = false;
             PanelLeft2.Visible = false;
 
-            guna2Button1.Visible = false;
-            guna2Button4.Visible = false;
-            guna2Button2.Visible = false;
-            guna2GradientPanel3.Visible = false;
-            guna2Button3.Visible = false;
+            openForm(new SettingsForm());
+
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
@@ -300,127 +261,6 @@ namespace KoinovDiplom_ActEmpKPK
         {
             FormChartsView formChartsView = new FormChartsView();
             formChartsView.Show();
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (TextBox1.Text == null)
-            {
-                TextBox1.Text = "";
-            }
-            string strFindMDK = TextBox1.Text;
-            ListViewActEmp.Items.Clear();
-            try
-            {
-                foreach (DataRow Row in user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID LIKE '%" + strFindMDK + "*'"))
-                {
-                    string[] items = new string[10];
-                    DataRow TempRow;
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_DISCIPLINE");
-                    items[1] = TempRow[1].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_WORKER");
-                    items[2] = TempRow["Name"].ToString();
-                    items[3] = TempRow["Surname"].ToString();
-                    items[4] = TempRow["Lastname"].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EDUCATION_FORM");
-                    items[5] = TempRow["Education_Form"].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_SPECIALITY");
-                    items[6] = TempRow["Name"].ToString();
-                    items[7] = Row[4].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EVENT");
-                    items[8] = TempRow["Name"].ToString();
-                    ListViewItem it = new ListViewItem();
-                    it.Text = Row["ActEmp_ID"].ToString();
-                    it.SubItems.AddRange(items);
-                    ListViewActEmp.Items.Add(it);
-                }
-                Countlabel.Text = $"Найдено {ListViewActEmp.Items.Count} из {user2DataSet.ACTIVITY_EMPLOYEE.Count}";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Введите данные для поиска", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void ComboBoxEducationForm_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
-            ListViewActEmp.Items.Clear();
-            foreach (DataRow Row in user2DataSet.ACTIVITY_EMPLOYEE.Rows)
-            {
-                DataRow RowFilter_WP = user2DataSet.EDUCATION_FORM.Select("Education_Form = '" + ComboBoxEducationForm.SelectedItem + "'")[0];
-                if (Convert.ToString(Row["EducationForm_ID"]) == Convert.ToString(RowFilter_WP["Form_ID"]))
-                {
-                    string[] items = new string[10];
-                    DataRow TempRow;
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_DISCIPLINE");
-                    items[1] = TempRow[1].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_WORKER");
-                    items[2] = TempRow["Name"].ToString();
-                    items[3] = TempRow["Surname"].ToString();
-                    items[4] = TempRow["Lastname"].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EDUCATION_FORM");
-                    items[5] = TempRow["Education_Form"].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_SPECIALITY");
-                    items[6] = TempRow["Name"].ToString();
-                    items[7] = Row[4].ToString();
-                    TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EVENT");
-                    items[8] = TempRow["Name"].ToString();
-                    ListViewItem it = new ListViewItem();
-                    it.Text = Row["ActEmp_ID"].ToString();
-                    it.SubItems.AddRange(items);
-                    ListViewActEmp.Items.Add(it);
-                }
-                Countlabel.Text = $"Найдено {ListViewActEmp.Items.Count}  из {user2DataSet.ACTIVITY_EMPLOYEE.Count}";
-            }
-        }
-
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            ComboBoxEducationForm.Text = "";
-            TextBox1.Text = "";
-
-            ListViewActEmp.Items.Clear();
-            FillActEmpList();
-        }
-
-        private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-            string strFindMDK = guna2TextBox1.Text;
-            ListViewActEmp.Items.Clear();
-            try
-            {
-                DataRow[] foundRows = user2DataSet.ACTIVITY_EMPLOYEE.Select($"{guna2ComboBox1.SelectedText.ToString()} LIKE '%{strFindMDK}%'");
-                foreach (DataRow Row in foundRows)
-                {
-                    {
-                        string[] items = new string[10];
-                        DataRow TempRow;
-                        TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_DISCIPLINE");
-                        items[1] = TempRow[1].ToString();
-                        TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_WORKER");
-                        items[2] = TempRow["Name"].ToString();
-                        items[3] = TempRow["Surname"].ToString();
-                        items[4] = TempRow["Lastname"].ToString();
-                        TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EDUCATION_FORM");
-                        items[5] = TempRow["Education_Form"].ToString();
-                        TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_SPECIALITY");
-                        items[6] = TempRow["Name"].ToString();
-                        items[7] = Row[4].ToString();
-                        TempRow = Row.GetParentRow("FK_ACTIVITY_EMPLOYEE_EVENT");
-                        items[8] = TempRow["Name"].ToString();
-                        ListViewItem it = new ListViewItem();
-                        it.Text = Row["ActEmp_ID"].ToString();
-                        it.SubItems.AddRange(items);
-                        ListViewActEmp.Items.Add(it);
-                    }
-                    Countlabel.Text = $"Найдено {ListViewActEmp.Items.Count} из {user2DataSet.ACTIVITY_EMPLOYEE.Count}";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Введите данные для поиска", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
         }
     }
 }

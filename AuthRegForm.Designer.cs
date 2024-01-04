@@ -53,6 +53,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.helpLabel = new System.Windows.Forms.Label();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,11 +85,11 @@
             this.guna2TabControl1.Controls.Add(this.tabPage2);
             this.guna2TabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2TabControl1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2TabControl1.ItemSize = new System.Drawing.Size(175, 40);
-            this.guna2TabControl1.Location = new System.Drawing.Point(30, 163);
+            this.guna2TabControl1.ItemSize = new System.Drawing.Size(194, 40);
+            this.guna2TabControl1.Location = new System.Drawing.Point(15, 163);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(357, 347);
+            this.guna2TabControl1.Size = new System.Drawing.Size(393, 347);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.Purple;
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -104,7 +105,7 @@
             this.guna2TabControl1.TabButtonSelectedState.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2TabControl1.TabButtonSelectedState.ForeColor = System.Drawing.Color.Lavender;
             this.guna2TabControl1.TabButtonSelectedState.InnerColor = System.Drawing.Color.Fuchsia;
-            this.guna2TabControl1.TabButtonSize = new System.Drawing.Size(175, 40);
+            this.guna2TabControl1.TabButtonSize = new System.Drawing.Size(194, 40);
             this.guna2TabControl1.TabIndex = 2;
             this.guna2TabControl1.TabMenuBackColor = System.Drawing.Color.MediumPurple;
             this.guna2TabControl1.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
@@ -120,7 +121,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(349, 299);
+            this.tabPage1.Size = new System.Drawing.Size(385, 299);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ВХОД";
             // 
@@ -228,29 +229,32 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(349, 299);
+            this.tabPage2.Size = new System.Drawing.Size(385, 299);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "РЕГИСТРАЦИЯ";
             // 
             // ButtonVerification
             // 
+            this.ButtonVerification.Animated = true;
             this.ButtonVerification.BackColor = System.Drawing.Color.White;
-            this.ButtonVerification.BorderRadius = 15;
+            this.ButtonVerification.BorderRadius = 10;
             this.ButtonVerification.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ButtonVerification.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ButtonVerification.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ButtonVerification.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ButtonVerification.FillColor = System.Drawing.Color.Indigo;
-            this.ButtonVerification.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonVerification.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.ButtonVerification.ForeColor = System.Drawing.Color.White;
-            this.ButtonVerification.Location = new System.Drawing.Point(196, 184);
+            this.ButtonVerification.Location = new System.Drawing.Point(211, 184);
             this.ButtonVerification.Name = "ButtonVerification";
             this.ButtonVerification.Size = new System.Drawing.Size(100, 56);
             this.ButtonVerification.TabIndex = 10;
             this.ButtonVerification.Text = "Отправить на почту";
+            this.ButtonVerification.Click += new System.EventHandler(this.ButtonVerification_Click);
             // 
             // guna2TextBox1
             // 
+            this.guna2TextBox1.Animated = true;
             this.guna2TextBox1.BorderRadius = 15;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
@@ -258,13 +262,14 @@
             this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Enabled = false;
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(43, 184);
+            this.guna2TextBox1.Location = new System.Drawing.Point(57, 184);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Пароль с почты";
+            this.guna2TextBox1.PlaceholderText = "Код с эл. почты";
             this.guna2TextBox1.ReadOnly = true;
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(269, 56);
@@ -282,7 +287,7 @@
             this.CheckBoxChowPass.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckBoxChowPass.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.CheckBoxChowPass.ForeColor = System.Drawing.Color.Lavender;
-            this.CheckBoxChowPass.Location = new System.Drawing.Point(197, 158);
+            this.CheckBoxChowPass.Location = new System.Drawing.Point(211, 158);
             this.CheckBoxChowPass.Name = "CheckBoxChowPass";
             this.CheckBoxChowPass.Size = new System.Drawing.Size(121, 20);
             this.CheckBoxChowPass.TabIndex = 8;
@@ -304,7 +309,7 @@
             this.CheckBoxKeyGen.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CheckBoxKeyGen.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CheckBoxKeyGen.ForeColor = System.Drawing.Color.Lavender;
-            this.CheckBoxKeyGen.Location = new System.Drawing.Point(43, 158);
+            this.CheckBoxKeyGen.Location = new System.Drawing.Point(57, 158);
             this.CheckBoxKeyGen.Name = "CheckBoxKeyGen";
             this.CheckBoxKeyGen.Size = new System.Drawing.Size(148, 20);
             this.CheckBoxKeyGen.TabIndex = 7;
@@ -328,7 +333,7 @@
             this.ButtonReg.FillColor = System.Drawing.Color.Indigo;
             this.ButtonReg.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonReg.ForeColor = System.Drawing.Color.White;
-            this.ButtonReg.Location = new System.Drawing.Point(43, 246);
+            this.ButtonReg.Location = new System.Drawing.Point(57, 246);
             this.ButtonReg.Name = "ButtonReg";
             this.ButtonReg.Size = new System.Drawing.Size(269, 45);
             this.ButtonReg.TabIndex = 0;
@@ -336,6 +341,7 @@
             // 
             // TextBoxRegConfirmPassword
             // 
+            this.TextBoxRegConfirmPassword.Animated = true;
             this.TextBoxRegConfirmPassword.BorderRadius = 15;
             this.TextBoxRegConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxRegConfirmPassword.DefaultText = "";
@@ -344,11 +350,11 @@
             this.TextBoxRegConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextBoxRegConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextBoxRegConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxRegConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBoxRegConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.TextBoxRegConfirmPassword.ForeColor = System.Drawing.Color.Black;
             this.TextBoxRegConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxRegConfirmPassword.IconLeft = global::KoinovDiplom_ActEmpKPK.Properties.Resources._lock;
-            this.TextBoxRegConfirmPassword.Location = new System.Drawing.Point(43, 111);
+            this.TextBoxRegConfirmPassword.Location = new System.Drawing.Point(57, 111);
             this.TextBoxRegConfirmPassword.Name = "TextBoxRegConfirmPassword";
             this.TextBoxRegConfirmPassword.PasswordChar = '\0';
             this.TextBoxRegConfirmPassword.PlaceholderText = "ПОВТОРИТЕ ПАРОЛЬ";
@@ -358,6 +364,7 @@
             // 
             // TextBoxRegPassword
             // 
+            this.TextBoxRegPassword.Animated = true;
             this.TextBoxRegPassword.BorderRadius = 15;
             this.TextBoxRegPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxRegPassword.DefaultText = "";
@@ -366,11 +373,11 @@
             this.TextBoxRegPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextBoxRegPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextBoxRegPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxRegPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBoxRegPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.TextBoxRegPassword.ForeColor = System.Drawing.Color.Black;
             this.TextBoxRegPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxRegPassword.IconLeft = global::KoinovDiplom_ActEmpKPK.Properties.Resources._lock;
-            this.TextBoxRegPassword.Location = new System.Drawing.Point(43, 64);
+            this.TextBoxRegPassword.Location = new System.Drawing.Point(57, 64);
             this.TextBoxRegPassword.Name = "TextBoxRegPassword";
             this.TextBoxRegPassword.PasswordChar = '\0';
             this.TextBoxRegPassword.PlaceholderText = "ПРИДУМАЙТЕ ПАРОЛЬ";
@@ -380,6 +387,7 @@
             // 
             // TextBoxRegLogin
             // 
+            this.TextBoxRegLogin.Animated = true;
             this.TextBoxRegLogin.BorderRadius = 15;
             this.TextBoxRegLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxRegLogin.DefaultText = "";
@@ -392,7 +400,7 @@
             this.TextBoxRegLogin.ForeColor = System.Drawing.Color.Black;
             this.TextBoxRegLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxRegLogin.IconLeft = global::KoinovDiplom_ActEmpKPK.Properties.Resources.key;
-            this.TextBoxRegLogin.Location = new System.Drawing.Point(43, 4);
+            this.TextBoxRegLogin.Location = new System.Drawing.Point(57, 4);
             this.TextBoxRegLogin.Name = "TextBoxRegLogin";
             this.TextBoxRegLogin.PasswordChar = '\0';
             this.TextBoxRegLogin.PlaceholderText = "ПРИДУМАЙТЕ ЛОГИН";
@@ -473,12 +481,24 @@
             // 
             this.guna2AnimateWindow2.Interval = 1000;
             // 
+            // helpLabel
+            // 
+            this.helpLabel.BackColor = System.Drawing.Color.Transparent;
+            this.helpLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.helpLabel.Location = new System.Drawing.Point(12, 12);
+            this.helpLabel.Name = "helpLabel";
+            this.helpLabel.Size = new System.Drawing.Size(324, 33);
+            this.helpLabel.TabIndex = 6;
+            this.helpLabel.Text = "label3";
+            this.helpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AuthRegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(420, 534);
+            this.Controls.Add(this.helpLabel);
             this.Controls.Add(this.guna2CircleButton2);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.label2);
@@ -489,6 +509,7 @@
             this.Name = "AuthRegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Автворизация";
+            this.Load += new System.EventHandler(this.AuthRegForm_Load);
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -524,6 +545,7 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
+        private System.Windows.Forms.Label helpLabel;
     }
 }
 

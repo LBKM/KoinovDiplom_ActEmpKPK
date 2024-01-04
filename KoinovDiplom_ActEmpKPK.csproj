@@ -72,11 +72,12 @@
     <Compile Include="DarkOverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DataManager.cs" />
+    <Compile Include="AuthRegForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AuthRegForm.Designer.cs">
+      <DependentUpon>AuthRegForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAboutProgram.cs">
       <SubType>Form</SubType>
@@ -90,11 +91,29 @@
     <Compile Include="FormChartsView.Designer.cs">
       <DependentUpon>FormChartsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuForms\FormReportsNCharts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\FormReportsNCharts.Designer.cs">
+      <DependentUpon>FormReportsNCharts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForms\FormFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\FormFilter.Designer.cs">
+      <DependentUpon>FormFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForms\FormMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\FormMainWindow.Designer.cs">
+      <DependentUpon>FormMainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="MessageDialog.cs">
       <SubType>Form</SubType>
@@ -104,6 +123,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MenuForms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SuccessDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,8 +149,8 @@
     <EmbeddedResource Include="AddOrChangeActEmp.resx">
       <DependentUpon>AddOrChangeActEmp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AuthRegForm.resx">
+      <DependentUpon>AuthRegForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAboutProgram.resx">
       <DependentUpon>FormAboutProgram.cs</DependentUpon>
@@ -133,8 +158,17 @@
     <EmbeddedResource Include="FormChartsView.resx">
       <DependentUpon>FormChartsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\FormReportsNCharts.resx">
+      <DependentUpon>FormReportsNCharts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\FormFilter.resx">
+      <DependentUpon>FormFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\FormMainWindow.resx">
+      <DependentUpon>FormMainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageDialog.resx">
       <DependentUpon>MessageDialog.cs</DependentUpon>
@@ -149,6 +183,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="MenuForms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuccessDialog.resx">
       <DependentUpon>SuccessDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChartsView));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
@@ -37,42 +36,47 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChartsView));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.wORKERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.authHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eDUCATION_FORMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pOSTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.uSERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aCTIVITY_EMPLOYEEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.user2DataSet = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.wORKERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.wORKERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.WORKERTableAdapter();
             this.tableAdapterManager = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.TableAdapterManager();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.aCTIVITY_EMPLOYEEDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aCTIVITY_EMPLOYEEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.uSERDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.wORKERDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartForEdForm = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.uSERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.uSERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.USERTableAdapter();
             this.aCCESS_LEVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
-            this.aCTIVITY_EMPLOYEEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVITY_EMPLOYEETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACTIVITY_EMPLOYEETableAdapter();
             this.dISCIPLINEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dISCIPLINETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.DISCIPLINETableAdapter();
@@ -86,18 +90,33 @@
             this.pOSTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.POSTTableAdapter();
             this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sPECIALITYTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.SPECIALITYTableAdapter();
-            this.uSERDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aCTIVITY_EMPLOYEEDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.wORKERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.authHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eDUCATION_FORMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pOSTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aCTIVITY_EMPLOYEEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wORKERDataGridView)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartForEdForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dISCIPLINEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENT_MATERIALSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOSTBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authHistoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource)).BeginInit();
@@ -105,25 +124,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.uSERSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wORKERDataGridView)).BeginInit();
-            this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartForEdForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dISCIPLINEBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENT_MATERIALSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pOSTBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -155,22 +155,6 @@
             this.guna2CircleButton1.TabIndex = 6;
             this.guna2CircleButton1.Text = "Х";
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // wORKERBindingSource
-            // 
-            this.wORKERBindingSource.DataMember = "WORKER";
-            // 
-            // authHistoryBindingSource
-            // 
-            this.authHistoryBindingSource.DataMember = "AuthHistory";
-            // 
-            // eDUCATION_FORMBindingSource
-            // 
-            this.eDUCATION_FORMBindingSource.DataMember = "EDUCATION_FORM";
-            // 
-            // pOSTBindingSource
-            // 
-            this.pOSTBindingSource.DataMember = "POST";
             // 
             // button5
             // 
@@ -219,18 +203,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // uSERSBindingSource
-            // 
-            this.uSERSBindingSource.DataMember = "USERS";
-            // 
-            // aCTIVITY_EMPLOYEEBindingSource
-            // 
-            this.aCTIVITY_EMPLOYEEBindingSource.DataMember = "ACTIVITY_EMPLOYEE";
-            // 
-            // uSERBindingSource
-            // 
-            this.uSERBindingSource.DataMember = "USER";
-            // 
             // user2DataSet
             // 
             this.user2DataSet.DataSetName = "user2DataSet";
@@ -272,6 +244,110 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(432, 618);
             this.panel1.TabIndex = 20;
+            // 
+            // aCTIVITY_EMPLOYEEDataGridView
+            // 
+            this.aCTIVITY_EMPLOYEEDataGridView.AutoGenerateColumns = false;
+            this.aCTIVITY_EMPLOYEEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.aCTIVITY_EMPLOYEEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.aCTIVITY_EMPLOYEEDataGridView.DataSource = this.aCTIVITY_EMPLOYEEBindingSource1;
+            this.aCTIVITY_EMPLOYEEDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.aCTIVITY_EMPLOYEEDataGridView.Location = new System.Drawing.Point(0, 369);
+            this.aCTIVITY_EMPLOYEEDataGridView.Name = "aCTIVITY_EMPLOYEEDataGridView";
+            this.aCTIVITY_EMPLOYEEDataGridView.Size = new System.Drawing.Size(428, 245);
+            this.aCTIVITY_EMPLOYEEDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "ActEmp_ID";
+            this.dataGridViewTextBoxColumn9.HeaderText = "ActEmp_ID";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Discipline_ID";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Discipline_ID";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Worker_ID";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Worker_ID";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "EducationForm_ID";
+            this.dataGridViewTextBoxColumn12.HeaderText = "EducationForm_ID";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Speciality_ID";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Speciality_ID";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Event_ID";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Event_ID";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // aCTIVITY_EMPLOYEEBindingSource1
+            // 
+            this.aCTIVITY_EMPLOYEEBindingSource1.DataMember = "ACTIVITY_EMPLOYEE";
+            this.aCTIVITY_EMPLOYEEBindingSource1.DataSource = this.user2DataSet;
+            // 
+            // uSERDataGridView
+            // 
+            this.uSERDataGridView.AutoGenerateColumns = false;
+            this.uSERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uSERDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.uSERDataGridView.DataSource = this.uSERBindingSource1;
+            this.uSERDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uSERDataGridView.Location = new System.Drawing.Point(0, 202);
+            this.uSERDataGridView.Name = "uSERDataGridView";
+            this.uSERDataGridView.Size = new System.Drawing.Size(428, 168);
+            this.uSERDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Login";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Login";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Access_Level_ID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Access_Level_ID";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // uSERBindingSource1
+            // 
+            this.uSERBindingSource1.DataMember = "USER";
+            this.uSERBindingSource1.DataSource = this.user2DataSet;
             // 
             // wORKERDataGridView
             // 
@@ -321,23 +397,9 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Post_ID";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(957, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(19, 618);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Показать    таблицы";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.AutoScroll = true;
             this.guna2GradientPanel1.Controls.Add(this.button4);
             this.guna2GradientPanel1.Controls.Add(this.button5);
             this.guna2GradientPanel1.Controls.Add(this.button2);
@@ -426,11 +488,6 @@
             this.chart2.TabIndex = 19;
             this.chart2.Text = "chart2";
             // 
-            // uSERBindingSource1
-            // 
-            this.uSERBindingSource1.DataMember = "USER";
-            this.uSERBindingSource1.DataSource = this.user2DataSet;
-            // 
             // uSERTableAdapter
             // 
             this.uSERTableAdapter.ClearBeforeFill = true;
@@ -443,11 +500,6 @@
             // aCCESS_LEVELTableAdapter
             // 
             this.aCCESS_LEVELTableAdapter.ClearBeforeFill = true;
-            // 
-            // aCTIVITY_EMPLOYEEBindingSource1
-            // 
-            this.aCTIVITY_EMPLOYEEBindingSource1.DataMember = "ACTIVITY_EMPLOYEE";
-            this.aCTIVITY_EMPLOYEEBindingSource1.DataSource = this.user2DataSet;
             // 
             // aCTIVITY_EMPLOYEETableAdapter
             // 
@@ -507,99 +559,48 @@
             // 
             this.sPECIALITYTableAdapter.ClearBeforeFill = true;
             // 
-            // uSERDataGridView
+            // button1
             // 
-            this.uSERDataGridView.AutoGenerateColumns = false;
-            this.uSERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uSERDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.uSERDataGridView.DataSource = this.uSERBindingSource1;
-            this.uSERDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uSERDataGridView.Location = new System.Drawing.Point(0, 202);
-            this.uSERDataGridView.Name = "uSERDataGridView";
-            this.uSERDataGridView.Size = new System.Drawing.Size(428, 168);
-            this.uSERDataGridView.TabIndex = 1;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(957, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(19, 618);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Показать    таблицы";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // dataGridViewTextBoxColumn6
+            // wORKERBindingSource
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Login";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Login";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.wORKERBindingSource.DataMember = "WORKER";
             // 
-            // dataGridViewTextBoxColumn7
+            // authHistoryBindingSource
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.authHistoryBindingSource.DataMember = "AuthHistory";
             // 
-            // dataGridViewTextBoxColumn8
+            // eDUCATION_FORMBindingSource
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Access_Level_ID";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Access_Level_ID";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.eDUCATION_FORMBindingSource.DataMember = "EDUCATION_FORM";
             // 
-            // aCTIVITY_EMPLOYEEDataGridView
+            // pOSTBindingSource
             // 
-            this.aCTIVITY_EMPLOYEEDataGridView.AutoGenerateColumns = false;
-            this.aCTIVITY_EMPLOYEEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aCTIVITY_EMPLOYEEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15});
-            this.aCTIVITY_EMPLOYEEDataGridView.DataSource = this.aCTIVITY_EMPLOYEEBindingSource1;
-            this.aCTIVITY_EMPLOYEEDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.aCTIVITY_EMPLOYEEDataGridView.Location = new System.Drawing.Point(0, 369);
-            this.aCTIVITY_EMPLOYEEDataGridView.Name = "aCTIVITY_EMPLOYEEDataGridView";
-            this.aCTIVITY_EMPLOYEEDataGridView.Size = new System.Drawing.Size(428, 245);
-            this.aCTIVITY_EMPLOYEEDataGridView.TabIndex = 2;
+            this.pOSTBindingSource.DataMember = "POST";
             // 
-            // dataGridViewTextBoxColumn9
+            // uSERSBindingSource
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "ActEmp_ID";
-            this.dataGridViewTextBoxColumn9.HeaderText = "ActEmp_ID";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.uSERSBindingSource.DataMember = "USERS";
             // 
-            // dataGridViewTextBoxColumn10
+            // aCTIVITY_EMPLOYEEBindingSource
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Discipline_ID";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Discipline_ID";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.aCTIVITY_EMPLOYEEBindingSource.DataMember = "ACTIVITY_EMPLOYEE";
             // 
-            // dataGridViewTextBoxColumn11
+            // uSERBindingSource
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Worker_ID";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Worker_ID";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "EducationForm_ID";
-            this.dataGridViewTextBoxColumn12.HeaderText = "EducationForm_ID";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Speciality_ID";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Speciality_ID";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Event_ID";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Event_ID";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.uSERBindingSource.DataMember = "USER";
             // 
             // FormChartsView
             // 
@@ -615,6 +616,25 @@
             this.Name = "FormChartsView";
             this.Text = "FormChartsView";
             this.Load += new System.EventHandler(this.FormChartsView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wORKERDataGridView)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartForEdForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dISCIPLINEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENT_MATERIALSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOSTBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.authHistoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource)).EndInit();
@@ -622,25 +642,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.uSERSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.wORKERDataGridView)).EndInit();
-            this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartForEdForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dISCIPLINEBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENT_MATERIALSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pOSTBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
