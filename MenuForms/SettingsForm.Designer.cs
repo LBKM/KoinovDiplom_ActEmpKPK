@@ -34,6 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::KoinovDiplom_ActEmpKPK.Properties.Resources._64c14f36767c0e634bd3909a__1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(926, 515);
             this.Name = "SettingsForm";
             this.Text = "SettingsForm";

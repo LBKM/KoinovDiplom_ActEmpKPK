@@ -120,6 +120,21 @@
   <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 165</value>
+  </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Добрый бобрый день\ночь!
+
+Приветствуем вас в нашем приложении! 
+
+Надеемся, что данное приложение сможет удовлетворить ваши потребности. 
+
+Если у вас возникнут вопросы по использованию приложения или вам потребуется помощь, не стесняйтесь обращаться к разделу справки. 
+ты чо, тупая 
+
+Желаем вам приятного использования моего приложения!</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -279,18 +294,6 @@
         Yiz0uzjs7YMzCOMcAs7Ofw3Mxx0GeK0z9KMUYzWpJ//Z
 </value>
   </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Добрый бобрый день\ночь!
-
-Приветствуем вас в нашем приложении! 
-
-Надеемся, что данное приложение сможет удовлетворить ваши потребности. 
-
-Если у вас возникнут вопросы по использованию приложения или вам потребуется помощь, не стесняйтесь обращаться к разделу справки. 
-ты чо, тупая 
-
-Желаем вам приятного использования моего приложения!</value>
-  </data>
   <metadata name="user2DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 17</value>
   </metadata>
@@ -356,8 +359,5 @@
   </metadata>
   <metadata name="wORKERBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>845, 128</value>
-  </metadata>
-  <metadata name="guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 165</value>
   </metadata>
 </root>

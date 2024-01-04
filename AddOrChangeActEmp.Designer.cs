@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -68,6 +68,24 @@
             this.wORKERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.WORKERTableAdapter();
             this.tableAdapterManager = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.TableAdapterManager();
             this.pOSTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.POSTTableAdapter();
+            this.aCCESS_LEVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
+            this.aCTIVITY_EMPLOYEEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aCTIVITY_EMPLOYEETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACTIVITY_EMPLOYEETableAdapter();
+            this.dISCIPLINEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dISCIPLINETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.DISCIPLINETableAdapter();
+            this.eDUCATION_FORMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eDUCATION_FORMTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EDUCATION_FORMTableAdapter();
+            this.eVENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eVENTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EVENTTableAdapter();
+            this.eVENT_MATERIALSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eVENT_MATERIALSTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EVENT_MATERIALSTableAdapter();
+            this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sPECIALITYTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.SPECIALITYTableAdapter();
+            this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.USERTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TextBoxActEmpID = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOSTBindingSource)).BeginInit();
@@ -75,6 +93,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dISCIPLINEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENT_MATERIALSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -98,11 +124,12 @@
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(822, 429);
+            this.guna2Button2.Location = new System.Drawing.Point(824, 464);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 59;
             this.guna2Button2.Text = "Добавить";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -118,7 +145,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Silver;
             this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(39, 429);
+            this.guna2Button1.Location = new System.Drawing.Point(54, 464);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 58;
@@ -131,7 +158,7 @@
             this.Label1.AutoSize = true;
             this.Label1.BackColor = System.Drawing.Color.Transparent;
             this.Label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Label1.Location = new System.Drawing.Point(770, 324);
+            this.Label1.Location = new System.Drawing.Point(778, 324);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(313, 32);
             this.Label1.TabIndex = 48;
@@ -147,7 +174,7 @@
             this.EventDateTimePicker.FillColor = System.Drawing.Color.Lavender;
             this.EventDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.EventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.EventDateTimePicker.Location = new System.Drawing.Point(309, 320);
+            this.EventDateTimePicker.Location = new System.Drawing.Point(307, 440);
             this.EventDateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.EventDateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.EventDateTimePicker.Name = "EventDateTimePicker";
@@ -168,6 +195,7 @@
             // 
             // TextBoxNameAetEmp
             // 
+            this.TextBoxNameAetEmp.Animated = true;
             this.TextBoxNameAetEmp.BackColor = System.Drawing.Color.Transparent;
             this.TextBoxNameAetEmp.BorderRadius = 15;
             this.TextBoxNameAetEmp.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -179,12 +207,12 @@
             this.TextBoxNameAetEmp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxNameAetEmp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextBoxNameAetEmp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxNameAetEmp.Location = new System.Drawing.Point(309, 138);
+            this.TextBoxNameAetEmp.Location = new System.Drawing.Point(307, 198);
             this.TextBoxNameAetEmp.Name = "TextBoxNameAetEmp";
             this.TextBoxNameAetEmp.PasswordChar = '\0';
             this.TextBoxNameAetEmp.PlaceholderText = "";
             this.TextBoxNameAetEmp.SelectedText = "";
-            this.TextBoxNameAetEmp.Size = new System.Drawing.Size(330, 148);
+            this.TextBoxNameAetEmp.Size = new System.Drawing.Size(330, 218);
             this.TextBoxNameAetEmp.TabIndex = 55;
             // 
             // label3
@@ -203,7 +231,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(306, 301);
+            this.label15.Location = new System.Drawing.Point(304, 421);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(105, 16);
             this.label15.TabIndex = 46;
@@ -214,7 +242,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(306, 119);
+            this.label14.Location = new System.Drawing.Point(304, 179);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 16);
             this.label14.TabIndex = 44;
@@ -260,7 +288,7 @@
             this.ComboBoxWorker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxWorker.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ComboBoxWorker.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ComboBoxWorker.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBoxWorker.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ComboBoxWorker.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ComboBoxWorker.ItemHeight = 30;
             this.ComboBoxWorker.Location = new System.Drawing.Point(36, 196);
@@ -325,6 +353,8 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 30;
+            this.guna2GradientPanel1.Controls.Add(this.TextBoxActEmpID);
+            this.guna2GradientPanel1.Controls.Add(this.label6);
             this.guna2GradientPanel1.Controls.Add(this.guna2DataGridView1);
             this.guna2GradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button2);
@@ -349,23 +379,23 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCyan;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1146, 486);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1154, 530);
             this.guna2GradientPanel1.TabIndex = 54;
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.ColumnHeadersHeight = 15;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -375,14 +405,14 @@
             this.lastnameDataGridViewTextBoxColumn,
             this.postIDDataGridViewTextBoxColumn});
             this.guna2DataGridView1.DataSource = this.wORKERBindingSource1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(686, 138);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
@@ -475,7 +505,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1146, 86);
+            this.guna2Panel1.Size = new System.Drawing.Size(1154, 86);
             this.guna2Panel1.TabIndex = 60;
             this.guna2Panel1.UseTransparentBackground = true;
             // 
@@ -485,7 +515,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1146, 86);
+            this.label5.Size = new System.Drawing.Size(1154, 86);
             this.label5.TabIndex = 0;
             this.label5.Text = "Добавление новой методической активности";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -536,11 +566,117 @@
             // 
             this.pOSTTableAdapter.ClearBeforeFill = true;
             // 
+            // aCCESS_LEVELBindingSource
+            // 
+            this.aCCESS_LEVELBindingSource.DataMember = "ACCESS_LEVEL";
+            this.aCCESS_LEVELBindingSource.DataSource = this.user2DataSet;
+            // 
+            // aCCESS_LEVELTableAdapter
+            // 
+            this.aCCESS_LEVELTableAdapter.ClearBeforeFill = true;
+            // 
+            // aCTIVITY_EMPLOYEEBindingSource
+            // 
+            this.aCTIVITY_EMPLOYEEBindingSource.DataMember = "ACTIVITY_EMPLOYEE";
+            this.aCTIVITY_EMPLOYEEBindingSource.DataSource = this.user2DataSet;
+            // 
+            // aCTIVITY_EMPLOYEETableAdapter
+            // 
+            this.aCTIVITY_EMPLOYEETableAdapter.ClearBeforeFill = true;
+            // 
+            // dISCIPLINEBindingSource
+            // 
+            this.dISCIPLINEBindingSource.DataMember = "DISCIPLINE";
+            this.dISCIPLINEBindingSource.DataSource = this.user2DataSet;
+            // 
+            // dISCIPLINETableAdapter
+            // 
+            this.dISCIPLINETableAdapter.ClearBeforeFill = true;
+            // 
+            // eDUCATION_FORMBindingSource
+            // 
+            this.eDUCATION_FORMBindingSource.DataMember = "EDUCATION_FORM";
+            this.eDUCATION_FORMBindingSource.DataSource = this.user2DataSet;
+            // 
+            // eDUCATION_FORMTableAdapter
+            // 
+            this.eDUCATION_FORMTableAdapter.ClearBeforeFill = true;
+            // 
+            // eVENTBindingSource
+            // 
+            this.eVENTBindingSource.DataMember = "EVENT";
+            this.eVENTBindingSource.DataSource = this.user2DataSet;
+            // 
+            // eVENTTableAdapter
+            // 
+            this.eVENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // eVENT_MATERIALSBindingSource
+            // 
+            this.eVENT_MATERIALSBindingSource.DataMember = "EVENT_MATERIALS";
+            this.eVENT_MATERIALSBindingSource.DataSource = this.user2DataSet;
+            // 
+            // eVENT_MATERIALSTableAdapter
+            // 
+            this.eVENT_MATERIALSTableAdapter.ClearBeforeFill = true;
+            // 
+            // sPECIALITYBindingSource
+            // 
+            this.sPECIALITYBindingSource.DataMember = "SPECIALITY";
+            this.sPECIALITYBindingSource.DataSource = this.user2DataSet;
+            // 
+            // sPECIALITYTableAdapter
+            // 
+            this.sPECIALITYTableAdapter.ClearBeforeFill = true;
+            // 
+            // uSERBindingSource
+            // 
+            this.uSERBindingSource.DataMember = "USER";
+            this.uSERBindingSource.DataSource = this.user2DataSet;
+            // 
+            // uSERTableAdapter
+            // 
+            this.uSERTableAdapter.ClearBeforeFill = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(304, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "Код мет. акт.";
+            // 
+            // TextBoxActEmpID
+            // 
+            this.TextBoxActEmpID.Animated = true;
+            this.TextBoxActEmpID.AutoRoundedCorners = true;
+            this.TextBoxActEmpID.BackColor = System.Drawing.Color.Transparent;
+            this.TextBoxActEmpID.BorderRadius = 15;
+            this.TextBoxActEmpID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxActEmpID.DefaultText = "";
+            this.TextBoxActEmpID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxActEmpID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxActEmpID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxActEmpID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxActEmpID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxActEmpID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TextBoxActEmpID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxActEmpID.Location = new System.Drawing.Point(307, 138);
+            this.TextBoxActEmpID.Name = "TextBoxActEmpID";
+            this.TextBoxActEmpID.PasswordChar = '\0';
+            this.TextBoxActEmpID.PlaceholderText = "";
+            this.TextBoxActEmpID.SelectedText = "";
+            this.TextBoxActEmpID.Size = new System.Drawing.Size(330, 36);
+            this.TextBoxActEmpID.TabIndex = 63;
+            // 
             // AddOrChangeActEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 486);
+            this.ClientSize = new System.Drawing.Size(1154, 530);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddOrChangeActEmp";
@@ -555,6 +691,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dISCIPLINEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eDUCATION_FORMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENT_MATERIALSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,5 +741,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn postIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource aCCESS_LEVELBindingSource;
+        private user2DataSetTableAdapters.ACCESS_LEVELTableAdapter aCCESS_LEVELTableAdapter;
+        private System.Windows.Forms.BindingSource aCTIVITY_EMPLOYEEBindingSource;
+        private user2DataSetTableAdapters.ACTIVITY_EMPLOYEETableAdapter aCTIVITY_EMPLOYEETableAdapter;
+        private System.Windows.Forms.BindingSource dISCIPLINEBindingSource;
+        private user2DataSetTableAdapters.DISCIPLINETableAdapter dISCIPLINETableAdapter;
+        private System.Windows.Forms.BindingSource eDUCATION_FORMBindingSource;
+        private user2DataSetTableAdapters.EDUCATION_FORMTableAdapter eDUCATION_FORMTableAdapter;
+        private System.Windows.Forms.BindingSource eVENTBindingSource;
+        private user2DataSetTableAdapters.EVENTTableAdapter eVENTTableAdapter;
+        private System.Windows.Forms.BindingSource eVENT_MATERIALSBindingSource;
+        private user2DataSetTableAdapters.EVENT_MATERIALSTableAdapter eVENT_MATERIALSTableAdapter;
+        private System.Windows.Forms.BindingSource sPECIALITYBindingSource;
+        private user2DataSetTableAdapters.SPECIALITYTableAdapter sPECIALITYTableAdapter;
+        private System.Windows.Forms.BindingSource uSERBindingSource;
+        private user2DataSetTableAdapters.USERTableAdapter uSERTableAdapter;
+        private Guna.UI2.WinForms.Guna2TextBox TextBoxActEmpID;
+        internal System.Windows.Forms.Label label6;
     }
 }
