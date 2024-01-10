@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace KoinovDiplom_ActEmpKPK.MenuForms
 {
-    public partial class FormMainWindow : Form
+    partial class FormMainWindow : Form
     {
+        ListViewItem LastSelectedItem;
+        DataRow CurrentRow;
         public FormMainWindow()
         {
             InitializeComponent();
@@ -45,7 +49,7 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
 
         void FillActEmpList()
         {
-            ListViewActEmp.Items.Clear();
+            MainListViewActEmp.Items.Clear();
             foreach (DataRow Row in user2DataSet.ACTIVITY_EMPLOYEE.Rows)
             {
                 string[] items = new string[10];
@@ -66,15 +70,57 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
                 ListViewItem it = new ListViewItem();
                 it.Text = Row["ActEmp_ID"].ToString();
                 it.SubItems.AddRange(items);
-                ListViewActEmp.Items.Add(it);
+                MainListViewActEmp.Items.Add(it);
             }
-            Countlabel.Text = $"{ListViewActEmp.Items.Count} из {user2DataSet.ACTIVITY_EMPLOYEE.Rows.Count}";
+            Countlabel.Text = $"{MainListViewActEmp.Items.Count} из {user2DataSet.ACTIVITY_EMPLOYEE.Rows.Count}";
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            AddOrChangeActEmp addOrChangeActEmp = new AddOrChangeActEmp();
-            addOrChangeActEmp.ShowDialog();
+            if (MainListViewActEmp.SelectedItems.Count > 0 && MainListViewActEmp.SelectedItems[0].SubItems.Count > 0)
+            {
+                string actEmpID = MainListViewActEmp.SelectedItems[0].SubItems[0].Text;
+
+                // Проверяем, чтобы избежать выхода за пределы массива
+                if (!string.IsNullOrEmpty(actEmpID))
+                {
+                    DataRow[] selectedRows = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + actEmpID + "'");
+
+                    if (selectedRows.Length > 0)
+                    {
+                        DataRow currentRow = selectedRows[0];
+                        //Добавление записи
+                        DataRow CurrentRow = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + MainListViewActEmp.SelectedItems[0].SubItems[0].Text + "'")[0]; 
+                        AddOrChangeActEmp dialog = new AddOrChangeActEmp(CurrentRow);
+                        dialog.AddOrChange = false; dialog.ShowDialog();
+                        if (dialog.DialogResult == DialogResult.OK) { FillActEmpList(); }
+                    }
+                }
+            }
+
+            
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            DataRow[] RowsActEmp;
+            foreach (ListViewItem item in MainListViewActEmp.CheckedItems)
+            {
+                DialogResult reslt = MessageBox.Show("Вы действительно хотите удалить выделенные объекты? ", "Предупреждение!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (reslt == DialogResult.OK)
+                {
+                    RowsActEmp = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + item.Text + "'");
+                    aCTIVITY_EMPLOYEETableAdapter.Delete(Convert.ToString(RowsActEmp[0][0]), Convert.ToInt32(RowsActEmp[0][1]), Convert.ToInt32(RowsActEmp[0][2]), Convert.ToInt32(RowsActEmp[0][3]), Convert.ToInt32(RowsActEmp[0][4]), Convert.ToString(RowsActEmp[0][5]), Convert.ToInt32(RowsActEmp[0][6]));
+                    LastSelectedItem.Remove();
+                    MessageBox.Show("Успешное удаление!", "Процесс удаления: 100%", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            this.aCTIVITY_EMPLOYEETableAdapter.Fill(user2DataSet.ACTIVITY_EMPLOYEE);
+        }
+
+        private void ListViewActEmp_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            LastSelectedItem = e.Item;
         }
     }
 }

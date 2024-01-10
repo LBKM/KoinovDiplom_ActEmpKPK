@@ -16,7 +16,7 @@ using KoinovDiplom_ActEmpKPK.MenuForms;
 
 namespace KoinovDiplom_ActEmpKPK
 {
-    public partial class MainMenuForm : Form
+    partial class MainMenuForm : Form
     {
         ListViewItem LastSelectedItem;                           
         DataRow CurrentRow;
@@ -59,8 +59,6 @@ namespace KoinovDiplom_ActEmpKPK
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
             //для перетаскивания формы
-
-
             // TODO: данная строка кода позволяет загрузить данные в таблицу "user2DataSet.WORKER". При необходимости она может быть перемещена или удалена.
             this.wORKERTableAdapter.Fill(this.user2DataSet.WORKER);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "user2DataSet.USER". При необходимости она может быть перемещена или удалена.
@@ -100,7 +98,7 @@ namespace KoinovDiplom_ActEmpKPK
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            AddOrChangeActEmp addOrChangeActEmp = new AddOrChangeActEmp();
+            AddOrChangeActEmp addOrChangeActEmp = new AddOrChangeActEmp(CurrentRow);
             addOrChangeActEmp.ShowDialog();
         }
 
@@ -160,7 +158,6 @@ namespace KoinovDiplom_ActEmpKPK
             PanelLeft2.Visible = false;
             PanelLeft3.Visible = false;
             PanelLeft4.Visible = false;
-
 
             openForm(new FormMainWindow());
         }

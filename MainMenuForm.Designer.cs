@@ -32,32 +32,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.PanelLeft4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.PanelLeft3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.PanelLeft2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.PanelLeft1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.user2DataSet = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.aCCESS_LEVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
@@ -80,7 +81,6 @@
             this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wORKERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
@@ -89,8 +89,8 @@
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            this.GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
@@ -127,305 +127,6 @@
             this.guna2Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2Panel1_MouseDown);
             this.guna2Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.guna2Panel1_MouseMove);
             this.guna2Panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.guna2Panel1_MouseUp);
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.Animated = true;
-            this.guna2CircleButton2.BorderColor = System.Drawing.Color.Red;
-            this.guna2CircleButton2.BorderThickness = 1;
-            this.guna2CircleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.Indigo;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(1, 0);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(30, 30);
-            this.guna2CircleButton2.TabIndex = 6;
-            this.guna2CircleButton2.Text = "?";
-            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Indigo;
-            this.guna2Panel2.Controls.Add(this.iconButton9);
-            this.guna2Panel2.Controls.Add(this.guna2Panel12);
-            this.guna2Panel2.Controls.Add(this.guna2Panel10);
-            this.guna2Panel2.Controls.Add(this.guna2Panel8);
-            this.guna2Panel2.Controls.Add(this.guna2Panel6);
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
-            this.guna2Panel2.Controls.Add(this.guna2Panel3);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 31);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(194, 569);
-            this.guna2Panel2.TabIndex = 2;
-            // 
-            // guna2Panel12
-            // 
-            this.guna2Panel12.Controls.Add(this.iconButton5);
-            this.guna2Panel12.Location = new System.Drawing.Point(4, 503);
-            this.guna2Panel12.Name = "guna2Panel12";
-            this.guna2Panel12.Size = new System.Drawing.Size(197, 55);
-            this.guna2Panel12.TabIndex = 17;
-            // 
-            // guna2Panel10
-            // 
-            this.guna2Panel10.Controls.Add(this.iconButton4);
-            this.guna2Panel10.Controls.Add(this.PanelLeft4);
-            this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel10.Location = new System.Drawing.Point(0, 347);
-            this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(194, 55);
-            this.guna2Panel10.TabIndex = 17;
-            // 
-            // PanelLeft4
-            // 
-            this.PanelLeft4.BackColor = System.Drawing.Color.Lavender;
-            this.PanelLeft4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelLeft4.Location = new System.Drawing.Point(0, 0);
-            this.PanelLeft4.Name = "PanelLeft4";
-            this.PanelLeft4.Size = new System.Drawing.Size(10, 55);
-            this.PanelLeft4.TabIndex = 0;
-            // 
-            // guna2Panel8
-            // 
-            this.guna2Panel8.Controls.Add(this.iconButton3);
-            this.guna2Panel8.Controls.Add(this.PanelLeft3);
-            this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel8.Location = new System.Drawing.Point(0, 292);
-            this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(194, 55);
-            this.guna2Panel8.TabIndex = 18;
-            // 
-            // PanelLeft3
-            // 
-            this.PanelLeft3.BackColor = System.Drawing.Color.Lavender;
-            this.PanelLeft3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelLeft3.Location = new System.Drawing.Point(0, 0);
-            this.PanelLeft3.Name = "PanelLeft3";
-            this.PanelLeft3.Size = new System.Drawing.Size(10, 55);
-            this.PanelLeft3.TabIndex = 0;
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.Controls.Add(this.iconButton2);
-            this.guna2Panel6.Controls.Add(this.PanelLeft2);
-            this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel6.Location = new System.Drawing.Point(0, 237);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(194, 55);
-            this.guna2Panel6.TabIndex = 17;
-            // 
-            // PanelLeft2
-            // 
-            this.PanelLeft2.BackColor = System.Drawing.Color.Lavender;
-            this.PanelLeft2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelLeft2.Location = new System.Drawing.Point(0, 0);
-            this.PanelLeft2.Name = "PanelLeft2";
-            this.PanelLeft2.Size = new System.Drawing.Size(10, 55);
-            this.PanelLeft2.TabIndex = 0;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.Controls.Add(this.iconButton1);
-            this.guna2Panel4.Controls.Add(this.PanelLeft1);
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 182);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(194, 55);
-            this.guna2Panel4.TabIndex = 16;
-            // 
-            // PanelLeft1
-            // 
-            this.PanelLeft1.BackColor = System.Drawing.Color.Lavender;
-            this.PanelLeft1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelLeft1.Location = new System.Drawing.Point(0, 0);
-            this.PanelLeft1.Name = "PanelLeft1";
-            this.PanelLeft1.Size = new System.Drawing.Size(10, 55);
-            this.PanelLeft1.TabIndex = 0;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.Lavender;
-            this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.Controls.Add(this.pictureBox1);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(194, 182);
-            this.guna2Panel3.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(0, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 61);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Учёт методической\r\nактивности педагогов";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.Indigo;
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(191, 24);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(960, 576);
-            this.guna2GradientPanel2.TabIndex = 17;
-            // 
-            // guna2AnimateWindow1
-            // 
-            this.guna2AnimateWindow1.Interval = 1000;
-            // 
-            // GradientPanel1
-            // 
-            this.GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GradientPanel1.BackColor = System.Drawing.Color.Lavender;
-            this.GradientPanel1.Controls.Add(this.richTextBox1);
-            this.GradientPanel1.Location = new System.Drawing.Point(200, 38);
-            this.GradientPanel1.Name = "GradientPanel1";
-            this.GradientPanel1.Size = new System.Drawing.Size(942, 554);
-            this.GradientPanel1.TabIndex = 16;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Lavender;
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(85, 134);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(772, 286);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.Indigo;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.iconButton5.IconColor = System.Drawing.Color.Lavender;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 0);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(197, 55);
-            this.iconButton5.TabIndex = 1;
-            this.iconButton5.Text = "Выход из приложения";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.BackColor = System.Drawing.Color.Indigo;
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.iconButton4.IconColor = System.Drawing.Color.Lavender;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(10, 0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(184, 55);
-            this.iconButton4.TabIndex = 1;
-            this.iconButton4.Text = "Параметры";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.Indigo;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.BarChart;
-            this.iconButton3.IconColor = System.Drawing.Color.Lavender;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(10, 0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(184, 55);
-            this.iconButton3.TabIndex = 1;
-            this.iconButton3.Text = "Справочники, графики и отчёты";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.Indigo;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            this.iconButton2.IconColor = System.Drawing.Color.Lavender;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(10, 0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(184, 55);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "Фильтрация";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.Indigo;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
-            this.iconButton1.IconColor = System.Drawing.Color.Lavender;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(10, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(184, 55);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "Главная";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Lavender;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // iconButton8
             // 
@@ -475,6 +176,325 @@
             this.iconButton6.TabIndex = 16;
             this.iconButton6.UseVisualStyleBackColor = false;
             this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.Animated = true;
+            this.guna2CircleButton2.BorderColor = System.Drawing.Color.Red;
+            this.guna2CircleButton2.BorderThickness = 1;
+            this.guna2CircleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.Indigo;
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.Location = new System.Drawing.Point(1, 0);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(30, 30);
+            this.guna2CircleButton2.TabIndex = 6;
+            this.guna2CircleButton2.Text = "?";
+            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Indigo;
+            this.guna2Panel2.Controls.Add(this.iconButton9);
+            this.guna2Panel2.Controls.Add(this.guna2Panel12);
+            this.guna2Panel2.Controls.Add(this.guna2Panel10);
+            this.guna2Panel2.Controls.Add(this.guna2Panel8);
+            this.guna2Panel2.Controls.Add(this.guna2Panel6);
+            this.guna2Panel2.Controls.Add(this.guna2Panel4);
+            this.guna2Panel2.Controls.Add(this.guna2Panel3);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 31);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(194, 569);
+            this.guna2Panel2.TabIndex = 2;
+            // 
+            // iconButton9
+            // 
+            this.iconButton9.BackColor = System.Drawing.Color.Indigo;
+            this.iconButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton9.ForeColor = System.Drawing.Color.White;
+            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
+            this.iconButton9.IconColor = System.Drawing.Color.Lavender;
+            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton9.Location = new System.Drawing.Point(0, 402);
+            this.iconButton9.Name = "iconButton9";
+            this.iconButton9.Size = new System.Drawing.Size(194, 55);
+            this.iconButton9.TabIndex = 19;
+            this.iconButton9.Text = "Личный кабинет";
+            this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton9.UseVisualStyleBackColor = false;
+            // 
+            // guna2Panel12
+            // 
+            this.guna2Panel12.Controls.Add(this.iconButton5);
+            this.guna2Panel12.Location = new System.Drawing.Point(4, 503);
+            this.guna2Panel12.Name = "guna2Panel12";
+            this.guna2Panel12.Size = new System.Drawing.Size(197, 55);
+            this.guna2Panel12.TabIndex = 17;
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.Indigo;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton5.ForeColor = System.Drawing.Color.White;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.iconButton5.IconColor = System.Drawing.Color.Lavender;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(0, 0);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(197, 55);
+            this.iconButton5.TabIndex = 1;
+            this.iconButton5.Text = "Выход из приложения";
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
+            // guna2Panel10
+            // 
+            this.guna2Panel10.Controls.Add(this.iconButton4);
+            this.guna2Panel10.Controls.Add(this.PanelLeft4);
+            this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel10.Location = new System.Drawing.Point(0, 347);
+            this.guna2Panel10.Name = "guna2Panel10";
+            this.guna2Panel10.Size = new System.Drawing.Size(194, 55);
+            this.guna2Panel10.TabIndex = 17;
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.BackColor = System.Drawing.Color.Indigo;
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton4.ForeColor = System.Drawing.Color.White;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Gear;
+            this.iconButton4.IconColor = System.Drawing.Color.Lavender;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(10, 0);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(184, 55);
+            this.iconButton4.TabIndex = 1;
+            this.iconButton4.Text = "Параметры";
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // PanelLeft4
+            // 
+            this.PanelLeft4.BackColor = System.Drawing.Color.Lavender;
+            this.PanelLeft4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLeft4.Location = new System.Drawing.Point(0, 0);
+            this.PanelLeft4.Name = "PanelLeft4";
+            this.PanelLeft4.Size = new System.Drawing.Size(10, 55);
+            this.PanelLeft4.TabIndex = 0;
+            // 
+            // guna2Panel8
+            // 
+            this.guna2Panel8.Controls.Add(this.iconButton3);
+            this.guna2Panel8.Controls.Add(this.PanelLeft3);
+            this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel8.Location = new System.Drawing.Point(0, 292);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.Size = new System.Drawing.Size(194, 55);
+            this.guna2Panel8.TabIndex = 18;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.Indigo;
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.BarChart;
+            this.iconButton3.IconColor = System.Drawing.Color.Lavender;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(10, 0);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(184, 55);
+            this.iconButton3.TabIndex = 1;
+            this.iconButton3.Text = "Справочники, графики и отчёты";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // PanelLeft3
+            // 
+            this.PanelLeft3.BackColor = System.Drawing.Color.Lavender;
+            this.PanelLeft3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLeft3.Location = new System.Drawing.Point(0, 0);
+            this.PanelLeft3.Name = "PanelLeft3";
+            this.PanelLeft3.Size = new System.Drawing.Size(10, 55);
+            this.PanelLeft3.TabIndex = 0;
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.Controls.Add(this.iconButton2);
+            this.guna2Panel6.Controls.Add(this.PanelLeft2);
+            this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel6.Location = new System.Drawing.Point(0, 237);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(194, 55);
+            this.guna2Panel6.TabIndex = 17;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.Indigo;
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            this.iconButton2.IconColor = System.Drawing.Color.Lavender;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(10, 0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(184, 55);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "Фильтрация";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // PanelLeft2
+            // 
+            this.PanelLeft2.BackColor = System.Drawing.Color.Lavender;
+            this.PanelLeft2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLeft2.Location = new System.Drawing.Point(0, 0);
+            this.PanelLeft2.Name = "PanelLeft2";
+            this.PanelLeft2.Size = new System.Drawing.Size(10, 55);
+            this.PanelLeft2.TabIndex = 0;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Controls.Add(this.iconButton1);
+            this.guna2Panel4.Controls.Add(this.PanelLeft1);
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 182);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(194, 55);
+            this.guna2Panel4.TabIndex = 16;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.Indigo;
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            this.iconButton1.IconColor = System.Drawing.Color.Lavender;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(10, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(184, 55);
+            this.iconButton1.TabIndex = 1;
+            this.iconButton1.Text = "Главная";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
+            // 
+            // PanelLeft1
+            // 
+            this.PanelLeft1.BackColor = System.Drawing.Color.Lavender;
+            this.PanelLeft1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLeft1.Location = new System.Drawing.Point(0, 0);
+            this.PanelLeft1.Name = "PanelLeft1";
+            this.PanelLeft1.Size = new System.Drawing.Size(10, 55);
+            this.PanelLeft1.TabIndex = 0;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Lavender;
+            this.guna2Panel3.Controls.Add(this.label1);
+            this.guna2Panel3.Controls.Add(this.pictureBox1);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(194, 182);
+            this.guna2Panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 61);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Учёт методической\r\nактивности педагогов";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Lavender;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.Indigo;
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(191, 24);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(960, 576);
+            this.guna2GradientPanel2.TabIndex = 17;
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.Interval = 1000;
+            // 
+            // GradientPanel1
+            // 
+            this.GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GradientPanel1.AutoSize = true;
+            this.GradientPanel1.BackColor = System.Drawing.Color.Lavender;
+            this.GradientPanel1.Controls.Add(this.richTextBox1);
+            this.GradientPanel1.Location = new System.Drawing.Point(200, 38);
+            this.GradientPanel1.Name = "GradientPanel1";
+            this.GradientPanel1.Size = new System.Drawing.Size(942, 554);
+            this.GradientPanel1.TabIndex = 16;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox1.Location = new System.Drawing.Point(85, 134);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(772, 286);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // user2DataSet
             // 
@@ -586,25 +606,6 @@
             this.wORKERBindingSource.DataMember = "WORKER";
             this.wORKERBindingSource.DataSource = this.user2DataSet;
             // 
-            // iconButton9
-            // 
-            this.iconButton9.BackColor = System.Drawing.Color.Indigo;
-            this.iconButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton9.ForeColor = System.Drawing.Color.White;
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
-            this.iconButton9.IconColor = System.Drawing.Color.Lavender;
-            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.Location = new System.Drawing.Point(0, 402);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Size = new System.Drawing.Size(194, 55);
-            this.iconButton9.TabIndex = 19;
-            this.iconButton9.Text = "Личный кабинет";
-            this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton9.UseVisualStyleBackColor = false;
-            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,8 +629,8 @@
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
-            this.GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).EndInit();
@@ -642,6 +643,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -651,7 +653,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.BindingSource aCCESS_LEVELBindingSource;
-        private user2DataSet user2DataSet;
         private user2DataSetTableAdapters.ACCESS_LEVELTableAdapter aCCESS_LEVELTableAdapter;
         private user2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private user2DataSetTableAdapters.ACTIVITY_EMPLOYEETableAdapter aCTIVITY_EMPLOYEETableAdapter;
@@ -698,5 +699,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel GradientPanel1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private FontAwesome.Sharp.IconButton iconButton9;
+        public user2DataSet user2DataSet;
     }
 }

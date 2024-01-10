@@ -51,6 +51,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ComboBoxEvent = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.TextBoxActEmpID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.workerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,8 +86,6 @@
             this.sPECIALITYTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.SPECIALITYTableAdapter();
             this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.USERTableAdapter();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TextBoxActEmpID = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOSTBindingSource)).BeginInit();
@@ -173,7 +173,7 @@
             this.EventDateTimePicker.Checked = true;
             this.EventDateTimePicker.FillColor = System.Drawing.Color.Lavender;
             this.EventDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.EventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.EventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.EventDateTimePicker.Location = new System.Drawing.Point(307, 440);
             this.EventDateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.EventDateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -382,6 +382,40 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1154, 530);
             this.guna2GradientPanel1.TabIndex = 54;
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+            // 
+            // TextBoxActEmpID
+            // 
+            this.TextBoxActEmpID.Animated = true;
+            this.TextBoxActEmpID.AutoRoundedCorners = true;
+            this.TextBoxActEmpID.BackColor = System.Drawing.Color.Transparent;
+            this.TextBoxActEmpID.BorderRadius = 17;
+            this.TextBoxActEmpID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxActEmpID.DefaultText = "";
+            this.TextBoxActEmpID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxActEmpID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxActEmpID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxActEmpID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxActEmpID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxActEmpID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TextBoxActEmpID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxActEmpID.Location = new System.Drawing.Point(307, 138);
+            this.TextBoxActEmpID.Name = "TextBoxActEmpID";
+            this.TextBoxActEmpID.PasswordChar = '\0';
+            this.TextBoxActEmpID.PlaceholderText = "";
+            this.TextBoxActEmpID.SelectedText = "";
+            this.TextBoxActEmpID.Size = new System.Drawing.Size(330, 36);
+            this.TextBoxActEmpID.TabIndex = 63;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(304, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "Код мет. акт.";
             // 
             // guna2DataGridView1
             // 
@@ -637,40 +671,6 @@
             // uSERTableAdapter
             // 
             this.uSERTableAdapter.ClearBeforeFill = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(304, 119);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "Код мет. акт.";
-            // 
-            // TextBoxActEmpID
-            // 
-            this.TextBoxActEmpID.Animated = true;
-            this.TextBoxActEmpID.AutoRoundedCorners = true;
-            this.TextBoxActEmpID.BackColor = System.Drawing.Color.Transparent;
-            this.TextBoxActEmpID.BorderRadius = 15;
-            this.TextBoxActEmpID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxActEmpID.DefaultText = "";
-            this.TextBoxActEmpID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBoxActEmpID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBoxActEmpID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxActEmpID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxActEmpID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxActEmpID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxActEmpID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxActEmpID.Location = new System.Drawing.Point(307, 138);
-            this.TextBoxActEmpID.Name = "TextBoxActEmpID";
-            this.TextBoxActEmpID.PasswordChar = '\0';
-            this.TextBoxActEmpID.PlaceholderText = "";
-            this.TextBoxActEmpID.SelectedText = "";
-            this.TextBoxActEmpID.Size = new System.Drawing.Size(330, 36);
-            this.TextBoxActEmpID.TabIndex = 63;
             // 
             // AddOrChangeActEmp
             // 

@@ -1,4 +1,6 @@
-﻿using KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters;
+﻿using Guna.UI2.WinForms;
+using KoinovDiplom_ActEmpKPK.MenuForms;
+using KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +17,23 @@ namespace KoinovDiplom_ActEmpKPK
 {
     public partial class AddOrChangeActEmp : Form
     {
-        public AddOrChangeActEmp()
+        DataRow newRow;
+        public bool AddOrChange; 
+        public string imagePath, MainImagePath;
+
+        public Guna2TextBox TextBoxActEmpIDGet { get { return TextBoxActEmpID; } }
+        public Guna2ComboBox ComboBoxDisciplineGet { get { return ComboBoxDiscipline; } }
+        public Guna2ComboBox ComboBoxWorkerGet { get { return ComboBoxWorker; } }
+        public Guna2ComboBox ComboBoxEducationFormGet { get { return ComboBoxEducationForm; } }
+        public Guna2ComboBox ComboBoxSpecialityGet { get { return ComboBoxSpeciality; } }
+        public Guna2ComboBox ComboBoxEventGet { get { return ComboBoxEvent; } }
+        public Guna2TextBox TextBoxNameAetEmpGet { get { return TextBoxNameAetEmp; } }
+        public Guna2DateTimePicker EventDateTimePickerGet { get { return EventDateTimePicker; } }
+
+        public AddOrChangeActEmp(DataRow OldRow)
         {
             InitializeComponent();
+            newRow = OldRow;
         }
 
         private void wORKERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -70,32 +86,172 @@ namespace KoinovDiplom_ActEmpKPK
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            //    var cn = new OleDbConnection();
-            //    cn.ConnectionString = Properties.Settings.Default.ConnectionStringKUMO;
-            //    cn.Open();
-            //    var sql = new OleDbCommand("SELECT COUNT(*) FROM ACTIVITY_EMPLOYEE WHERE ActEmp_ID = '" + TextBoxActEmpID.Text + "'", cn); // текст запроса
-            //    int UserExist = Convert.ToInt32(sql.ExecuteScalar());
-            //    if (UserExist > 0)
-            //    {
+            DataRow[] Rows;
 
-            //    }
-            //        int InsertedRows = ACTIVITY_EMPLOYEETableAdapter.Insert(TextBoxActEmpID.Text, ComboBoxDiscipline.Text, TB_Name_WP.Text, DateAddPicker.Value);
-            //        if (InsertedRows == 0) //ставим условие, если кол-во строк было равно нулю, значит запись не добавилась
-            //        {
-            //            dialog.label_Reslt.Text = "Не удалось добавить\nрабочую программу";
-            //            dialog.ShowDialog();
-            //        }
-            //        else //если удалось, вывод сообщения
-            //        {
-            //            dialogSuc.label_Reslt.Text = "Рабочая программа\nуспешно добавлена";
-            //            dialogSuc.ShowDialog();
-            //        }
-            //        this.wORK_PROGRAMTableAdapter.Fill(this.kUMO_DataSet.WORK_PROGRAM);
-            //    }
-            //    DialogResult = DialogResult.OK;
-            //    foreach (DataRow Row_WP in kUMO_DataSet.WORK_PROGRAM) CB_WP.Items.Add(Row_WP["Index_WorkProg"]);
+            DataRow[] RowsDiscipline;
+            string Discipline;
+            RowsDiscipline  = this.user2DataSet.DISCIPLINE.Select("Name = '" + ComboBoxDiscipline.Text + "'");
+            if (RowsDiscipline.Length == 0)
+            {
+                this.dISCIPLINETableAdapter.Insert(ComboBoxDiscipline.Text);
+                this.dISCIPLINETableAdapter.Fill(this.user2DataSet.DISCIPLINE);
+                RowsDiscipline = this.user2DataSet.DISCIPLINE.Select("Name = '" + ComboBoxDiscipline.Text + "'");
+                Discipline = Convert.ToString(RowsDiscipline[0]["Discipline_ID"]);
+            }
+            else
+            {
+                Discipline = Convert.ToString(RowsDiscipline[0]["Discipline_ID"]);
+            }
+
+            DataRow[] RowsWorker;
+            string Worker;
+            RowsWorker = this.user2DataSet.WORKER.Select("Worker_ID = '" + ComboBoxWorker.Text + "'");
+            
+                Worker = Convert.ToString(RowsWorker[0]["Worker_ID"]);
+
+
+            DataRow[] RowsEducationForm;
+            string EducationForm;
+            RowsEducationForm = this.user2DataSet.EDUCATION_FORM.Select("Education_Form = '" + ComboBoxEducationForm.Text + "'");
+            if (RowsEducationForm.Length == 0)
+            {
+                this.eDUCATION_FORMTableAdapter.Insert(ComboBoxEducationForm.Text);
+                this.eDUCATION_FORMTableAdapter.Fill(this.user2DataSet.EDUCATION_FORM);
+                RowsEducationForm = this.user2DataSet.EDUCATION_FORM.Select("Education_Form = '" + ComboBoxEducationForm.Text + "'");
+                EducationForm = Convert.ToString(RowsEducationForm[0]["Form_ID"]);
+            }
+            else
+            {
+                EducationForm = Convert.ToString(RowsEducationForm[0]["Form_ID"]);
+            }
+
+            DataRow[] RowsSpeciality;
+            string Speciality;
+            RowsSpeciality = this.user2DataSet.SPECIALITY.Select("Name = '" + ComboBoxSpeciality.Text + "'");
+            if (RowsSpeciality.Length == 0)
+            {
+                this.sPECIALITYTableAdapter.Insert(ComboBoxSpeciality.Text);
+                this.sPECIALITYTableAdapter.Fill(this.user2DataSet.SPECIALITY);
+                RowsSpeciality = this.user2DataSet.SPECIALITY.Select("Name = '" + ComboBoxSpeciality.Text + "'");
+                Speciality = Convert.ToString(RowsSpeciality[0]["Speciality_ID"]);
+            }
+            else
+            {
+                Speciality = Convert.ToString(RowsSpeciality[0]["Speciality_ID"]);
+            }
+
+            DataRow[] RowsEvent;
+            string Event;
+            RowsEvent = this.user2DataSet.EVENT.Select("Name = '" + ComboBoxEvent.Text + "'");
+            if (RowsEvent.Length == 0)
+            {
+                this.eVENTTableAdapter.Insert(ComboBoxEvent.Text, EventDateTimePicker.Value);
+                this.eVENTTableAdapter.Fill(this.user2DataSet.EVENT);
+                RowsEvent = this.user2DataSet.EVENT.Select("Name = '" + ComboBoxEvent.Text + "'");
+                Event = Convert.ToString(RowsEvent[0]["Event_ID"]);
+            }
+            else
+            {
+                Event = Convert.ToString(RowsEvent[0]["Event_ID"]);
+            }
+
+            //Rows = FormMainWindow..Discipline.Select("Name_Discipline ='" + ComboBoxDiscipline.Text + "'");
+            //if (Rows.Length == 0)
+            //{
+            //    MainMenuForm.DisciplineTableAdapter.Insert(ComboBoxDiscipline.Text);
+            //    MainMenuForm.DisciplineTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Discipline);
+            //    Rows = MainMenuForm.KPMetodicalActDataSet.Discipline.Select("Name_Discipline ='" + ComboBoxDiscipline.Text + "'");
+            //    ID_Discipline = Convert.ToUInt64(Rows[0]["ID_Discipline"]);
             //}
-            //cn.Close();
+            //else
+            //{
+            //    ID_Discipline = Convert.ToUInt64(Rows[0]["ID_Discipline"]);
+            //}
+
+            //Rows = MainMenuForm.KPMetodicalActDataSet.Worker.Select("FIO_Worker ='" + ComboBoxWorker.Text + "'");
+            //if (Rows.Length == 0)
+            //{
+            //    MainMenuForm.WorkerTableAdapter.Insert(ComboBoxWorker.Text, "");
+            //    MainMenuForm.WorkerTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Worker);
+            //    Rows = MainMenuForm.KPMetodicalActDataSet.Worker.Select("FIO_Worker ='" + ComboBoxWorker.Text + "'");
+            //    ID_Worker = Convert.ToUInt64(Rows[0]["ID_Worker"]);
+            //}
+            //else
+            //{
+            //    ID_Worker = Convert.ToUInt64(Rows[0]["ID_Worker"]);
+            //}
+
+            //Rows = MainMenuForm.KPMetodicalActDataSet.Education_Form.Select("Name_Form ='" + ComboBoxEducationForm.Text + "'");
+            //if (Rows.Length == 0)
+            //{
+            //    MainMenuForm.Education_FormTableAdapter.Insert(ComboBoxEducationForm.Text);
+            //    MainMenuForm.Education_FormTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Education_Form);
+            //    Rows = MainMenuForm.KPMetodicalActDataSet.Education_Form.Select("Name_Form ='" + ComboBoxEducationForm.Text + "'");
+            //    ID_Education_Form = Convert.ToUInt64(Rows[0]["ID_Education_Form"]);
+            //}
+            //else
+            //{
+            //    ID_Education_Form = Convert.ToUInt64(Rows[0]["ID_Education_Form"]);
+            //}
+
+            //Rows = MainMenuForm.KPMetodicalActDataSet.Speciality.Select("Name_Speciality ='" + ComboBoxSpeciality.Text + "'");
+            //if (Rows.Length == 0)
+            //{
+            //    MainMenuForm.SpecialityTableAdapter.Insert(ComboBoxSpeciality.Text);
+            //    MainMenuForm.SpecialityTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Speciality);
+            //    Rows = MainMenuForm.KPMetodicalActDataSet.Speciality.Select("Name_Speciality ='" + ComboBoxSpeciality.Text + "'");
+            //    ID_Speciality = Convert.ToUInt64(Rows[0]["ID_Speciality"]);
+            //}
+            //else
+            //{
+            //    ID_Speciality = Convert.ToUInt64(Rows[0]["ID_Speciality"]);
+            //}
+
+            //Rows = MainMenuForm.KPMetodicalActDataSet._Event.Select("Name_Event ='" + ComboBoxEvent.Text + "'");
+            //if (Rows.Length == 0)
+            //{
+            //    MainMenuForm.EventTableAdapter.Insert(ComboBoxEvent.Text);
+            //    MainMenuForm.EventTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet._Event);
+            //    Rows = MainMenuForm.KPMetodicalActDataSet._Event.Select("Name_Event ='" + ComboBoxEvent.Text + "'");
+            //    ID_Event = Convert.ToUInt64(Rows[0]["ID_Event"]);
+            //}
+            //else
+            //{
+            //    ID_Event = Convert.ToUInt64(Rows[0]["ID_Event"]);
+            //}
+
+            //if (AddOnChange == false)
+            //{
+            //    MainMenuForm.Activity_EmployeeTableAdapter.Insert(ID_Discipline, ID_Worker, ID_Education_Form, ID_Speciality, ID_Event, TextBoxNameAetEmp.Text, EventDateTimePicker.Value.Date);
+            //}
+
+            //MainMenuForm.Activity_EmployeeTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Activity_Employee);
+            //this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            //this.Close();
+
+            //if (AddOnChange == true)
+            //{
+            //    DataRow OldWorkerRow = MainMenuForm.KPMetodicalActDataSet.Activity_Employee.Select("ID_Activity_Employee='" + OldRowID.ToString() + "'")[0];
+            //    MainMenuForm.Activity_EmployeeTableAdapter.Update(ID_Discipline, ID_Worker, ID_Education_Form, ID_Speciality, ID_Event, TextBoxNameAetEmp.Text, EventDateTimePicker.Value.Date, OldWorkerRow[0], OldWorkerRow[1], OldWorkerRow[2], OldWorkerRow[3], OldWorkerRow[4], OldWorkerRow[5], OldWorkerRow[6], OldWorkerRow[7]);
+            //}
+
+            int InsertedRows = aCTIVITY_EMPLOYEETableAdapter.Insert(TextBoxActEmpID.Text, Convert.ToInt32(Discipline), Convert.ToInt32(Worker), Convert.ToInt32(EducationForm), Convert.ToInt32(Speciality), TextBoxNameAetEmp.Text, Convert.ToInt32(Event));
+
+            try
+            {
+                if (InsertedRows > 0) 
+                MessageBox.Show("Успешное добавление!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                if (InsertedRows == 0)
+                    // Если произошла ошибка, отобразите сообщение об ошибке
+                    MessageBox.Show("Не удалось добавить рабочую программу. Причина: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.aCTIVITY_EMPLOYEETableAdapter.Fill(this.user2DataSet.ACTIVITY_EMPLOYEE);
+
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Close();
         }
     }
 }
