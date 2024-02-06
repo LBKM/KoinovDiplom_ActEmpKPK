@@ -63,6 +63,16 @@ namespace KoinovDiplom_ActEmpKPK.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1669044129_185_url {
+            get {
+                object obj = ResourceManager.GetObject("1669044129_185_url", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK {
             get {
                 object obj = ResourceManager.GetObject("360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK", resourceCulture);
@@ -93,6 +103,26 @@ namespace KoinovDiplom_ActEmpKPK.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cifrovoe_masterstvo_____w400 {
+            get {
+                object obj = ResourceManager.GetObject("Cifrovoe_masterstvo_____w400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imageUMA {
+            get {
+                object obj = ResourceManager.GetObject("imageUMA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key {
             get {
                 object obj = ResourceManager.GetObject("key", resourceCulture);
@@ -116,6 +146,26 @@ namespace KoinovDiplom_ActEmpKPK.Properties {
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_colorful_glass_morphism_png_image_6572073 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-colorful-glass-morphism-png-image_6572073", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_gradient_glassmorphism_element_of_smartphone_free_png_png_image_5683358 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-gradient-glassmorphism-element-of-smartphone-free-png-png-image_5683358", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

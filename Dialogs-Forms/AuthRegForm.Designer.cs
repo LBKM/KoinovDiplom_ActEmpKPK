@@ -50,13 +50,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.helpLabel = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +73,11 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Lavender;
-            this.label1.Location = new System.Drawing.Point(0, 33);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 109);
+            this.label1.Size = new System.Drawing.Size(500, 73);
             this.label1.TabIndex = 1;
             this.label1.Text = "УЧЁТ МЕТОДИЧЕСКОЙ АКТИВНОСТИ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,10 +89,10 @@
             this.guna2TabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2TabControl1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2TabControl1.ItemSize = new System.Drawing.Size(194, 40);
-            this.guna2TabControl1.Location = new System.Drawing.Point(15, 163);
+            this.guna2TabControl1.Location = new System.Drawing.Point(549, 48);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(393, 347);
+            this.guna2TabControl1.Size = new System.Drawing.Size(404, 462);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.Purple;
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -101,19 +104,20 @@
             this.guna2TabControl1.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.guna2TabControl1.TabButtonIdleState.InnerColor = System.Drawing.Color.MediumPurple;
             this.guna2TabControl1.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.guna2TabControl1.TabButtonSelectedState.FillColor = System.Drawing.Color.Indigo;
+            this.guna2TabControl1.TabButtonSelectedState.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.guna2TabControl1.TabButtonSelectedState.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2TabControl1.TabButtonSelectedState.ForeColor = System.Drawing.Color.Lavender;
-            this.guna2TabControl1.TabButtonSelectedState.InnerColor = System.Drawing.Color.Fuchsia;
+            this.guna2TabControl1.TabButtonSelectedState.InnerColor = System.Drawing.Color.White;
             this.guna2TabControl1.TabButtonSize = new System.Drawing.Size(194, 40);
             this.guna2TabControl1.TabIndex = 2;
-            this.guna2TabControl1.TabMenuBackColor = System.Drawing.Color.MediumPurple;
+            this.guna2TabControl1.TabMenuBackColor = System.Drawing.Color.LightPink;
             this.guna2TabControl1.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.MediumPurple;
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.BackColor = System.Drawing.Color.Pink;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.guna2CheckBox1);
             this.tabPage1.Controls.Add(this.guna2CheckBox3);
             this.tabPage1.Controls.Add(this.TextBoxPasswpordAuth);
             this.tabPage1.Controls.Add(this.TextBoxLoginAuth);
@@ -121,7 +125,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(385, 299);
+            this.tabPage1.Size = new System.Drawing.Size(396, 414);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ВХОД";
             // 
@@ -136,7 +140,7 @@
             this.guna2CheckBox3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.guna2CheckBox3.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.guna2CheckBox3.ForeColor = System.Drawing.Color.Lavender;
+            this.guna2CheckBox3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.guna2CheckBox3.Location = new System.Drawing.Point(117, 156);
             this.guna2CheckBox3.Name = "guna2CheckBox3";
             this.guna2CheckBox3.Size = new System.Drawing.Size(121, 20);
@@ -169,7 +173,7 @@
             this.TextBoxPasswpordAuth.PasswordChar = '\0';
             this.TextBoxPasswpordAuth.PlaceholderText = "ПАРОЛЬ";
             this.TextBoxPasswpordAuth.SelectedText = "";
-            this.TextBoxPasswpordAuth.Size = new System.Drawing.Size(269, 36);
+            this.TextBoxPasswpordAuth.Size = new System.Drawing.Size(320, 36);
             this.TextBoxPasswpordAuth.TabIndex = 2;
             // 
             // TextBoxLoginAuth
@@ -192,7 +196,7 @@
             this.TextBoxLoginAuth.PasswordChar = '\0';
             this.TextBoxLoginAuth.PlaceholderText = "ЛОГИН";
             this.TextBoxLoginAuth.SelectedText = "";
-            this.TextBoxLoginAuth.Size = new System.Drawing.Size(269, 36);
+            this.TextBoxLoginAuth.Size = new System.Drawing.Size(320, 36);
             this.TextBoxLoginAuth.TabIndex = 1;
             // 
             // ButtonAuth
@@ -203,19 +207,19 @@
             this.ButtonAuth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ButtonAuth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ButtonAuth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ButtonAuth.FillColor = System.Drawing.Color.Indigo;
+            this.ButtonAuth.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.ButtonAuth.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonAuth.ForeColor = System.Drawing.Color.White;
             this.ButtonAuth.Location = new System.Drawing.Point(43, 246);
             this.ButtonAuth.Name = "ButtonAuth";
-            this.ButtonAuth.Size = new System.Drawing.Size(269, 45);
+            this.ButtonAuth.Size = new System.Drawing.Size(320, 45);
             this.ButtonAuth.TabIndex = 0;
             this.ButtonAuth.Text = "ВОЙТИ";
             this.ButtonAuth.Click += new System.EventHandler(this.ButtonAuth_Click);
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.MediumPurple;
+            this.tabPage2.BackColor = System.Drawing.Color.Lavender;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.ButtonVerification);
             this.tabPage2.Controls.Add(this.guna2TextBox1);
@@ -229,7 +233,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(385, 299);
+            this.tabPage2.Size = new System.Drawing.Size(396, 299);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "РЕГИСТРАЦИЯ";
             // 
@@ -337,7 +341,7 @@
             this.ButtonReg.Name = "ButtonReg";
             this.ButtonReg.Size = new System.Drawing.Size(269, 45);
             this.ButtonReg.TabIndex = 0;
-            this.ButtonReg.Text = "ЗАРЕГАТЬСЯ КРЧ ЕПТЕЛЬ";
+            this.ButtonReg.Text = "ЗАРЕГИСТРИРОВАТЬСЯ";
             // 
             // TextBoxRegConfirmPassword
             // 
@@ -411,18 +415,19 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Lavender;
-            this.label2.Location = new System.Drawing.Point(276, 33);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Indigo;
+            this.label2.Location = new System.Drawing.Point(12, 485);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 109);
+            this.label2.Size = new System.Drawing.Size(477, 40);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ГАПОУ СО \r\nКПК";
+            this.label2.Text = "ГАПОУ СО КПК";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CircleButton1
             // 
             this.guna2CircleButton1.Animated = true;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton1.BorderColor = System.Drawing.Color.Red;
             this.guna2CircleButton1.BorderThickness = 1;
             this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -434,7 +439,7 @@
             this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(378, 12);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(923, 12);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.Size = new System.Drawing.Size(30, 30);
@@ -442,22 +447,10 @@
             this.guna2CircleButton1.Text = "Х";
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 30;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(143, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(130, 130);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2CircleButton2
             // 
             this.guna2CircleButton2.Animated = true;
+            this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton2.BorderColor = System.Drawing.Color.Red;
             this.guna2CircleButton2.BorderThickness = 1;
             this.guna2CircleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -469,7 +462,7 @@
             this.guna2CircleButton2.FillColor = System.Drawing.Color.Indigo;
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(342, 12);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(887, 12);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.Size = new System.Drawing.Size(30, 30);
@@ -485,26 +478,72 @@
             // 
             this.helpLabel.BackColor = System.Drawing.Color.Transparent;
             this.helpLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.helpLabel.Location = new System.Drawing.Point(12, 12);
+            this.helpLabel.Location = new System.Drawing.Point(659, 12);
             this.helpLabel.Name = "helpLabel";
-            this.helpLabel.Size = new System.Drawing.Size(324, 33);
+            this.helpLabel.Size = new System.Drawing.Size(222, 33);
             this.helpLabel.TabIndex = 6;
             this.helpLabel.Text = "label3";
             this.helpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackgroundImage = global::KoinovDiplom_ActEmpKPK.Properties.Resources.imageUMA;
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(503, 534);
+            this.guna2Panel1.TabIndex = 7;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 30;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(152, 207);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(174, 148);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2CheckBox1
+            // 
+            this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2CheckBox1.Location = new System.Drawing.Point(135, 385);
+            this.guna2CheckBox1.Name = "guna2CheckBox1";
+            this.guna2CheckBox1.Size = new System.Drawing.Size(110, 20);
+            this.guna2CheckBox1.TabIndex = 10;
+            this.guna2CheckBox1.Text = "Войти как гость";
+            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // AuthRegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(420, 534);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackgroundImage = global::KoinovDiplom_ActEmpKPK.Properties.Resources._1669044129_185_url;
+            this.ClientSize = new System.Drawing.Size(973, 534);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.helpLabel);
             this.Controls.Add(this.guna2CircleButton2);
             this.Controls.Add(this.guna2CircleButton1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2TabControl1);
-            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AuthRegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -515,6 +554,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -546,6 +586,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
         private System.Windows.Forms.Label helpLabel;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
     }
 }
 

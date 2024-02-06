@@ -235,5 +235,20 @@
   <ItemGroup>
     <None Include="Resources\64c14f36767c0e634bd3909a__1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-gradient-glassmorphism-element-of-smartphone-free-png-png-image_5683358.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cifrovoe_masterstvo_____w400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-colorful-glass-morphism-png-image_6572073.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageUMA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1669044129_185_url.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
