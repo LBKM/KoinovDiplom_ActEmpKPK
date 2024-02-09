@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2CheckBox3 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.TextBoxPasswpordAuth = new Guna.UI2.WinForms.Guna2TextBox();
             this.TextBoxLoginAuth = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,7 +56,6 @@
             this.helpLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -129,6 +129,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ВХОД";
             // 
+            // guna2CheckBox1
+            // 
+            this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2CheckBox1.Location = new System.Drawing.Point(135, 385);
+            this.guna2CheckBox1.Name = "guna2CheckBox1";
+            this.guna2CheckBox1.Size = new System.Drawing.Size(111, 20);
+            this.guna2CheckBox1.TabIndex = 10;
+            this.guna2CheckBox1.Text = "Войти как гость";
+            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // guna2CheckBox3
             // 
             this.guna2CheckBox3.AutoSize = true;
@@ -143,7 +161,7 @@
             this.guna2CheckBox3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.guna2CheckBox3.Location = new System.Drawing.Point(117, 156);
             this.guna2CheckBox3.Name = "guna2CheckBox3";
-            this.guna2CheckBox3.Size = new System.Drawing.Size(121, 20);
+            this.guna2CheckBox3.Size = new System.Drawing.Size(122, 20);
             this.guna2CheckBox3.TabIndex = 9;
             this.guna2CheckBox3.Text = "Показать пароль";
             this.guna2CheckBox3.UncheckedState.BorderColor = System.Drawing.Color.Lavender;
@@ -233,7 +251,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(396, 299);
+            this.tabPage2.Size = new System.Drawing.Size(396, 414);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "РЕГИСТРАЦИЯ";
             // 
@@ -249,7 +267,7 @@
             this.ButtonVerification.FillColor = System.Drawing.Color.Indigo;
             this.ButtonVerification.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.ButtonVerification.ForeColor = System.Drawing.Color.White;
-            this.ButtonVerification.Location = new System.Drawing.Point(211, 184);
+            this.ButtonVerification.Location = new System.Drawing.Point(107, 173);
             this.ButtonVerification.Name = "ButtonVerification";
             this.ButtonVerification.Size = new System.Drawing.Size(100, 56);
             this.ButtonVerification.TabIndex = 10;
@@ -270,13 +288,13 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(57, 184);
+            this.guna2TextBox1.Location = new System.Drawing.Point(6, 173);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Код с эл. почты";
             this.guna2TextBox1.ReadOnly = true;
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(269, 56);
+            this.guna2TextBox1.Size = new System.Drawing.Size(215, 56);
             this.guna2TextBox1.TabIndex = 9;
             // 
             // CheckBoxChowPass
@@ -290,10 +308,10 @@
             this.CheckBoxChowPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CheckBoxChowPass.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckBoxChowPass.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.CheckBoxChowPass.ForeColor = System.Drawing.Color.Lavender;
-            this.CheckBoxChowPass.Location = new System.Drawing.Point(211, 158);
+            this.CheckBoxChowPass.ForeColor = System.Drawing.Color.Indigo;
+            this.CheckBoxChowPass.Location = new System.Drawing.Point(205, 147);
             this.CheckBoxChowPass.Name = "CheckBoxChowPass";
-            this.CheckBoxChowPass.Size = new System.Drawing.Size(121, 20);
+            this.CheckBoxChowPass.Size = new System.Drawing.Size(122, 20);
             this.CheckBoxChowPass.TabIndex = 8;
             this.CheckBoxChowPass.Text = "Показать пароль";
             this.CheckBoxChowPass.UncheckedState.BorderColor = System.Drawing.Color.Lavender;
@@ -312,10 +330,10 @@
             this.CheckBoxKeyGen.CheckedState.BorderThickness = 0;
             this.CheckBoxKeyGen.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CheckBoxKeyGen.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckBoxKeyGen.ForeColor = System.Drawing.Color.Lavender;
-            this.CheckBoxKeyGen.Location = new System.Drawing.Point(57, 158);
+            this.CheckBoxKeyGen.ForeColor = System.Drawing.Color.Indigo;
+            this.CheckBoxKeyGen.Location = new System.Drawing.Point(58, 147);
             this.CheckBoxKeyGen.Name = "CheckBoxKeyGen";
-            this.CheckBoxKeyGen.Size = new System.Drawing.Size(148, 20);
+            this.CheckBoxKeyGen.Size = new System.Drawing.Size(149, 20);
             this.CheckBoxKeyGen.TabIndex = 7;
             this.CheckBoxKeyGen.Text = "Генерировать пароль";
             this.CheckBoxKeyGen.UncheckedState.BorderColor = System.Drawing.Color.Lavender;
@@ -337,7 +355,7 @@
             this.ButtonReg.FillColor = System.Drawing.Color.Indigo;
             this.ButtonReg.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonReg.ForeColor = System.Drawing.Color.White;
-            this.ButtonReg.Location = new System.Drawing.Point(57, 246);
+            this.ButtonReg.Location = new System.Drawing.Point(58, 361);
             this.ButtonReg.Name = "ButtonReg";
             this.ButtonReg.Size = new System.Drawing.Size(269, 45);
             this.ButtonReg.TabIndex = 0;
@@ -358,7 +376,7 @@
             this.TextBoxRegConfirmPassword.ForeColor = System.Drawing.Color.Black;
             this.TextBoxRegConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxRegConfirmPassword.IconLeft = global::KoinovDiplom_ActEmpKPK.Properties.Resources._lock;
-            this.TextBoxRegConfirmPassword.Location = new System.Drawing.Point(57, 111);
+            this.TextBoxRegConfirmPassword.Location = new System.Drawing.Point(58, 100);
             this.TextBoxRegConfirmPassword.Name = "TextBoxRegConfirmPassword";
             this.TextBoxRegConfirmPassword.PasswordChar = '\0';
             this.TextBoxRegConfirmPassword.PlaceholderText = "ПОВТОРИТЕ ПАРОЛЬ";
@@ -381,7 +399,7 @@
             this.TextBoxRegPassword.ForeColor = System.Drawing.Color.Black;
             this.TextBoxRegPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxRegPassword.IconLeft = global::KoinovDiplom_ActEmpKPK.Properties.Resources._lock;
-            this.TextBoxRegPassword.Location = new System.Drawing.Point(57, 64);
+            this.TextBoxRegPassword.Location = new System.Drawing.Point(58, 53);
             this.TextBoxRegPassword.Name = "TextBoxRegPassword";
             this.TextBoxRegPassword.PasswordChar = '\0';
             this.TextBoxRegPassword.PlaceholderText = "ПРИДУМАЙТЕ ПАРОЛЬ";
@@ -404,7 +422,7 @@
             this.TextBoxRegLogin.ForeColor = System.Drawing.Color.Black;
             this.TextBoxRegLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxRegLogin.IconLeft = global::KoinovDiplom_ActEmpKPK.Properties.Resources.key;
-            this.TextBoxRegLogin.Location = new System.Drawing.Point(57, 4);
+            this.TextBoxRegLogin.Location = new System.Drawing.Point(58, 6);
             this.TextBoxRegLogin.Name = "TextBoxRegLogin";
             this.TextBoxRegLogin.PasswordChar = '\0';
             this.TextBoxRegLogin.PlaceholderText = "ПРИДУМАЙТЕ ЛОГИН";
@@ -478,7 +496,7 @@
             // 
             this.helpLabel.BackColor = System.Drawing.Color.Transparent;
             this.helpLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.helpLabel.Location = new System.Drawing.Point(659, 12);
+            this.helpLabel.Location = new System.Drawing.Point(659, 9);
             this.helpLabel.Name = "helpLabel";
             this.helpLabel.Size = new System.Drawing.Size(222, 33);
             this.helpLabel.TabIndex = 6;
@@ -506,30 +524,12 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(152, 207);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(152, 202);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(174, 148);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(178, 158);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2CheckBox1
-            // 
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2CheckBox1.Location = new System.Drawing.Point(135, 385);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(110, 20);
-            this.guna2CheckBox1.TabIndex = 10;
-            this.guna2CheckBox1.Text = "Войти как гость";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // AuthRegForm
             // 

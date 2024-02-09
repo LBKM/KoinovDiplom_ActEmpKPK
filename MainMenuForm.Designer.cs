@@ -57,8 +57,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.user2DataSet = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.aCCESS_LEVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
@@ -81,6 +79,8 @@
             this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wORKERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GradientPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
@@ -90,7 +90,7 @@
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.GradientPanel1.SuspendLayout();
+            this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
@@ -102,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -113,11 +114,12 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Lavender;
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.pictureBox2);
+            this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.iconButton8);
             this.guna2Panel1.Controls.Add(this.iconButton7);
             this.guna2Panel1.Controls.Add(this.iconButton6);
-            this.guna2Panel1.Controls.Add(this.guna2CircleButton2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -191,7 +193,7 @@
             this.guna2CircleButton2.FillColor = System.Drawing.Color.Indigo;
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(1, 0);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(80, 465);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.Size = new System.Drawing.Size(30, 30);
@@ -205,6 +207,7 @@
             this.guna2Panel2.Controls.Add(this.iconButton9);
             this.guna2Panel2.Controls.Add(this.guna2Panel12);
             this.guna2Panel2.Controls.Add(this.guna2Panel10);
+            this.guna2Panel2.Controls.Add(this.guna2CircleButton2);
             this.guna2Panel2.Controls.Add(this.guna2Panel8);
             this.guna2Panel2.Controls.Add(this.guna2Panel6);
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
@@ -226,13 +229,14 @@
             this.iconButton9.IconColor = System.Drawing.Color.Lavender;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.Location = new System.Drawing.Point(0, 402);
+            this.iconButton9.Location = new System.Drawing.Point(0, 396);
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Size = new System.Drawing.Size(194, 55);
             this.iconButton9.TabIndex = 19;
             this.iconButton9.Text = "Личный кабинет";
             this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton9.UseVisualStyleBackColor = false;
+            this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click);
             // 
             // guna2Panel12
             // 
@@ -267,7 +271,7 @@
             this.guna2Panel10.Controls.Add(this.iconButton4);
             this.guna2Panel10.Controls.Add(this.PanelLeft4);
             this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel10.Location = new System.Drawing.Point(0, 347);
+            this.guna2Panel10.Location = new System.Drawing.Point(0, 341);
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.Size = new System.Drawing.Size(194, 55);
             this.guna2Panel10.TabIndex = 17;
@@ -307,7 +311,7 @@
             this.guna2Panel8.Controls.Add(this.iconButton3);
             this.guna2Panel8.Controls.Add(this.PanelLeft3);
             this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel8.Location = new System.Drawing.Point(0, 292);
+            this.guna2Panel8.Location = new System.Drawing.Point(0, 286);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(194, 55);
             this.guna2Panel8.TabIndex = 18;
@@ -347,7 +351,7 @@
             this.guna2Panel6.Controls.Add(this.iconButton2);
             this.guna2Panel6.Controls.Add(this.PanelLeft2);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel6.Location = new System.Drawing.Point(0, 237);
+            this.guna2Panel6.Location = new System.Drawing.Point(0, 231);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(194, 55);
             this.guna2Panel6.TabIndex = 17;
@@ -387,7 +391,7 @@
             this.guna2Panel4.Controls.Add(this.iconButton1);
             this.guna2Panel4.Controls.Add(this.PanelLeft1);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 182);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 176);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(194, 55);
             this.guna2Panel4.TabIndex = 16;
@@ -425,24 +429,22 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Lavender;
-            this.guna2Panel3.Controls.Add(this.label1);
             this.guna2Panel3.Controls.Add(this.pictureBox1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(194, 182);
+            this.guna2Panel3.Size = new System.Drawing.Size(194, 176);
             this.guna2Panel3.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(0, 121);
+            this.label1.Location = new System.Drawing.Point(38, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 61);
+            this.label1.Size = new System.Drawing.Size(1017, 31);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Учёт методической\r\nактивности педагогов";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Text = "Учёт методической активности педагогов";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
@@ -451,7 +453,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 116);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -461,6 +463,7 @@
             this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel2.Controls.Add(this.GradientPanel1);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.Indigo;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel2.Location = new System.Drawing.Point(191, 24);
@@ -471,30 +474,6 @@
             // guna2AnimateWindow1
             // 
             this.guna2AnimateWindow1.Interval = 1000;
-            // 
-            // GradientPanel1
-            // 
-            this.GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GradientPanel1.AutoSize = true;
-            this.GradientPanel1.BackColor = System.Drawing.Color.Lavender;
-            this.GradientPanel1.Controls.Add(this.richTextBox1);
-            this.GradientPanel1.Location = new System.Drawing.Point(200, 38);
-            this.GradientPanel1.Name = "GradientPanel1";
-            this.GradientPanel1.Size = new System.Drawing.Size(942, 554);
-            this.GradientPanel1.TabIndex = 16;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Lavender;
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(85, 134);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(772, 286);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // user2DataSet
             // 
@@ -606,6 +585,27 @@
             this.wORKERBindingSource.DataMember = "WORKER";
             this.wORKERBindingSource.DataSource = this.user2DataSet;
             // 
+            // GradientPanel1
+            // 
+            this.GradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.GradientPanel1.Location = new System.Drawing.Point(3, 7);
+            this.GradientPanel1.Name = "GradientPanel1";
+            this.GradientPanel1.Radius = 10;
+            this.GradientPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.GradientPanel1.Size = new System.Drawing.Size(957, 569);
+            this.GradientPanel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::KoinovDiplom_ActEmpKPK.Properties.Resources.Cifrovoe_masterstvo_____w400;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,7 +614,6 @@
             this.ClientSize = new System.Drawing.Size(1151, 600);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.GradientPanel1);
             this.Controls.Add(this.guna2GradientPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenuForm";
@@ -630,7 +629,7 @@
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).EndInit();
@@ -642,8 +641,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -696,9 +695,9 @@
         private FontAwesome.Sharp.IconButton iconButton8;
         private FontAwesome.Sharp.IconButton iconButton7;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2GradientPanel GradientPanel1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private FontAwesome.Sharp.IconButton iconButton9;
         public user2DataSet user2DataSet;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2ShadowPanel GradientPanel1;
     }
 }

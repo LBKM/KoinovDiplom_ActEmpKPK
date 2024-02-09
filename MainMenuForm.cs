@@ -259,5 +259,23 @@ namespace KoinovDiplom_ActEmpKPK
             FormChartsView formChartsView = new FormChartsView();
             formChartsView.Show();
         }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            IconButton activeButton = (IconButton)sender;
+            SetButtonColors(activeButton, activebackgroundcolor, activeforegroundcolor);
+
+            SetButtonColors(iconButton1, defaultbackgroundcolor, defaultforegroundcolor);
+            SetButtonColors(iconButton4, defaultbackgroundcolor, defaultforegroundcolor);
+            SetButtonColors(iconButton2, defaultbackgroundcolor, defaultforegroundcolor);
+            SetButtonColors(iconButton3, defaultbackgroundcolor, defaultforegroundcolor);
+
+            PanelLeft2.Visible = false;
+            PanelLeft3.Visible = false;
+            PanelLeft4.Visible = false;
+            PanelLeft1.Visible = false;
+
+            openForm(new FormLK());
+        }
     }
 }
