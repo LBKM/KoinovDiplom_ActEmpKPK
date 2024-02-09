@@ -68,6 +68,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.user2DataSet1 = new KoinovDiplom_ActEmpKPK.user2DataSet();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
@@ -286,7 +287,7 @@
             this.Countlabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Countlabel.Location = new System.Drawing.Point(402, 503);
             this.Countlabel.Name = "Countlabel";
-            this.Countlabel.Size = new System.Drawing.Size(40, 16);
+            this.Countlabel.Size = new System.Drawing.Size(41, 16);
             this.Countlabel.TabIndex = 21;
             this.Countlabel.Text = "label1";
             // 
@@ -351,12 +352,21 @@
             this.user2DataSet1.DataSetName = "user2DataSet";
             this.user2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.BorderRadius = 30;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 556);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainWindow";
             this.Text = "FormMainWindow";
             this.Load += new System.EventHandler(this.FormMainWindow_Load);
@@ -417,5 +427,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         public user2DataSet user2DataSet;
         private user2DataSet user2DataSet1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

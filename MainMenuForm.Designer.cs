@@ -135,7 +135,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(38, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(977, 31);
+            this.label1.Size = new System.Drawing.Size(774, 31);
             this.label1.TabIndex = 7;
             this.label1.Text = "Учёт методической активности педагогов ГАПОУ СО \"Камышловский педагогический колл" +
     "едж\"";
@@ -291,11 +291,11 @@
             // 
             this.GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.GradientPanel1.FillColor = System.Drawing.Color.White;
-            this.GradientPanel1.Location = new System.Drawing.Point(3, 7);
+            this.GradientPanel1.Location = new System.Drawing.Point(9, 11);
             this.GradientPanel1.Name = "GradientPanel1";
             this.GradientPanel1.Radius = 10;
             this.GradientPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.GradientPanel1.Size = new System.Drawing.Size(957, 569);
+            this.GradientPanel1.Size = new System.Drawing.Size(948, 560);
             this.GradientPanel1.TabIndex = 0;
             // 
             // guna2AnimateWindow1
