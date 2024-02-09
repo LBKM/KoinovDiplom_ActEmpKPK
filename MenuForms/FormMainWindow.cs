@@ -90,15 +90,15 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
                     {
                         DataRow currentRow = selectedRows[0];
                         //Добавление записи
-                        DataRow CurrentRow = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + MainListViewActEmp.SelectedItems[0].SubItems[0].Text + "'")[0]; 
+                        DataRow CurrentRow = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + MainListViewActEmp.SelectedItems[0].SubItems[0].Text + "'")[0];
                         AddOrChangeActEmp dialog = new AddOrChangeActEmp(CurrentRow);
-                        dialog.AddOrChange = false; dialog.ShowDialog();
-                        if (dialog.DialogResult == DialogResult.OK) { FillActEmpList(); }
+                        dialog.AddOrChange = false; 
+                        dialog.ShowDialog();
+                        if (dialog.DialogResult == DialogResult.OK) 
+                        { FillActEmpList(); }
                     }
                 }
             }
-
-            
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -121,6 +121,13 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
         private void ListViewActEmp_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             LastSelectedItem = e.Item;
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            AddOrChangeActEmp dialog = new AddOrChangeActEmp(CurrentRow);
+            dialog.AddOrChange = false;
+            dialog.ShowDialog();
         }
     }
 }

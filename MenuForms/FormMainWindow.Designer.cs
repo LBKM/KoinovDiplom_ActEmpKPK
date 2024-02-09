@@ -69,6 +69,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.user2DataSet1 = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
@@ -199,6 +200,7 @@
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Lavender;
             this.guna2GradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2GradientPanel1.BackgroundImage")));
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2GradientPanel1.Controls.Add(this.guna2Button2);
             this.guna2GradientPanel1.Controls.Add(this.MainListViewActEmp);
             this.guna2GradientPanel1.Controls.Add(this.Countlabel);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button4);
@@ -287,7 +289,7 @@
             this.Countlabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Countlabel.Location = new System.Drawing.Point(402, 503);
             this.Countlabel.Name = "Countlabel";
-            this.Countlabel.Size = new System.Drawing.Size(41, 16);
+            this.Countlabel.Size = new System.Drawing.Size(40, 16);
             this.Countlabel.TabIndex = 21;
             this.Countlabel.Text = "label1";
             // 
@@ -360,6 +362,21 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(512, 503);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(147, 29);
+            this.guna2Button2.TabIndex = 22;
+            this.guna2Button2.Text = "guna2Button2";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,5 +445,6 @@
         public user2DataSet user2DataSet;
         private user2DataSet user2DataSet1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
