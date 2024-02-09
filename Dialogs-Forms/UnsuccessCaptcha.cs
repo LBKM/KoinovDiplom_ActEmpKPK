@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KoinovDiplom_ActEmpKPK.MenuForms
+namespace KoinovDiplom_ActEmpKPK.Dialogs_Forms
 {
-    public partial class FormLK : Form
+    public partial class UnsuccessCaptcha : Form
     {
-        public FormLK()
+        public UnsuccessCaptcha()
         {
             InitializeComponent();
         }
 
-        private void FormLK_Load(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
-
+using KoinovDiplom_ActEmpKPK.Dialogs_Forms;
 
 namespace KoinovDiplom_ActEmpKPK
 {
@@ -48,7 +48,7 @@ namespace KoinovDiplom_ActEmpKPK
                 text += ALF[rnd.Next(ALF.Length)];
             //Нарисуем сгенирируемый текст
             g.DrawString(text,
-                         new Font("Arial", 65),
+                         new Font("Century Gothic", 90),
                          colors[rnd.Next(colors.Length)],
                          new PointF(Xpos, Ypos));
             // немного помех
@@ -77,38 +77,63 @@ namespace KoinovDiplom_ActEmpKPK
 
         private void ButtonAuth_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True;";
+            string[] connectionStrings = new string[]
+            {
+        "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True;",
+        "Server=PR59\\SQLEXPRESS;Database=user2;User Id=user2;Password=212345;"
+            };
+
             string login = TextBoxLoginAuth.Text;
             string password = TextBoxPasswpordAuth.Text;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+
+            bool success = false; // Флаг, указывающий на успешное подключение
+
+            foreach (string connectionString in connectionStrings)
             {
-                connection.Open();
-                string query = "SELECT COUNT(*) FROM [User] WHERE Login = @Login AND Password = @Password";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Login", login);
-                command.Parameters.AddWithValue("@Password", password);
-                int count = (int)command.ExecuteScalar();
+                try
                 {
-                    //checkBox1.Checked = false;
-                    if (count > 0)
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        //MessageBox.Show("ЧОООООООООООООО это вернае имя пользователя или пароль.");
-                        MainMenuForm dialog = new MainMenuForm();
-                        MessageDialog dialog1 = new MessageDialog();
-                        dialog1.ShowDialog();
-                        this.Hide(); // Скрыть текущую форму
-                        dialog.ShowDialog();
-                        this.Close(); // Закрыть текущую форму, когда новая форма закрыта
+                        connection.Open();
+                        string query = "SELECT COUNT(*) FROM [User] WHERE Login = @Login AND Password = @Password";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@Login", login);
+                        command.Parameters.AddWithValue("@Password", password);
+                        int count = (int)command.ExecuteScalar();
+
+                        // Если учетные данные верны
+                        if (count > 0)
+                        {
+                            // Установить флаг успеха
+                            success = true;
+                            // Открыть главное меню
+                            MainMenuForm dialog = new MainMenuForm();
+                            this.Hide();
+                            dialog.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Неверное имя пользователя или пароль.");
+                            MessageBox.Show("Подсказка администратора: admin, adminpass");
+                        }
                     }
-                    else
-                    {
-                        // Неверные учетные данные.
-                        UnsuccesDialogcs dialog1 = new UnsuccesDialogcs();
-                        dialog1.ShowDialog();
-                        MessageBox.Show("Неверное имя пользователя или пароль.");
-                        MessageBox.Show("подсказка админа: admin, adminpass");
-                    }
+
+                    // Если подключение и выполнение запроса прошло успешно, выйти из цикла
+                    if (success)
+                        break;
                 }
+                catch (Exception ex)
+                {
+                    // Обработка исключений при подключении к базе данных
+                    MessageBox.Show("Ошибка подключения к базе данных: " + ex.Message);
+                }
+            }
+
+            // Если не удалось подключиться к ни одной базе данных
+            if (!success)
+            {
+                MessageBox.Show("Не удалось подключиться к базе данных.");
             }
         }
 
@@ -217,7 +242,8 @@ namespace KoinovDiplom_ActEmpKPK
             }
             else
             {
-                MessageBox.Show("Ошибка!");
+                UnsuccessCaptcha unsuccessCaptcha = new UnsuccessCaptcha();
+                unsuccessCaptcha.ShowDialog();
                 pictureBoxCode.Image = this.CreateImage(pictureBoxCode.Width, pictureBoxCode.Height); textBoxCode.Clear();
             }
         }

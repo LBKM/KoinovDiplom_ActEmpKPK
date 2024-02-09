@@ -71,6 +71,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs-Forms\UnsuccessCaptcha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs-Forms\UnsuccessCaptcha.Designer.cs">
+      <DependentUpon>UnsuccessCaptcha.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormForClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>user2DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dialogs-Forms\UnsuccessCaptcha.resx">
+      <DependentUpon>UnsuccessCaptcha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormForClass.resx">
       <DependentUpon>FormForClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChartsView.resx">
       <DependentUpon>FormChartsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\FormLK.resx">
+      <DependentUpon>FormLK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForms\FormReportsNCharts.resx">
       <DependentUpon>FormReportsNCharts.cs</DependentUpon>
@@ -280,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1669044129_185_url.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer-user-3d-icon-render-graphic-abstract-man-vector-49469761.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

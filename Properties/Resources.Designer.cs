@@ -19,7 +19,7 @@ namespace KoinovDiplom_ActEmpKPK.Properties {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -106,6 +106,16 @@ namespace KoinovDiplom_ActEmpKPK.Properties {
         internal static System.Drawing.Bitmap Cifrovoe_masterstvo_____w400 {
             get {
                 object obj = ResourceManager.GetObject("Cifrovoe_masterstvo_____w400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customer_user_3d_icon_render_graphic_abstract_man_vector_49469761 {
+            get {
+                object obj = ResourceManager.GetObject("customer-user-3d-icon-render-graphic-abstract-man-vector-49469761", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
