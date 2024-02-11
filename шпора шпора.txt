@@ -1,0 +1,265 @@
+----------------------------------------- АТОРИЗАЦИЯ -----------------------------------------
+string ConnectionStg = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=StockProDB-demo;Integrated Security=True;";
+string login = textBoxLogin.Text;
+string password = textBoxPassword.Text;
+using (SqlConnection connection = new SqlConnection(ConnectionStg) )
+{
+    connection.Open();
+    // проверка пользователя на наличие в базе данных  помощью запроса
+    string authquery = "SELECT COUNT(*) FROM Пользователи WHERE Имя_Пользователя = @Login AND Пароль = @Password";
+    SqlCommand sqlCommand = new SqlCommand(authquery, connection);
+    sqlCommand.Parameters.AddWithValue("Login", login);
+    sqlCommand.Parameters.AddWithValue("Password", password);
+    int count = (int)sqlCommand.ExecuteScalar();
+    {
+        //Если пользователь есть, открываем доступ к приложению
+        if (count > 0)
+        {
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            this.Hide();
+            mainMenuForm.ShowDialog();
+            this.Close();
+        }
+        //В ином случае, вывод с ошибкой
+        else
+        {
+            MessageBox.Show("Неправильный ввод данных при авторизации!", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+}
+
+----------------------------------------- ВЫВОД В LIST VIEW -----------------------------------------
+
+private  ыс 7\41oid MainForm_Load(object sender, EventArgs e) {
+FillListView_KSV
+}
+
+private void FillListView_KSV()
+{
+    ListView.Items.Clear();
+    foreach (DataRow Row in DataSet.table.Rows)
+    {
+        DataRow TempRow;
+        string[] items = new string[n];
+
+	items[1] = Row["Name"].ToString();
+	items[2] = Row["Name_course"].ToString();	
+	...
+
+        TempRow = Row.GetParentRow("Name-relationship");
+        items[n] = TempRow["Index_ProfMod"].ToString();
+        
+        
+        ListViewItem it = new ListViewItem();
+        it.Text = Row["ID"].ToString();
+        it.SubItems.AddRange(items);
+        ListView.Items.Add(it);
+    }
+    label.Text = $"Количество чего-то {ListView.Items.Count} из {DataSet.table.Count}";
+}
+
+----------------------------------------- ДОБАВЛЕНИЕ -----------------------------------------
+
+private void ButAdd(object sender, EventArgs e)
+{
+    AddChangedialog = new AddChangedialog(CurrentRow);
+    dialog.AddOrChange = false;
+    dialog.ShowDialog();
+    if (dialog.DialogResult == DialogResult.OK)
+    {
+        FillMainList_HAU();
+        Fill_WP_List_HAU();
+    }
+}
+
+
+кнопка добавления:
+
+
+private void guna2Button2_Click(object sender, EventArgs e)
+{
+    DataRow[] Rows;
+
+    DataRow[] RowsDiscipline;
+    string Discipline;
+    RowsDiscipline  = this.user2DataSet.DISCIPLINE.Select("Name = '" + ComboBoxDiscipline.Text + "'");
+    if (RowsDiscipline.Length == 0)
+    {
+        this.dISCIPLINETableAdapter.Insert(ComboBoxDiscipline.Text);
+        this.dISCIPLINETableAdapter.Fill(this.user2DataSet.DISCIPLINE);
+        RowsDiscipline = this.user2DataSet.DISCIPLINE.Select("Name = '" + ComboBoxDiscipline.Text + "'");
+        Discipline = Convert.ToString(RowsDiscipline[0]["Discipline_ID"]);
+    }
+    else
+    {
+        Discipline = Convert.ToString(RowsDiscipline[0]["Discipline_ID"]);
+    }
+
+    DataRow[] RowsWorker;
+    string Worker;
+    RowsWorker = this.user2DataSet.WORKER.Select("Worker_ID = '" + ComboBoxWorker.Text + "'");
+    
+        Worker = Convert.ToString(RowsWorker[0]["Worker_ID"]);
+
+
+    DataRow[] RowsEducationForm;
+    string EducationForm;
+    RowsEducationForm = this.user2DataSet.EDUCATION_FORM.Select("Education_Form = '" + ComboBoxEducationForm.Text + "'");
+    if (RowsEducationForm.Length == 0)
+    {
+        this.eDUCATION_FORMTableAdapter.Insert(ComboBoxEducationForm.Text);
+        this.eDUCATION_FORMTableAdapter.Fill(this.user2DataSet.EDUCATION_FORM);
+        RowsEducationForm = this.user2DataSet.EDUCATION_FORM.Select("Education_Form = '" + ComboBoxEducationForm.Text + "'");
+        EducationForm = Convert.ToString(RowsEducationForm[0]["Form_ID"]);
+    }
+    else
+    {
+        EducationForm = Convert.ToString(RowsEducationForm[0]["Form_ID"]);
+    }
+
+    DataRow[] RowsSpeciality;
+    string Speciality;
+    RowsSpeciality = this.user2DataSet.SPECIALITY.Select("Name = '" + ComboBoxSpeciality.Text + "'");
+    if (RowsSpeciality.Length == 0)
+    {
+        this.sPECIALITYTableAdapter.Insert(ComboBoxSpeciality.Text);
+        this.sPECIALITYTableAdapter.Fill(this.user2DataSet.SPECIALITY);
+        RowsSpeciality = this.user2DataSet.SPECIALITY.Select("Name = '" + ComboBoxSpeciality.Text + "'");
+        Speciality = Convert.ToString(RowsSpeciality[0]["Speciality_ID"]);
+    }
+    else
+    {
+        Speciality = Convert.ToString(RowsSpeciality[0]["Speciality_ID"]);
+    }
+
+    DataRow[] RowsEvent;
+    string Event;
+    RowsEvent = this.user2DataSet.EVENT.Select("Name = '" + ComboBoxEvent.Text + "'");
+    if (RowsEvent.Length == 0)
+    {
+        this.eVENTTableAdapter.Insert(ComboBoxEvent.Text, EventDateTimePicker.Value);
+        this.eVENTTableAdapter.Fill(this.user2DataSet.EVENT);
+        RowsEvent = this.user2DataSet.EVENT.Select("Name = '" + ComboBoxEvent.Text + "'");
+        Event = Convert.ToString(RowsEvent[0]["Event_ID"]);
+    }
+    else
+    {
+        Event = Convert.ToString(RowsEvent[0]["Event_ID"]);
+    }
+
+    int InsertedRows = aCTIVITY_EMPLOYEETableAdapter.Insert(TextBoxActEmpID.Text, Convert.ToInt32(Discipline), Convert.ToInt32(Worker), Convert.ToInt32(EducationForm), Convert.ToInt32(Speciality), TextBoxNameAetEmp.Text, Convert.ToInt32(Event));
+
+    try
+    {
+        if (InsertedRows > 0) 
+        MessageBox.Show("Успешное добавление!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+    catch (Exception ex)
+    {
+        if (InsertedRows == 0)
+            // Если произошла ошибка, отобразите сообщение об ошибке
+            MessageBox.Show("Не удалось добавить рабочую программу. Причина: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+    this.aCTIVITY_EMPLOYEETableAdapter.Fill(this.user2DataSet.ACTIVITY_EMPLOYEE);
+
+    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+    this.Close();
+}
+
+----------------------------------------- УДАЛЕНИЕ -------------------------------------------
+private void ListViewActEmp_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+{
+    LastSelectedItem = e.Item;
+}	
+
+DataRow[] RowsActEmp;
+foreach (ListViewItem item in MainListViewActEmp.CheckedItems)
+{
+    DialogResult reslt = MessageBox.Show("Вы действительно хотите удалить выделенные объекты? ", "Предупреждение!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+    if (reslt == DialogResult.OK)
+    {
+        RowsActEmp = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + item.Text + "'");
+        aCTIVITY_EMPLOYEETableAdapter.Delete(Convert.ToString(RowsActEmp[0][0]), Convert.ToInt32(RowsActEmp[0][1]), Convert.ToInt32(RowsActEmp[0][2]), Convert.ToInt32(RowsActEmp[0][3]), Convert.ToInt32(RowsActEmp[0][4]), Convert.ToString(RowsActEmp[0][5]), Convert.ToInt32(RowsActEmp[0][6]));
+        LastSelectedItem.Remove();
+        MessageBox.Show("Успешное удаление!", "Процесс удаления: 100%", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+}
+this.aCTIVITY_EMPLOYEETableAdapter.Fill(user2DataSet.ACTIVITY_EMPLOYEE);
+
+----------------------------------------- ФИЛЬТРАЦИЯ -----------------------------------------
+
+textbox.textchanged
+if (TextBox1.Text == null)
+{
+    TextBox1.Text = "";
+}
+
+string strFindMDK = TextBox1.Text;
+ListView.Items.Clear();
+try
+{
+    foreach (DataRow Row in user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID LIKE '%" + strFindMDK + "*'"))
+    {
+        DataRow TempRow;
+        string[] items = new string[n];
+
+	items[1] = Row["Name"].ToString();
+	items[2] = Row["Name_course"].ToString();	
+	...
+
+        TempRow = Row.GetParentRow("Name-relationship");
+        items[n] = TempRow["Index_ProfMod"].ToString();
+        
+        
+        ListViewItem it = new ListViewItem();
+        it.Text = Row["ID"].ToString();
+        it.SubItems.AddRange(items);
+        ListView.Items.Add(it);
+    }
+    label.Text = $"Количество чего-то {ListView.Items.Count} из {DataSet.table.Count}";
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message, "Введите данные для поиска", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+}
+
+
+кнопка сброса фильтрации
+ComboBoxEducationForm.Items.Clear();
+foreach (DataRow Row_WP in user2DataSet.EDUCATION_FORM.Rows) ComboBoxEducationForm.Items.Add(Row_WP["Education_Form"]);
+TextBox1.Text = "";
+
+ListViewActEmp.Items.Clear();
+
+DataManager dataManager = new DataManager(user2DataSet, ListViewActEmp, Countlabel);
+dataManager.FillActEmpList();
+
+
+combobox.selectionchangecommine
+private void ComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+{
+    ListViewActEmp.Items.Clear();
+    foreach (DataRow Row in user2DataSet.ACTIVITY_EMPLOYEE.Rows)
+    {
+        DataRow RowFilter_WP = user2DataSet.EDUCATION_FORM.Select("Education_Form = '" + ComboBoxEducationForm.SelectedItem + "'")[0];
+        if (Convert.ToString(Row["EducationForm_ID"]) == Convert.ToString(RowFilter_WP["Form_ID"]))
+        {
+            DataRow TempRow;
+        string[] items = new string[n];
+
+	items[1] = Row["Name"].ToString();
+	items[2] = Row["Name_course"].ToString();	
+	...
+
+        TempRow = Row.GetParentRow("Name-relationship");
+        items[n] = TempRow["Index_ProfMod"].ToString();
+        
+        
+        ListViewItem it = new ListViewItem();
+        it.Text = Row["ID"].ToString();
+        it.SubItems.AddRange(items);
+        ListView.Items.Add(it);
+    }
+    label.Text = $"Количество чего-то {ListView.Items.Count} из {DataSet.table.Count}";
+    }
+}
