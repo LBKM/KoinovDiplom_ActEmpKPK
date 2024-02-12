@@ -114,6 +114,7 @@ private void FillListView_KSV()
 }
 
 ----------------------------------------- ДОБАВЛЕНИЕ -----------------------------------------
+                аГЕНТTableAdapter.Insert(TB_Name.Text, Convert.ToInt32(CB_TypeAgent.Text), Convert.ToInt32(numericUpDown_priority.Value), label_logo.Text, TB_Adress.Text, TB_INN.Text, Convert.ToInt32(TB_KPP.Text), TB_Director.Text, TB_Phone.Text, TB_Email.Text, Convert.ToInt32(numericUpDown_discount.Value));
 
 private void ButAdd(object sender, EventArgs e)
 {
