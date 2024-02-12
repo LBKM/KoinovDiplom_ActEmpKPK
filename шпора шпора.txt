@@ -1,3 +1,58 @@
+чекай это
+убывание:
+private void buttonDecDwn_Click(object sender, EventArgs e)
+        {
+            listViewAgents.Items.Clear();
+            foreach (DataRow Row in demo3DataSet.АГЕНТ.OrderByDescending(p => p.Размер_скидки))
+            {
+                DataRow TempRow;
+
+                string[] items = new string[6];
+                items[1] = Row[1].ToString();
+                items[2] = $"{Row[2].ToString()} шт/год";
+                //TempRow = Row.GetParentRow("FK_ПРОДАЖА_АГЕНТ1");
+                //items[2] = TempRow[1].ToString();
+                items[3] = $"{Row[11].ToString()} % ";
+                items[4] = Row[9].ToString();
+                TempRow = Row.GetParentRow("FK_АГЕНТ_ТИП_АГЕНТА");
+                items[5] = TempRow[1].ToString();
+
+                ListViewItem it = new ListViewItem();
+                it.Text = Row["Код"].ToString();
+                it.SubItems.AddRange(items);
+                listViewAgents.Items.Add(it);
+            }
+            CountLabel.Text = $"Количество чего-то {listViewAgents.Items.Count} из {demo3DataSet.АГЕНТ.Count}";
+        }
+
+
+возрастание
+private void buttonDecUp_Click(object sender, EventArgs e)
+        {
+            listViewAgents.Items.Clear();
+            foreach (DataRow Row in demo3DataSet.АГЕНТ.OrderBy(p => p.Размер_скидки))
+            {
+                DataRow TempRow;
+
+                string[] items = new string[6];
+                items[1] = Row[1].ToString();
+                items[2] = $"{Row[2].ToString()} шт/год";
+                //TempRow = Row.GetParentRow("FK_ПРОДАЖА_АГЕНТ1");
+                //items[2] = TempRow[1].ToString();
+                items[3] = $"{Row[11].ToString()} % ";
+                items[4] = Row[9].ToString();
+                TempRow = Row.GetParentRow("FK_АГЕНТ_ТИП_АГЕНТА");
+                items[5] = TempRow[1].ToString();
+
+                ListViewItem it = new ListViewItem();
+                it.Text = Row["Код"].ToString();
+                it.SubItems.AddRange(items);
+                listViewAgents.Items.Add(it);
+            }
+            CountLabel.Text = $"Количество чего-то {listViewAgents.Items.Count} из {demo3DataSet.АГЕНТ.Count}";
+        }
+
+
 ----------------------------------------- АТОРИЗАЦИЯ -----------------------------------------
 string ConnectionStg = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=StockProDB-demo;Integrated Security=True;";
 string login = textBoxLogin.Text;
