@@ -60,7 +60,16 @@ private void FillListView_KSV()
 }
 
 ----------------------------------------- ДОБАВЛЕНИЕ -----------------------------------------
-                аГЕНТTableAdapter.Insert(TB_Name.Text, Convert.ToInt32(CB_TypeAgent.Text), Convert.ToInt32(numericUpDown_priority.Value), label_logo.Text, TB_Adress.Text, TB_INN.Text, Convert.ToInt32(TB_KPP.Text), TB_Director.Text, TB_Phone.Text, TB_Email.Text, Convert.ToInt32(numericUpDown_discount.Value));
+                аГЕНТTableAdapter.Insert(TB_Name.Text, Convert.ToInt32(CB_TypeAgent.Text), 
+Convert.ToInt32(numericUpDown_priority.Value), 
+label_logo.Text, 
+TB_Adress.Text, 
+TB_INN.Text, 
+Convert.ToInt32(TB_KPP.Text), 
+TB_Director.Text, 
+TB_Phone.Text, 
+TB_Email.Text, 
+Convert.ToInt32(numericUpDown_discount.Value));
 
 private void ButAdd(object sender, EventArgs e)
 {
@@ -147,7 +156,13 @@ private void guna2Button2_Click(object sender, EventArgs e)
         Event = Convert.ToString(RowsEvent[0]["Event_ID"]);
     }
 
-    int InsertedRows = aCTIVITY_EMPLOYEETableAdapter.Insert(TextBoxActEmpID.Text, Convert.ToInt32(Discipline), Convert.ToInt32(Worker), Convert.ToInt32(EducationForm), Convert.ToInt32(Speciality), TextBoxNameAetEmp.Text, Convert.ToInt32(Event));
+    int InsertedRows = aCTIVITY_EMPLOYEETableAdapter.Insert(TextBoxActEmpID.Text, 
+Convert.ToInt32(Discipline), 
+Convert.ToInt32(Worker), 
+Convert.ToInt32(EducationForm), 
+Convert.ToInt32(Speciality), 
+TextBoxNameAetEmp.Text, 
+Convert.ToInt32(Event));
 
     try
     {
@@ -179,7 +194,13 @@ foreach (ListViewItem item in MainListViewActEmp.CheckedItems)
     if (reslt == DialogResult.OK)
     {
         RowsActEmp = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + item.Text + "'");
-        aCTIVITY_EMPLOYEETableAdapter.Delete(Convert.ToString(RowsActEmp[0][0]), Convert.ToInt32(RowsActEmp[0][1]), Convert.ToInt32(RowsActEmp[0][2]), Convert.ToInt32(RowsActEmp[0][3]), Convert.ToInt32(RowsActEmp[0][4]), Convert.ToString(RowsActEmp[0][5]), Convert.ToInt32(RowsActEmp[0][6]));
+        aCTIVITY_EMPLOYEETableAdapter.Delete(Convert.ToString(RowsActEmp[0][0]), 
+Convert.ToInt32(RowsActEmp[0][1]), 
+Convert.ToInt32(RowsActEmp[0][2]), 
+Convert.ToInt32(RowsActEmp[0][3]), 
+Convert.ToInt32(RowsActEmp[0][4]), 
+Convert.ToString(RowsActEmp[0][5]), 
+Convert.ToInt32(RowsActEmp[0][6]));
         LastSelectedItem.Remove();
         MessageBox.Show("Успешное удаление!", "Процесс удаления: 100%", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
@@ -193,7 +214,8 @@ public AddOrChangeService()
 {
 InitializeComponent();
 }
-public TextBox TitleServiceTextBoxGet { get { return TitleServiceTextBox; } set {} } ссылка: 1 public NumericUpDown CostServiceNumericUpDownGet { get { return CostServiceNumericUpDown; } set {} } ссылка: 1
+public TextBox TitleServiceTextBoxGet { get { return TitleServiceTextBox; } set {} }
+public NumericUpDown CostServiceNumericUpDownGet { get { return CostServiceNumericUpDown; } set {} } ссылка: 1
 public NumericUpDown DurationsServiceNumericUpDownGet { get { return DurationsServiceNumericUpDown; } set {} }
 public TextBox DescriptionTextBoxGet { get { return DescriptionTextBox; } set {} } ссылка: 1
 public NumericUpDown DiscountServiceNumericUpDownGet { get { return DiscountServiceNumericUpDown; } set (} }
@@ -237,13 +259,20 @@ private void ChangeToolStripMenuItem_Click(object sender, EventArgs e)
 DataRow CurrentRow = salonDataSet. Service.Select($"ID = '{ServiceListView. SelectedItems [0].SubItems[0].Text}'")[0];
 //Объявили переменную типа формы диалогового окна и передали в неё найденную ранее
 строку
-AddOrChangeService Dialog = new AddOrChangeService(CurrentRow); //Далее заполняем элементы формы диалогового окна существующими данными. Dialog.Text = "Салон \"Бархатные бровки\" - Редактирование услуги"; Dialog.TitleServiceTextBoxGet.Text = CurrentRow["Title"].ToString(); Dialog. CostServiceNumericUpDownGet.Value = Convert.ToDecimal(CurrentRow["Cost"]); Dialog. DurationsServiceNumericUpDownGet. Value = Convert. ToDecimal(CurrentRow
+AddOrChangeService Dialog = new AddOrChangeService(CurrentRow); 
+//Далее заполняем элементы формы диалогового окна существующими данными. 
+Dialog.Text = "Салон \"Бархатные бровки\" - Редактирование услуги"; 
+Dialog.TitleServiceTextBoxGet.Text = CurrentRow["Title"].ToString(); 
+Dialog. CostServiceNumericUpDownGet.Value = Convert.ToDecimal(CurrentRow["Cost"]); 
+Dialog. DurationsServiceNumericUpDownGet. Value = Convert. ToDecimal(CurrentRow
 ["DurationInSeconds"]) / 60;
-Dialog.DescriptionTextBoxGet.Text = CurrentRow["Description"].ToString(); Dialog.DiscountServiceNumericUpDownGet.Value = Convert.ToDecimal(CurrentRow["Discount"])* 100;
+Dialog.DescriptionTextBoxGet.Text = CurrentRow["Description"].ToString(); 
+Dialog.DiscountServiceNumericUpDownGet.Value = Convert.ToDecimal(CurrentRow["Discount"])* 100;
 Dialog.MainImagePathServicePictureBoxGet. Image =
 Image. FromFile($"{Environment.CurrentDirectory}\\Images\\{CurrentRow
 ["MainImagePath"].ToString()}");
-Dialog.MainImagePath = CurrentRow["MainImagePath"].ToString(); Dialog. AddOrChange = true; Dialog.ShowDialog(); //Ставим условие, что если пользователь в диалог. окне нажал OK, то заполнять ServiceListView //новыми значениями
+Dialog.MainImagePath = CurrentRow["MainImagePath"].ToString(); Dialog.AddOrChange = true; 
+Dialog.ShowDialog(); //Ставим условие, что если пользователь в диалог. окне нажал OK, то заполнять ServiceListView //новыми значениями
 if (DialogResult == DialogResult.OK) { FillServiceList(); }
 }
 
