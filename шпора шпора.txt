@@ -535,3 +535,29 @@ void FillServiceList()
 //Открыли цикл foreach в котором Row - представляет все строк таблицы Service
 	foreach (DataRow Row in salonDataSet.Service.Rows)
 { ... }
+
+Далее видоизменим код добавления записей в ListView, добавив в него строку заполнения данными DataSet на основе запроса.
+private void FillMaterialsInStock_listView()
+{
+this.MАТЕРИАЛTableAdapter.FillByPage(this.draft_BSV_DataSet.MАТЕРИАЛ, pageNumber, int count = 0;
+pageSize);
+MaterialsInStock_listView.Items.Clear();
+string[] item = new string[7];
+foreach (MAТЕРИАЛRow MАТЕРИАЛRow in this.draft_BSV_DataSet.MAТЕРИАЛ)
+{...
+
+
+В кнопках переключения страниц добавим изменение переменной pageNumber зависимости от типа кнопки.
+
+private void NextPage_button_Click(object sender, EventArgs e)
+{
+//следующая страница pageNumber++; 
+FillMaterialsInStock_listView();
+}
+
+private void PreviousPage_button_Click(object sender, EventArgs e)
+{
+//предыдущая страница
+pageNumber--;
+FillMaterialsInStock_listView();
+}
