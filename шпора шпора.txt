@@ -1,58 +1,4 @@
 чекай это
-убывание:
-private void buttonDecDwn_Click(object sender, EventArgs e)
-        {
-            listViewAgents.Items.Clear();
-            foreach (DataRow Row in demo3DataSet.АГЕНТ.OrderByDescending(p => p.Размер_скидки))
-            {
-                DataRow TempRow;
-
-                string[] items = new string[6];
-                items[1] = Row[1].ToString();
-                items[2] = $"{Row[2].ToString()} шт/год";
-                //TempRow = Row.GetParentRow("FK_ПРОДАЖА_АГЕНТ1");
-                //items[2] = TempRow[1].ToString();
-                items[3] = $"{Row[11].ToString()} % ";
-                items[4] = Row[9].ToString();
-                TempRow = Row.GetParentRow("FK_АГЕНТ_ТИП_АГЕНТА");
-                items[5] = TempRow[1].ToString();
-
-                ListViewItem it = new ListViewItem();
-                it.Text = Row["Код"].ToString();
-                it.SubItems.AddRange(items);
-                listViewAgents.Items.Add(it);
-            }
-            CountLabel.Text = $"Количество чего-то {listViewAgents.Items.Count} из {demo3DataSet.АГЕНТ.Count}";
-        }
-
-
-возрастание
-private void buttonDecUp_Click(object sender, EventArgs e)
-        {
-            listViewAgents.Items.Clear();
-            foreach (DataRow Row in demo3DataSet.АГЕНТ.OrderBy(p => p.Размер_скидки))
-            {
-                DataRow TempRow;
-
-                string[] items = new string[6];
-                items[1] = Row[1].ToString();
-                items[2] = $"{Row[2].ToString()} шт/год";
-                //TempRow = Row.GetParentRow("FK_ПРОДАЖА_АГЕНТ1");
-                //items[2] = TempRow[1].ToString();
-                items[3] = $"{Row[11].ToString()} % ";
-                items[4] = Row[9].ToString();
-                TempRow = Row.GetParentRow("FK_АГЕНТ_ТИП_АГЕНТА");
-                items[5] = TempRow[1].ToString();
-
-                ListViewItem it = new ListViewItem();
-                it.Text = Row["Код"].ToString();
-                it.SubItems.AddRange(items);
-                listViewAgents.Items.Add(it);
-            }
-            CountLabel.Text = $"Количество чего-то {listViewAgents.Items.Count} из {demo3DataSet.АГЕНТ.Count}";
-        }
-
-
 ----------------------------------------- АТОРИЗАЦИЯ -----------------------------------------
 string ConnectionStg = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=StockProDB-demo;Integrated Security=True;";
 string login = textBoxLogin.Text;
@@ -129,9 +75,7 @@ private void ButAdd(object sender, EventArgs e)
 }
 
 
-кнопка добавления:
-
-
+*********кнопка добавления:
 private void guna2Button2_Click(object sender, EventArgs e)
 {
     DataRow[] Rows;
@@ -242,8 +186,96 @@ foreach (ListViewItem item in MainListViewActEmp.CheckedItems)
 }
 this.aCTIVITY_EMPLOYEETableAdapter.Fill(user2DataSet.ACTIVITY_EMPLOYEE);
 
------------------------------------------ ФИЛЬТРАЦИЯ -----------------------------------------
+----------------------------------------- ИЗМЕНЕНИЕ -----------------------------------------
+public partial class AddOrChangeService : Form
+{
+public AddOrChangeService()
+{
+InitializeComponent();
+}
+public TextBox TitleServiceTextBoxGet { get { return TitleServiceTextBox; } set {} } ссылка: 1 public NumericUpDown CostServiceNumericUpDownGet { get { return CostServiceNumericUpDown; } set {} } ссылка: 1
+public NumericUpDown DurationsServiceNumericUpDownGet { get { return DurationsServiceNumericUpDown; } set {} }
+public TextBox DescriptionTextBoxGet { get { return DescriptionTextBox; } set {} } ссылка: 1
+public NumericUpDown DiscountServiceNumericUpDownGet { get { return DiscountServiceNumericUpDown; } set (} }
+public PictureBox MainImagePathServicePictureBoxGet { get { return MainImagePathServicePictureBox; } set (} }
+private void AddOrChangeService_Load(object sender, EventArgs e)
+{
+}
+}
 
+Так же обработаем событие нажатие кнопки мыши в районе ServiceListView
+private void ServiceListView_MouseClick(object sender, MouseEventArgs e)
+{
+//Ставим условие, если во время нажатия кнопки мыши была нажата ПКМ,то… 
+if (e.Button == MouseButtons.Right) {
+//Выведем на экран контекстное меню
+contextMenuStrip1.Show(ServiceListView, e.Location); 
+}
+}
+
+Теперь, перед выводом диалог. окна, нужно создать переменные, для отображения признака редактирования и хранения строки услуги.
+Для этого объявим глобальные переменные в диалоговом окне.
+public partial class AddOrChangeService : Form
+{
+//Глобальная переменная для хранения строки выбранной пользователем. DataRow newRow;
+//Глоб. пер. для хранения признака редактирование
+// (если true-то редактируем.)
+public bool AddOrChange;
+Ссылок: 2
+public AddOrChangeService(DataRow oldRow) 
+{
+//Объявили параметр, который в f //дальнейшем передадим
+InitializeComponent();
+//Присваиваем старую переменную с новой, чтобы работать в этой форме 
+newRow = oldRow;
+}
+
+Теперь обработаем событие нажатия на кнопку Изменить контекстного меню.
+private void ChangeToolStripMenuItem_Click(object sender, EventArgs e)
+{
+//Объявили переменную типа DataRow в которой вывели запрос находящий строку с услугой //По его ID
+DataRow CurrentRow = salonDataSet. Service.Select($"ID = '{ServiceListView. SelectedItems [0].SubItems[0].Text}'")[0];
+//Объявили переменную типа формы диалогового окна и передали в неё найденную ранее
+строку
+AddOrChangeService Dialog = new AddOrChangeService(CurrentRow); //Далее заполняем элементы формы диалогового окна существующими данными. Dialog.Text = "Салон \"Бархатные бровки\" - Редактирование услуги"; Dialog.TitleServiceTextBoxGet.Text = CurrentRow["Title"].ToString(); Dialog. CostServiceNumericUpDownGet.Value = Convert.ToDecimal(CurrentRow["Cost"]); Dialog. DurationsServiceNumericUpDownGet. Value = Convert. ToDecimal(CurrentRow
+["DurationInSeconds"]) / 60;
+Dialog.DescriptionTextBoxGet.Text = CurrentRow["Description"].ToString(); Dialog.DiscountServiceNumericUpDownGet.Value = Convert.ToDecimal(CurrentRow["Discount"])* 100;
+Dialog.MainImagePathServicePictureBoxGet. Image =
+Image. FromFile($"{Environment.CurrentDirectory}\\Images\\{CurrentRow
+["MainImagePath"].ToString()}");
+Dialog.MainImagePath = CurrentRow["MainImagePath"].ToString(); Dialog. AddOrChange = true; Dialog.ShowDialog(); //Ставим условие, что если пользователь в диалог. окне нажал OK, то заполнять ServiceListView //новыми значениями
+if (DialogResult == DialogResult.OK) { FillServiceList(); }
+}
+
+Теперь нам нужно реализовать само редактирование.
+if (AddOrChange)
+{
+	try
+	{
+	//В ранее созданной строке(которая уже хранит строку выбранной пользователем) 
+	//Мы заменяем данные в столбцах на новые их элементов управления. 
+newRow.SetField<string>("Title", TitleServiceTextBox. Text); 
+newRow.SetField<decimal>("Cost", CostServiceNumericUpDown.Value); 
+newRow.SetField<int>("DurationInSeconds", Convert.ToInt32(DurationsServiceNumericUpDown.Value * 60)); 
+newRow.SetField<string>("Description", DescriptionTextBox. Text); 
+newRow.SetField<float>("Discount", Convert.ToInt32(DiscountServiceNumericUpDown.Value / 100));
+newRow.SetField<string>("MainImagePath", MainImagePath); 
+	//Объявили переменную которая хранит количество обновлённых строк, 
+	//и в ней сразу же производим обновление данных 
+int UpdateRows = serviceTableAdapter1.Update(newRow); 
+	//Ставим условие, если количество обновлённых строк было равно 0,
+	//то нам не удалось обновить данные, значит сообщаем об этом
+	if (UpdateRows == 0)
+		{
+		MessageBox.Show("Не удалось редактировать услугу", "Ошибка");
+		}
+	}
+	catch 
+	{ 
+		MessageBox.Show("Система выдала ошибку", "Ошибка");
+	}
+}
+----------------------------------------- ФИЛЬТРАЦИЯ -----------------------------------------
 textbox.textchanged
 if (TextBox1.Text == null)
 {
@@ -280,7 +312,7 @@ catch (Exception ex)
 }
 
 
-кнопка сброса фильтрации
+********************* кнопка сброса фильтрации
 ComboBoxEducationForm.Items.Clear();
 foreach (DataRow Row_WP in user2DataSet.EDUCATION_FORM.Rows) ComboBoxEducationForm.Items.Add(Row_WP["Education_Form"]);
 TextBox1.Text = "";
@@ -319,3 +351,158 @@ private void ComboBox_SelectionChangeCommitted(object sender, EventArgs e)
     label.Text = $"Количество чего-то {ListView.Items.Count} из {DataSet.table.Count}";
     }
 }
+
+
+----------------------------------------- ФИЛЬТРАЦИЯ УБЫВАНИЯ -----------------------------------------
+private void buttonDecDwn_Click(object sender, EventArgs e)
+        {
+            listViewAgents.Items.Clear();
+            foreach (DataRow Row in demo3DataSet.АГЕНТ.OrderByDescending(p => p.Размер_скидки))
+            {
+                DataRow TempRow;
+
+                string[] items = new string[6];
+                items[1] = Row[1].ToString();
+                items[2] = $"{Row[2].ToString()} шт/год";
+                //TempRow = Row.GetParentRow("FK_ПРОДАЖА_АГЕНТ1");
+                //items[2] = TempRow[1].ToString();
+                items[3] = $"{Row[11].ToString()} % ";
+                items[4] = Row[9].ToString();
+                TempRow = Row.GetParentRow("FK_АГЕНТ_ТИП_АГЕНТА");
+                items[5] = TempRow[1].ToString();
+
+                ListViewItem it = new ListViewItem();
+                it.Text = Row["Код"].ToString();
+                it.SubItems.AddRange(items);
+                listViewAgents.Items.Add(it);
+            }
+            CountLabel.Text = $"Количество чего-то {listViewAgents.Items.Count} из {demo3DataSet.АГЕНТ.Count}";
+        }
+
+
+----------------------------------------- ФИЛЬТРАЦИЯ ВОЗРАСТАНИЯ -----------------------------------------
+private void buttonDecUp_Click(object sender, EventArgs e)
+        {
+            listViewAgents.Items.Clear();
+            foreach (DataRow Row in demo3DataSet.АГЕНТ.OrderBy(p => p.Размер_скидки))
+            {
+                DataRow TempRow;
+
+                string[] items = new string[6];
+                items[1] = Row[1].ToString();
+                items[2] = $"{Row[2].ToString()} шт/год";
+                //TempRow = Row.GetParentRow("FK_ПРОДАЖА_АГЕНТ1");
+                //items[2] = TempRow[1].ToString();
+                items[3] = $"{Row[11].ToString()} % ";
+                items[4] = Row[9].ToString();
+                TempRow = Row.GetParentRow("FK_АГЕНТ_ТИП_АГЕНТА");
+                items[5] = TempRow[1].ToString();
+
+                ListViewItem it = new ListViewItem();
+                it.Text = Row["Код"].ToString();
+                it.SubItems.AddRange(items);
+                listViewAgents.Items.Add(it);
+            }
+            CountLabel.Text = $"Количество чего-то {listViewAgents.Items.Count} из {demo3DataSet.АГЕНТ.Count}";
+        }
+
+----------------------------------------- ФИЛЬТРАЦИЯ ПО КОМБОКСУ СО ЗНАЧЕНИЯМИ 10-20, 20-30 И Т.Д. -----------------------------------------
+В РЕДАКТООРЕ НАПИСАТЬ ЗНАЧЕНИЯ
+В обработчике события выбора элемента ServiceDiscountComboBox (SelectionChangeCommitted) пишем следующий код:
+
+private void ServiceDiscountComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+{
+	switch (ServiceDiscountComboBox.SelectedItem)
+{
+	case "Bсе":
+	FillServiceList();
+	break;
+	case "от 0% до 5%":
+	FillServiceListBetween(0, 0.05); break;
+	case "от 5% до 15%":
+	FillServiceListBetween(0.05, 0.15); break;
+	case "от 15% до 30%":
+	FillServiceListBetween(0.15, 0.30); break;
+	case "от 30% до 70%":
+	FillServiceListBetween(0.30, 0.70); break;
+	case "от 70% до 100%":
+	FillServiceListBetween(0.70, 1); break;
+}
+}
+
+**************** ОБРАБОТКИ ОЧИСТКИ ПО КНОПКЕ
+private void ClearFilterButton_Click(object sender, EventArgs e)
+{
+	ServiceTitleFilterTextBox.Text = "Введите название услуги"; ServiceDiscountComboBox.Text =
+	ServiceDiscountComboBox. Items[0].ToString();
+}
+FillServiceList();
+
+----------------------------------------- ВЫДЕЛЕНИЕ СТРОК В LIST VIEW -----------------------------------------
+Выделение строки ListView цветом и подсчёт количества элементов ListView и строки в БД зелёным цветом, если есть скидка.
+ServiceListView.Items[ServiceListView.Items.Count - 1].BackColor = items[4] != "0%" ? Color.LightGreen : Color.White;
+
+----------------------------------------- Вывод изображение при выборе элемента в списке ListView -----------------------------------------
+private void ServiceListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+{
+//Создали переменную типа строки данных в которой по запросу нашли ID выбранной строки 
+DataRow Row = salonDataSet.Service.Select($"ID = '{e.Item.Text}'")[0]; 
+//Идёт проверка условия, если не было найдено изображения у строки, то стави фото-заглушку.
+if (Row["MainImagePath"].ToString() = "")
+{
+ImageServicePictureBox.Image = Image.FromFile(System.IO.Directory.GetCurrentDirectory() + "\\Images\\not_found.png");
+}
+//A если имя изображения есть в строки, то устанавливаем у PictureBox эту картинку. 
+else
+ImageServicePictureBox.Image = Image.FromFile(System.IO. Directory.GetCurrentDirectory() "\\\Images\\" + Row["MainImagePath"].ToString());
+}
+
+А также нужно добавить во все функции заполнения ServiceListView код для выбора первого элемента строки, чтобы PictureBox у нас никогда не был пустым.
+		//Проверяем условие, если в ServiceListView есть элементы, то выбираем первый из них 
+if (ServiceListView.Items.Count > 0)
+	ServiceListView.Items[0].Selected = true;
+		//A если элементов нет, то ставим в PictureBox заглушку для избежания ошибки
+else
+	ImageServicePictureBox. Image = Image.FromFile(System.IO.Directory.GetCurrentDirectory() + "\\Images\\not_found.png");
+
+----------------------------------------- Реализация постраничного просмотра через хранимую процедуру. -----------------------------------------
+14.1. Чтобы создать хранимую процедуру, откройте MS SQL Server Management Studio, откройте свою базу данных, и перейдите в папку «Programmability» -> «Stored Procedures».
+
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+==========================================
+- Author:
+<Author,,Name>
+-- Create date: <Create Date,,>
+- Description: <Description,,>
+=============================================
+CREATE PROCEDURE PageView
+-- Add the parameters for the stored procedure here @pageNumber int,
+@pageSize int
+AS
+BEGIN
+SELECT *
+FROM dbo.Service
+ORDER BY ID OFFSET ((@pageNumber)*@pageSize)
+ROWS FETCH NEXT @pageSize ROWS ONLY
+END
+GO
+
+В КОДЕ:
+namespace BeautySalon_Khudiakov
+{
+public partial class ServiceForm : Form
+{
+int pageSize = 5, pageNumber = 0;
+...
+
+Далее видоизменим код заполнение записей в ListView, добавив в него строку заполнения данными DataSet на основе запроса.
+void FillServiceList()
+{
+	this.serviceTableAdapter.FillByPageView(this.salonDataSet.Service, pageNumber, pageSize); 
+//Очистили ServiceListView от всеx строк
+	ServiceListView.Items.Clear(); 
+//Открыли цикл foreach в котором Row - представляет все строк таблицы Service
+	foreach (DataRow Row in salonDataSet.Service.Rows)
+{ ... }
