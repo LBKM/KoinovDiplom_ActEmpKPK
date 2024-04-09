@@ -103,15 +103,28 @@ namespace KoinovDiplom_ActEmpKPK
                         // Если учетные данные верны
                         if (count > 0)
                         {
+                            ClassUserInfo authorizedUser = new ClassUserInfo
+                            {
+                                Login = login,
+                                Password = password
+                            };
+                            ClassUserInfo userInfo = new ClassUserInfo
+                            {
+                                Login = authorizedUser.Login,
+                                Password = authorizedUser.Password
+                                // Добавьте другие свойства, если необходимо
+                            };
+
                             // Установить флаг успеха
                             success = true;
                             MessageDialog messageDialog = new MessageDialog();
                             messageDialog.ShowDialog();
                             // Открыть главное меню
-                            MainMenuForm dialog = new MainMenuForm();
+                            MainMenuForm dialog = new MainMenuForm(userInfo);
                             this.Hide();
                             dialog.ShowDialog();
                             this.Close();
+
                         }
                         else
                         {
@@ -138,6 +151,7 @@ namespace KoinovDiplom_ActEmpKPK
             {
                 MessageBox.Show("Не удалось подключиться к базе данных.");
             }
+
         }
 
         private void CheckBoxKeyGen_CheckedChanged(object sender, EventArgs e)

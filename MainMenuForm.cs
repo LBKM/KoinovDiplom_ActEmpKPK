@@ -16,13 +16,17 @@ using KoinovDiplom_ActEmpKPK.MenuForms;
 
 namespace KoinovDiplom_ActEmpKPK
 {
+
     partial class MainMenuForm : Form
     {
+        private ClassUserInfo authorizedUser;
+
         ListViewItem LastSelectedItem;                           
         DataRow CurrentRow;
-        public MainMenuForm()
+        public MainMenuForm(ClassUserInfo authorizedUser)
         {
             InitializeComponent();
+            this.authorizedUser = authorizedUser;
         }
 
         bool dragging = false;
@@ -275,7 +279,9 @@ namespace KoinovDiplom_ActEmpKPK
             PanelLeft4.Visible = false;
             PanelLeft1.Visible = false;
 
-            openForm(new FormLK());
+            // Открыть форму FormLK и передать ей экземпляр класса ClassUserInfo
+            openForm(new FormLK(authorizedUser));
+
         }
     }
 }

@@ -58,7 +58,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.GradientPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.user2DataSet = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.aCCESS_LEVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
@@ -132,7 +131,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::KoinovDiplom_ActEmpKPK.Properties.Resources.Cifrovoe_masterstvo_____w400;
+            this.pictureBox2.Image = global::KoinovDiplom_ActEmpKPK.Properties.Resources.Designer;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 31);
@@ -145,7 +144,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(38, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(774, 31);
+            this.label1.Size = new System.Drawing.Size(778, 31);
             this.label1.TabIndex = 7;
             this.label1.Text = "Учёт методической активности педагогов ГАПОУ СО \"Камышловский педагогический колл" +
     "едж\"";
@@ -498,10 +497,6 @@
             this.GradientPanel1.Size = new System.Drawing.Size(948, 560);
             this.GradientPanel1.TabIndex = 0;
             // 
-            // guna2AnimateWindow1
-            // 
-            this.guna2AnimateWindow1.Interval = 1000;
-            // 
             // user2DataSet
             // 
             this.user2DataSet.DataSetName = "user2DataSet";
@@ -704,7 +699,6 @@
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton8;
         private FontAwesome.Sharp.IconButton iconButton7;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private FontAwesome.Sharp.IconButton iconButton9;
         public user2DataSet user2DataSet;
         private System.Windows.Forms.PictureBox pictureBox2;
