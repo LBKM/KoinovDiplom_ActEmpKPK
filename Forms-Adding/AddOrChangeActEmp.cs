@@ -235,7 +235,14 @@ namespace KoinovDiplom_ActEmpKPK
             //    MainMenuForm.Activity_EmployeeTableAdapter.Update(ID_Discipline, ID_Worker, ID_Education_Form, ID_Speciality, ID_Event, TextBoxNameAetEmp.Text, EventDateTimePicker.Value.Date, OldWorkerRow[0], OldWorkerRow[1], OldWorkerRow[2], OldWorkerRow[3], OldWorkerRow[4], OldWorkerRow[5], OldWorkerRow[6], OldWorkerRow[7]);
             //}
 
-            int InsertedRows = aCTIVITY_EMPLOYEETableAdapter.Insert(TextBoxActEmpID.Text, Convert.ToInt32(Discipline), Convert.ToInt32(Worker), Convert.ToInt32(EducationForm), Convert.ToInt32(Speciality), TextBoxNameAetEmp.Text, Convert.ToInt32(Event));
+            int InsertedRows = aCTIVITY_EMPLOYEETableAdapter.Insert( //Добавление данных в БД через поля приложения:
+                TextBoxActEmpID.Text, 
+                Convert.ToInt32(Discipline), 
+                Convert.ToInt32(Worker), 
+                Convert.ToInt32(EducationForm), 
+                Convert.ToInt32(Speciality), 
+                TextBoxNameAetEmp.Text, 
+                Convert.ToInt32(Event));
 
             try
             {

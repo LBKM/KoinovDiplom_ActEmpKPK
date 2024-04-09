@@ -79,8 +79,7 @@ namespace KoinovDiplom_ActEmpKPK
         {
             string[] connectionStrings = new string[]
             {
-        "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True;",
-        "Server=PR59\\SQLEXPRESS;Database=user2;User Id=user2;Password=212345;"
+        "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True;"
             };
 
             string login = TextBoxLoginAuth.Text;
@@ -106,6 +105,8 @@ namespace KoinovDiplom_ActEmpKPK
                         {
                             // Установить флаг успеха
                             success = true;
+                            MessageDialog messageDialog = new MessageDialog();
+                            messageDialog.ShowDialog();
                             // Открыть главное меню
                             MainMenuForm dialog = new MainMenuForm();
                             this.Hide();
@@ -114,8 +115,10 @@ namespace KoinovDiplom_ActEmpKPK
                         }
                         else
                         {
-                            MessageBox.Show("Неверное имя пользователя или пароль.");
-                            MessageBox.Show("Подсказка администратора: admin, adminpass");
+                            UnsuccesDialogcs unsuccesDialogcs = new UnsuccesDialogcs();
+                            unsuccesDialogcs.ShowDialog();
+                            //MessageBox.Show("Неверное имя пользователя или пароль.");
+                            //MessageBox.Show("Подсказка администратора: admin, adminpass");
                         }
                     }
 

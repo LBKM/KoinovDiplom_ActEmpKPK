@@ -42,8 +42,10 @@ namespace KoinovDiplom_ActEmpKPK
             this.pOSTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pOSTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.POSTTableAdapter();
             this.tableAdapterManager = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.TableAdapterManager();
-            this.wORKERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.wORKERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.WORKERTableAdapter();
+            this.wORKERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             label1 = new System.Windows.Forms.Label();
             worker_IDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pOSTBindingSource)).BeginInit();
@@ -150,14 +152,20 @@ namespace KoinovDiplom_ActEmpKPK
             this.tableAdapterManager.USERTableAdapter = null;
             this.tableAdapterManager.WORKERTableAdapter = this.wORKERTableAdapter;
             // 
+            // wORKERTableAdapter
+            // 
+            this.wORKERTableAdapter.ClearBeforeFill = true;
+            // 
             // wORKERBindingSource1
             // 
             this.wORKERBindingSource1.DataMember = "WORKER";
             this.wORKERBindingSource1.DataSource = this.user2DataSet;
             // 
-            // wORKERTableAdapter
+            // guna2BorderlessForm1
             // 
-            this.wORKERTableAdapter.ClearBeforeFill = true;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // FormForClass
             // 
@@ -171,6 +179,7 @@ namespace KoinovDiplom_ActEmpKPK
             this.Controls.Add(this.wORKERDataGridView);
             this.Controls.Add(worker_IDLabel);
             this.Controls.Add(this.worker_IDComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormForClass";
             this.Text = "FormForClass";
             this.Load += new System.EventHandler(this.FormForClass_Load);
@@ -199,5 +208,7 @@ namespace KoinovDiplom_ActEmpKPK
         private user2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private user2DataSetTableAdapters.WORKERTableAdapter wORKERTableAdapter;
         private System.Windows.Forms.BindingSource wORKERBindingSource1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }

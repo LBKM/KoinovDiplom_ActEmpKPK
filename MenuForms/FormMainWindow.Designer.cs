@@ -53,6 +53,7 @@
             this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wORKERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.MainListViewActEmp = new System.Windows.Forms.ListView();
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -69,7 +70,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.user2DataSet1 = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
@@ -210,6 +210,21 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(942, 554);
             this.guna2GradientPanel1.TabIndex = 18;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(512, 503);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(147, 29);
+            this.guna2Button2.TabIndex = 22;
+            this.guna2Button2.Text = "guna2Button2";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // MainListViewActEmp
             // 
@@ -361,21 +376,6 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(512, 503);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(147, 29);
-            this.guna2Button2.TabIndex = 22;
-            this.guna2Button2.Text = "guna2Button2";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // FormMainWindow
             // 

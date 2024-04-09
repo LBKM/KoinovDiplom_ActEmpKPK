@@ -77,6 +77,9 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            AddOrChangeActEmp dialog = new AddOrChangeActEmp(CurrentRow);
+            dialog.AddOrChange = false;
+            dialog.ShowDialog();
             if (MainListViewActEmp.SelectedItems.Count > 0 && MainListViewActEmp.SelectedItems[0].SubItems.Count > 0)
             {
                 string actEmpID = MainListViewActEmp.SelectedItems[0].SubItems[0].Text;
@@ -91,9 +94,9 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
                         DataRow currentRow = selectedRows[0];
                         //Добавление записи
                         DataRow CurrentRow = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + MainListViewActEmp.SelectedItems[0].SubItems[0].Text + "'")[0];
-                        AddOrChangeActEmp dialog = new AddOrChangeActEmp(CurrentRow);
-                        dialog.AddOrChange = false; 
-                        dialog.ShowDialog();
+                        AddOrChangeActEmp dialogп = new AddOrChangeActEmp(CurrentRow);
+                        dialogп.AddOrChange = false; 
+                        dialogп.ShowDialog();
                         if (dialog.DialogResult == DialogResult.OK) 
                         { FillActEmpList(); }
                     }
@@ -103,6 +106,7 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+
             DataRow[] RowsActEmp;
             foreach (ListViewItem item in MainListViewActEmp.CheckedItems)
             {
@@ -128,6 +132,28 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
             AddOrChangeActEmp dialog = new AddOrChangeActEmp(CurrentRow);
             dialog.AddOrChange = false;
             dialog.ShowDialog();
+            if (MainListViewActEmp.SelectedItems.Count > 0 && MainListViewActEmp.SelectedItems[0].SubItems.Count > 0)
+            {
+                string actEmpID = MainListViewActEmp.SelectedItems[0].SubItems[0].Text;
+
+                // Проверяем, чтобы избежать выхода за пределы массива
+                if (!string.IsNullOrEmpty(actEmpID))
+                {
+                    DataRow[] selectedRows = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + actEmpID + "'");
+
+                    if (selectedRows.Length > 0)
+                    {
+                        DataRow currentRow = selectedRows[0];
+                        //Добавление записи
+                        DataRow CurrentRow = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + MainListViewActEmp.SelectedItems[0].SubItems[0].Text + "'")[0];
+                        AddOrChangeActEmp dialogп = new AddOrChangeActEmp(CurrentRow);
+                        dialogп.AddOrChange = false;
+                        dialogп.ShowDialog();
+                        if (dialog.DialogResult == DialogResult.OK)
+                        { FillActEmpList(); }
+                    }
+                }
+            }
         }
     }
 }
