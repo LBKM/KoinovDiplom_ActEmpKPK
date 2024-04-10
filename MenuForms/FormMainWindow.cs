@@ -155,5 +155,11 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
                 }
             }
         }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            PageViewForm pageViewForm = new PageViewForm();
+            pageViewForm.ShowDialog();
+        }
     }
 }

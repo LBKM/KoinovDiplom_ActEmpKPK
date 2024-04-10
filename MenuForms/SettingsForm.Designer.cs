@@ -35,6 +35,8 @@
             this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -74,7 +76,7 @@
             this.CheckBoxAutoRun.ForeColor = System.Drawing.Color.White;
             this.CheckBoxAutoRun.Location = new System.Drawing.Point(12, 413);
             this.CheckBoxAutoRun.Name = "CheckBoxAutoRun";
-            this.CheckBoxAutoRun.Size = new System.Drawing.Size(261, 20);
+            this.CheckBoxAutoRun.Size = new System.Drawing.Size(260, 20);
             this.CheckBoxAutoRun.TabIndex = 2;
             this.CheckBoxAutoRun.Text = "Запускать приложение при включении";
             this.CheckBoxAutoRun.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -99,7 +101,7 @@
             this.guna2RadioButton1.ForeColor = System.Drawing.Color.White;
             this.guna2RadioButton1.Location = new System.Drawing.Point(12, 286);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(78, 20);
+            this.guna2RadioButton1.Size = new System.Drawing.Size(77, 20);
             this.guna2RadioButton1.TabIndex = 3;
             this.guna2RadioButton1.TabStop = true;
             this.guna2RadioButton1.Text = "Светлое";
@@ -124,7 +126,7 @@
             this.guna2RadioButton2.ForeColor = System.Drawing.Color.White;
             this.guna2RadioButton2.Location = new System.Drawing.Point(12, 318);
             this.guna2RadioButton2.Name = "guna2RadioButton2";
-            this.guna2RadioButton2.Size = new System.Drawing.Size(72, 20);
+            this.guna2RadioButton2.Size = new System.Drawing.Size(71, 20);
             this.guna2RadioButton2.TabIndex = 4;
             this.guna2RadioButton2.Text = "Тёмное";
             this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -140,6 +142,43 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 26;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(642, 448);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 55);
+            this.guna2Button1.TabIndex = 5;
+            this.guna2Button1.Text = "РУКОВОДСТВО ОПЕРАТОРА";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.AutoRoundedCorners = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 26;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(642, 387);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(180, 55);
+            this.guna2Button2.TabIndex = 6;
+            this.guna2Button2.Text = "ПРОВЕРКА ПОДКЛЮЧЕНИЯ";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +186,8 @@
             this.BackgroundImage = global::KoinovDiplom_ActEmpKPK.Properties.Resources._64c14f36767c0e634bd3909a__1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(926, 515);
+            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2RadioButton2);
             this.Controls.Add(this.guna2RadioButton1);
             this.Controls.Add(this.CheckBoxAutoRun);
@@ -168,5 +209,7 @@
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

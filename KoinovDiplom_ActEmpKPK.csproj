@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassUserInfo.cs" />
+    <Compile Include="DatabaseConnectionCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnectionCheckForm.Designer.cs">
+      <DependentUpon>DatabaseConnectionCheckForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs-Forms\UnsuccessCaptcha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
       <DependentUpon>MessageDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="MethodicalCodeValidator.cs" />
+    <Compile Include="OperDocxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperDocxForm.Designer.cs">
+      <DependentUpon>OperDocxForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +187,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>user2DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DatabaseConnectionCheckForm.resx">
+      <DependentUpon>DatabaseConnectionCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs-Forms\DarkOverlayForm.resx">
+      <DependentUpon>DarkOverlayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs-Forms\UnsuccessCaptcha.resx">
       <DependentUpon>UnsuccessCaptcha.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs-Forms\MessageDialog.resx">
       <DependentUpon>MessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperDocxForm.resx">
+      <DependentUpon>OperDocxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -296,6 +317,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Designer-_1_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
