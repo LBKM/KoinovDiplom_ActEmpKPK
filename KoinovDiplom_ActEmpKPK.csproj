@@ -67,10 +67,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassUserInfo.cs" />
-    <Compile Include="DatabaseConnectionCheckForm.cs">
+    <Compile Include="ConnectionStringDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseConnectionCheckForm.Designer.cs">
+    <Compile Include="ConnectionStringDialog.Designer.cs">
+      <DependentUpon>ConnectionStringDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs-Forms\DatabaseConnectionCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs-Forms\DatabaseConnectionCheckForm.Designer.cs">
       <DependentUpon>DatabaseConnectionCheckForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs-Forms\UnsuccessCaptcha.cs">
@@ -187,7 +193,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>user2DataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DatabaseConnectionCheckForm.resx">
+    <EmbeddedResource Include="ConnectionStringDialog.resx">
+      <DependentUpon>ConnectionStringDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs-Forms\DatabaseConnectionCheckForm.resx">
       <DependentUpon>DatabaseConnectionCheckForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs-Forms\DarkOverlayForm.resx">

@@ -78,9 +78,7 @@ namespace KoinovDiplom_ActEmpKPK
         private void ButtonAuth_Click(object sender, EventArgs e)
         {
             string[] connectionStrings = new string[]
-            {
-        "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True;"
-            };
+            {        "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True;"            };
 
             string login = TextBoxLoginAuth.Text;
             string password = TextBoxPasswpordAuth.Text;

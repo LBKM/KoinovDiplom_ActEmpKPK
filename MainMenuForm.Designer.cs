@@ -487,6 +487,9 @@
             // 
             // GradientPanel1
             // 
+            this.GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GradientPanel1.AutoSize = true;
             this.GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.GradientPanel1.FillColor = System.Drawing.Color.White;

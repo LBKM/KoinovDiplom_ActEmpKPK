@@ -28,5 +28,11 @@ namespace KoinovDiplom_ActEmpKPK
             DatabaseConnectionCheckForm databaseConnectionCheckForm = new DatabaseConnectionCheckForm();
             databaseConnectionCheckForm.ShowDialog();
         }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            ConnectionStringDialog dialog = new ConnectionStringDialog();
+            dialog.ShowDialog();
+        }
     }
 }
