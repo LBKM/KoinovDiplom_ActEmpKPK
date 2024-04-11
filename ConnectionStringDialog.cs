@@ -13,6 +13,7 @@ namespace KoinovDiplom_ActEmpKPK
 {
     public partial class ConnectionStringDialog : Form
     {
+
         string connectionString = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True;";
         public ConnectionStringDialog()
         {
@@ -25,6 +26,11 @@ namespace KoinovDiplom_ActEmpKPK
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = connectionString;
+        }
+
+        private void ConnectionStringDialog_Load(object sender, EventArgs e)
         {
             label1.Text = connectionString;
         }

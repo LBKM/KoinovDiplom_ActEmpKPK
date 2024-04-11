@@ -55,17 +55,17 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "СТРОКА ПОДКЛЮЧЕНИЯ К БАЗЕ ДАННЫХ:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Visible = false;
             // 
             // iconButton1
             // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
             this.iconButton1.IconColor = System.Drawing.Color.DarkGreen;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(749, 0);
+            this.iconButton1.Location = new System.Drawing.Point(0, 344);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(51, 52);
+            this.iconButton1.Size = new System.Drawing.Size(800, 64);
             this.iconButton1.TabIndex = 27;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -82,7 +82,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 23;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Visible = false;
             // 
             // label1
             // 
@@ -94,13 +93,12 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "СТРОКА";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Visible = false;
             // 
             // ConnectionStringDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 332);
+            this.ClientSize = new System.Drawing.Size(800, 408);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.iconButton1);
@@ -108,6 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConnectionStringDialog";
             this.Text = "ConnectionStringDialog";
+            this.Load += new System.EventHandler(this.ConnectionStringDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
