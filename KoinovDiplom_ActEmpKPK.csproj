@@ -82,6 +82,12 @@
     <Compile Include="ActEmpPageViewForm.Designer.cs">
       <DependentUpon>ActEmpPageViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllTablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllTablesForm.Designer.cs">
+      <DependentUpon>AllTablesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="libs\ClassUserInfo.cs" />
     <Compile Include="Dialogs-Forms\ConnectionStringDialog.cs">
       <SubType>Form</SubType>
@@ -178,6 +184,12 @@
     <Compile Include="Dialogs-Forms\OperDocxForm.Designer.cs">
       <DependentUpon>OperDocxForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoreMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreMenuForm.Designer.cs">
+      <DependentUpon>MoreMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +216,12 @@
     <Compile Include="Dialogs-Forms\UnsuccesDialogcs.Designer.cs">
       <DependentUpon>UnsuccesDialogcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="QueryForms\WorkersGridViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryForms\WorkersGridViewForm.Designer.cs">
+      <DependentUpon>WorkersGridViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="user2DataSet.cs">
       <DependentUpon>user2DataSet.xsd</DependentUpon>
     </Compile>
@@ -214,6 +232,9 @@
     </Compile>
     <EmbeddedResource Include="ActEmpPageViewForm.resx">
       <DependentUpon>ActEmpPageViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllTablesForm.resx">
+      <DependentUpon>AllTablesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs-Forms\ConnectionStringDialog.resx">
       <DependentUpon>ConnectionStringDialog.cs</DependentUpon>
@@ -263,6 +284,9 @@
     <EmbeddedResource Include="Dialogs-Forms\OperDocxForm.resx">
       <DependentUpon>OperDocxForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoreMenuForm.resx">
+      <DependentUpon>MoreMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PageViewForm.resx">
       <DependentUpon>PageViewForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs-Forms\UnsuccesDialogcs.resx">
       <DependentUpon>UnsuccesDialogcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryForms\WorkersGridViewForm.resx">
+      <DependentUpon>WorkersGridViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

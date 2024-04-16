@@ -204,5 +204,11 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
             ActEmpPageViewForm actEmpPageViewForm = new ActEmpPageViewForm();
             actEmpPageViewForm.ShowDialog();
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            MoreMenuForm moreMenuForm = new MoreMenuForm();
+            moreMenuForm.ShowDialog();
+        }
     }
 }

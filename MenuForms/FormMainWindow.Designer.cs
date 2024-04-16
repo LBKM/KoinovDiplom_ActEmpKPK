@@ -62,6 +62,14 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.Countlabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.GradientPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonQuery = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.MainListViewActEmp = new System.Windows.Forms.ListView();
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -72,14 +80,6 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.GradientPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonQuery = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DataGridView2 = new System.Windows.Forms.DataGridView();
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
@@ -246,7 +246,7 @@
             this.Countlabel.AutoSize = true;
             this.Countlabel.BackColor = System.Drawing.Color.Transparent;
             this.Countlabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Countlabel.Location = new System.Drawing.Point(796, 534);
+            this.Countlabel.Location = new System.Drawing.Point(796, 820);
             this.Countlabel.Name = "Countlabel";
             this.Countlabel.Size = new System.Drawing.Size(59, 16);
             this.Countlabel.TabIndex = 21;
@@ -264,77 +264,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Главное меню. Просмотр данных \"Методическая активность\"";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // MainListViewActEmp
-            // 
-            this.MainListViewActEmp.BackColor = System.Drawing.Color.Lavender;
-            this.MainListViewActEmp.CheckBoxes = true;
-            this.MainListViewActEmp.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader1,
-            this.ColumnHeader2,
-            this.ColumnHeader3,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13});
-            this.MainListViewActEmp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MainListViewActEmp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MainListViewActEmp.FullRowSelect = true;
-            this.MainListViewActEmp.HideSelection = false;
-            this.MainListViewActEmp.Location = new System.Drawing.Point(0, 208);
-            this.MainListViewActEmp.Name = "MainListViewActEmp";
-            this.MainListViewActEmp.Size = new System.Drawing.Size(928, 342);
-            this.MainListViewActEmp.TabIndex = 17;
-            this.MainListViewActEmp.UseCompatibleStateImageBehavior = false;
-            this.MainListViewActEmp.View = System.Windows.Forms.View.Details;
-            this.MainListViewActEmp.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.ListViewActEmp_ItemSelectionChanged);
-            // 
-            // ColumnHeader1
-            // 
-            this.ColumnHeader1.Text = "Код";
-            this.ColumnHeader1.Width = 124;
-            // 
-            // ColumnHeader2
-            // 
-            this.ColumnHeader2.Text = "Дисциплина";
-            this.ColumnHeader2.Width = 118;
-            // 
-            // ColumnHeader3
-            // 
-            this.ColumnHeader3.Text = "Имя";
-            this.ColumnHeader3.Width = 123;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Фамилия";
-            this.columnHeader8.Width = 125;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Отчество";
-            this.columnHeader9.Width = 123;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Форма обучения";
-            this.columnHeader10.Width = 142;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Специальность";
-            this.columnHeader11.Width = 158;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Описание";
-            this.columnHeader12.Width = 150;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Мероприятие";
-            this.columnHeader13.Width = 158;
             // 
             // guna2GradientPanel2
             // 
@@ -404,6 +333,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(175, 45);
             this.guna2Button3.TabIndex = 28;
             this.guna2Button3.Text = "ДОПОЛНИТЕЛЬНО";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2ButtonQuery
             // 
@@ -492,6 +422,77 @@
             this.guna2Button1.Text = "ДОБАВИТЬ НОВУЮ";
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // MainListViewActEmp
+            // 
+            this.MainListViewActEmp.BackColor = System.Drawing.Color.Lavender;
+            this.MainListViewActEmp.CheckBoxes = true;
+            this.MainListViewActEmp.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColumnHeader1,
+            this.ColumnHeader2,
+            this.ColumnHeader3,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13});
+            this.MainListViewActEmp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.MainListViewActEmp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainListViewActEmp.FullRowSelect = true;
+            this.MainListViewActEmp.HideSelection = false;
+            this.MainListViewActEmp.Location = new System.Drawing.Point(0, 208);
+            this.MainListViewActEmp.Name = "MainListViewActEmp";
+            this.MainListViewActEmp.Size = new System.Drawing.Size(928, 342);
+            this.MainListViewActEmp.TabIndex = 17;
+            this.MainListViewActEmp.UseCompatibleStateImageBehavior = false;
+            this.MainListViewActEmp.View = System.Windows.Forms.View.Details;
+            this.MainListViewActEmp.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.ListViewActEmp_ItemSelectionChanged);
+            // 
+            // ColumnHeader1
+            // 
+            this.ColumnHeader1.Text = "Код";
+            this.ColumnHeader1.Width = 124;
+            // 
+            // ColumnHeader2
+            // 
+            this.ColumnHeader2.Text = "Дисциплина";
+            this.ColumnHeader2.Width = 118;
+            // 
+            // ColumnHeader3
+            // 
+            this.ColumnHeader3.Text = "Имя";
+            this.ColumnHeader3.Width = 123;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Фамилия";
+            this.columnHeader8.Width = 125;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Отчество";
+            this.columnHeader9.Width = 123;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Форма обучения";
+            this.columnHeader10.Width = 142;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Специальность";
+            this.columnHeader11.Width = 158;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Описание";
+            this.columnHeader12.Width = 150;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Мероприятие";
+            this.columnHeader13.Width = 158;
             // 
             // panel1
             // 
