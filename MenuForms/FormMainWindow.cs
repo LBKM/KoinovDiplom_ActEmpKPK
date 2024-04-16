@@ -1,13 +1,17 @@
 ﻿using KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace KoinovDiplom_ActEmpKPK.MenuForms
@@ -23,6 +27,39 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
 
         private void FormMainWindow_Load(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True";
+            connection.Open();
+            SqlCommand sql = new SqlCommand("SELECT Post.Name, Count(*) AS Worker_Count FROM Post INNER JOIN Worker ON Post.Post_ID = Worker.Post_ID GROUP BY Post.Name;", connection);
+            SqlCommand sql2 = new SqlCommand("SELECT DATENAME(month, [Event_Data]) AS [Месяц], COUNT(*) AS Количество FROM EVENT GROUP BY DATENAME(month, [Event_Data]) ORDER BY MIN([Event_Data]);", connection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            System.Data.DataTable table = new System.Data.DataTable();
+            SqlDataAdapter dataAdapter2 = new SqlDataAdapter();
+            System.Data.DataTable table2 = new System.Data.DataTable();
+            dataAdapter.SelectCommand = sql;
+            dataAdapter2.SelectCommand = sql2;
+            dataAdapter.Fill(table);
+            dataAdapter2.Fill(table2);
+            connection.Close();
+
+            ChartActEmp.DataSource = table2;
+            ChartActEmp.Series["Series1"].XValueMember = "Месяц";
+            ChartActEmp.Series["Series1"].YValueMembers = "Количество";
+            ChartActEmp.Titles.Add("Количество методических активностей по месяцам");
+            ChartActEmp.Series["Series1"].ChartType = SeriesChartType.Column;
+            ChartActEmp.Series["Series1"].Color = Color.Purple;
+            ChartActEmp.Series["Series1"].IsVisibleInLegend = false;
+            ChartActEmp.DataBind();
+
+            ChartWorker.DataSource = table;
+            ChartWorker.Series["Series1"].XValueMember = "Name";
+            ChartWorker.Series["Series1"].YValueMembers = "Worker_Count";
+            ChartWorker.Titles.Add("Количество сотрудников по должностям");
+            ChartWorker.Series["Series1"].ChartType = SeriesChartType.Column;
+            ChartWorker.Series["Series1"].Color = Color.Purple;
+            ChartWorker.Series["Series1"].IsVisibleInLegend = false;
+            ChartWorker.DataBind();
+
             // TODO: данная строка кода позволяет загрузить данные в таблицу "user2DataSet.WORKER". При необходимости она может быть перемещена или удалена.
             this.wORKERTableAdapter.Fill(this.user2DataSet.WORKER);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "user2DataSet.USER". При необходимости она может быть перемещена или удалена.
