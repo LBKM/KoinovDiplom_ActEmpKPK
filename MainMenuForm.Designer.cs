@@ -169,6 +169,7 @@
             // iconButton7
             // 
             this.iconButton7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton7.Enabled = false;
             this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.iconButton7.IconColor = System.Drawing.Color.Indigo;

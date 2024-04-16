@@ -39,5 +39,11 @@ namespace KoinovDiplom_ActEmpKPK
         {
             openForm(new FormChartsView());
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            FormForClass formForClass = new FormForClass();
+            formForClass.Show();
+        }
     }
 }

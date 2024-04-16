@@ -147,7 +147,7 @@ namespace KoinovDiplom_ActEmpKPK
             // Если не удалось подключиться к ни одной базе данных
             if (!success)
             {
-                MessageBox.Show("Не удалось подключиться к базе данных.");
+                //MessageBox.Show("Не удалось подключиться к базе данных.");
             }
 
         }
@@ -261,6 +261,12 @@ namespace KoinovDiplom_ActEmpKPK
                 unsuccessCaptcha.ShowDialog();
                 pictureBoxCode.Image = this.CreateImage(pictureBoxCode.Width, pictureBoxCode.Height); textBoxCode.Clear();
             }
+        }
+
+        private void ButtonReg_Click(object sender, EventArgs e)
+        {
+            SuccessDialog successDialog = new SuccessDialog();
+            successDialog.ShowDialog();
         }
     }
 }

@@ -341,7 +341,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(385, 200);
+            this.tabPage4.Size = new System.Drawing.Size(385, 193);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Верификация капчей";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -481,6 +481,7 @@
             this.ButtonReg.Size = new System.Drawing.Size(269, 45);
             this.ButtonReg.TabIndex = 0;
             this.ButtonReg.Text = "ЗАРЕГИСТРИРОВАТЬСЯ";
+            this.ButtonReg.Click += new System.EventHandler(this.ButtonReg_Click);
             // 
             // TextBoxRegConfirmPassword
             // 

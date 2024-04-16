@@ -485,7 +485,7 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLK";
-            this.Text = "FormLK";
+            this.Text = "Пор";
             this.Load += new System.EventHandler(this.FormLK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);

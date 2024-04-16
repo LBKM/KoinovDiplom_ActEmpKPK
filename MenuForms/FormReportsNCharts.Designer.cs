@@ -30,13 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2ButtonQuery = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonDocs = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2ButtonDocs = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonQuery = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Lavender;
             this.guna2GradientPanel1.BackgroundImage = global::KoinovDiplom_ActEmpKPK.Properties.Resources._360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK;
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2GradientPanel1.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel1.Controls.Add(this.guna2ButtonQuery);
             this.guna2GradientPanel1.Controls.Add(this.guna2ButtonDocs);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button2);
@@ -55,6 +57,48 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(942, 554);
             this.guna2GradientPanel1.TabIndex = 20;
+            // 
+            // guna2ButtonQuery
+            // 
+            this.guna2ButtonQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2ButtonQuery.Animated = true;
+            this.guna2ButtonQuery.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonQuery.BorderColor = System.Drawing.Color.DarkGreen;
+            this.guna2ButtonQuery.BorderRadius = 15;
+            this.guna2ButtonQuery.BorderThickness = 1;
+            this.guna2ButtonQuery.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonQuery.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonQuery.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonQuery.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonQuery.FillColor = System.Drawing.Color.AliceBlue;
+            this.guna2ButtonQuery.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.guna2ButtonQuery.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonQuery.Location = new System.Drawing.Point(613, 498);
+            this.guna2ButtonQuery.Name = "guna2ButtonQuery";
+            this.guna2ButtonQuery.Size = new System.Drawing.Size(194, 45);
+            this.guna2ButtonQuery.TabIndex = 25;
+            this.guna2ButtonQuery.Text = "СЛОЖНЫЕ ЗАПРОСЫ";
+            // 
+            // guna2ButtonDocs
+            // 
+            this.guna2ButtonDocs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2ButtonDocs.Animated = true;
+            this.guna2ButtonDocs.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonDocs.BorderColor = System.Drawing.Color.DarkGreen;
+            this.guna2ButtonDocs.BorderRadius = 15;
+            this.guna2ButtonDocs.BorderThickness = 1;
+            this.guna2ButtonDocs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDocs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDocs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonDocs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonDocs.FillColor = System.Drawing.Color.AliceBlue;
+            this.guna2ButtonDocs.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.guna2ButtonDocs.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonDocs.Location = new System.Drawing.Point(213, 498);
+            this.guna2ButtonDocs.Name = "guna2ButtonDocs";
+            this.guna2ButtonDocs.Size = new System.Drawing.Size(194, 45);
+            this.guna2ButtonDocs.TabIndex = 24;
+            this.guna2ButtonDocs.Text = "ДОКУМЕНТАЦИЯ";
             // 
             // guna2Button2
             // 
@@ -73,7 +117,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.Location = new System.Drawing.Point(13, 498);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(219, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(194, 45);
             this.guna2Button2.TabIndex = 20;
             this.guna2Button2.Text = "ПРОСМОТР ГРАФИКОВ";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -92,9 +136,9 @@
             this.guna2Button3.FillColor = System.Drawing.Color.Ivory;
             this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(463, 498);
+            this.guna2Button3.Location = new System.Drawing.Point(413, 498);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(219, 45);
+            this.guna2Button3.Size = new System.Drawing.Size(194, 45);
             this.guna2Button3.TabIndex = 21;
             this.guna2Button3.Text = "ОТЧЁТНОСТЬ";
             // 
@@ -129,47 +173,25 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2ButtonDocs
+            // guna2Button1
             // 
-            this.guna2ButtonDocs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2ButtonDocs.Animated = true;
-            this.guna2ButtonDocs.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonDocs.BorderColor = System.Drawing.Color.DarkGreen;
-            this.guna2ButtonDocs.BorderRadius = 15;
-            this.guna2ButtonDocs.BorderThickness = 1;
-            this.guna2ButtonDocs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonDocs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonDocs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonDocs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonDocs.FillColor = System.Drawing.Color.AliceBlue;
-            this.guna2ButtonDocs.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2ButtonDocs.ForeColor = System.Drawing.Color.Black;
-            this.guna2ButtonDocs.Location = new System.Drawing.Point(238, 498);
-            this.guna2ButtonDocs.Name = "guna2ButtonDocs";
-            this.guna2ButtonDocs.Size = new System.Drawing.Size(219, 45);
-            this.guna2ButtonDocs.TabIndex = 24;
-            this.guna2ButtonDocs.Text = "ДОКУМЕНТАЦИЯ";
-            // 
-            // guna2ButtonQuery
-            // 
-            this.guna2ButtonQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2ButtonQuery.Animated = true;
-            this.guna2ButtonQuery.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonQuery.BorderColor = System.Drawing.Color.DarkGreen;
-            this.guna2ButtonQuery.BorderRadius = 15;
-            this.guna2ButtonQuery.BorderThickness = 1;
-            this.guna2ButtonQuery.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonQuery.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonQuery.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonQuery.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonQuery.FillColor = System.Drawing.Color.AliceBlue;
-            this.guna2ButtonQuery.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2ButtonQuery.ForeColor = System.Drawing.Color.Black;
-            this.guna2ButtonQuery.Location = new System.Drawing.Point(688, 498);
-            this.guna2ButtonQuery.Name = "guna2ButtonQuery";
-            this.guna2ButtonQuery.Size = new System.Drawing.Size(219, 45);
-            this.guna2ButtonQuery.TabIndex = 25;
-            this.guna2ButtonQuery.Text = "СЛОЖНЫЕ ЗАПРОСЫ";
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 21;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(813, 498);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(117, 45);
+            this.guna2Button1.TabIndex = 26;
+            this.guna2Button1.Text = "КЛАССЫ";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // FormReportsNCharts
             // 
@@ -196,5 +218,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonQuery;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDocs;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

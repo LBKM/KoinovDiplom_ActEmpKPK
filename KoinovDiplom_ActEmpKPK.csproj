@@ -66,11 +66,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassUserInfo.cs" />
-    <Compile Include="ConnectionStringDialog.cs">
+    <Compile Include="libs\ClassUserInfo.cs" />
+    <Compile Include="Dialogs-Forms\ConnectionStringDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConnectionStringDialog.Designer.cs">
+    <Compile Include="Dialogs-Forms\ConnectionStringDialog.Designer.cs">
       <DependentUpon>ConnectionStringDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs-Forms\DatabaseConnectionCheckForm.cs">
@@ -100,7 +100,7 @@
     <Compile Include="Dialogs-Forms\DarkOverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataManager.cs" />
+    <Compile Include="libs\DataManager.cs" />
     <Compile Include="Dialogs-Forms\AuthRegForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,11 +155,11 @@
     <Compile Include="Dialogs-Forms\MessageDialog.Designer.cs">
       <DependentUpon>MessageDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="MethodicalCodeValidator.cs" />
-    <Compile Include="OperDocxForm.cs">
+    <Compile Include="libs\MethodicalCodeValidator.cs" />
+    <Compile Include="Dialogs-Forms\OperDocxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OperDocxForm.Designer.cs">
+    <Compile Include="Dialogs-Forms\OperDocxForm.Designer.cs">
       <DependentUpon>OperDocxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PageViewForm.cs">
@@ -188,12 +188,15 @@
     <Compile Include="Dialogs-Forms\UnsuccesDialogcs.Designer.cs">
       <DependentUpon>UnsuccesDialogcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="user2DataSet.cs">
+      <DependentUpon>user2DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="user2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>user2DataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ConnectionStringDialog.resx">
+    <EmbeddedResource Include="Dialogs-Forms\ConnectionStringDialog.resx">
       <DependentUpon>ConnectionStringDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs-Forms\DatabaseConnectionCheckForm.resx">
@@ -238,7 +241,7 @@
     <EmbeddedResource Include="Dialogs-Forms\MessageDialog.resx">
       <DependentUpon>MessageDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OperDocxForm.resx">
+    <EmbeddedResource Include="Dialogs-Forms\OperDocxForm.resx">
       <DependentUpon>OperDocxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
