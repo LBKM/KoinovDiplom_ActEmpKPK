@@ -155,86 +155,6 @@ namespace KoinovDiplom_ActEmpKPK
                 Event = Convert.ToString(RowsEvent[0]["Event_ID"]);
             }
 
-            //Rows = FormMainWindow..Discipline.Select("Name_Discipline ='" + ComboBoxDiscipline.Text + "'");
-            //if (Rows.Length == 0)
-            //{
-            //    MainMenuForm.DisciplineTableAdapter.Insert(ComboBoxDiscipline.Text);
-            //    MainMenuForm.DisciplineTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Discipline);
-            //    Rows = MainMenuForm.KPMetodicalActDataSet.Discipline.Select("Name_Discipline ='" + ComboBoxDiscipline.Text + "'");
-            //    ID_Discipline = Convert.ToUInt64(Rows[0]["ID_Discipline"]);
-            //}
-            //else
-            //{
-            //    ID_Discipline = Convert.ToUInt64(Rows[0]["ID_Discipline"]);
-            //}
-
-            //Rows = MainMenuForm.KPMetodicalActDataSet.Worker.Select("FIO_Worker ='" + ComboBoxWorker.Text + "'");
-            //if (Rows.Length == 0)
-            //{
-            //    MainMenuForm.WorkerTableAdapter.Insert(ComboBoxWorker.Text, "");
-            //    MainMenuForm.WorkerTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Worker);
-            //    Rows = MainMenuForm.KPMetodicalActDataSet.Worker.Select("FIO_Worker ='" + ComboBoxWorker.Text + "'");
-            //    ID_Worker = Convert.ToUInt64(Rows[0]["ID_Worker"]);
-            //}
-            //else
-            //{
-            //    ID_Worker = Convert.ToUInt64(Rows[0]["ID_Worker"]);
-            //}
-
-            //Rows = MainMenuForm.KPMetodicalActDataSet.Education_Form.Select("Name_Form ='" + ComboBoxEducationForm.Text + "'");
-            //if (Rows.Length == 0)
-            //{
-            //    MainMenuForm.Education_FormTableAdapter.Insert(ComboBoxEducationForm.Text);
-            //    MainMenuForm.Education_FormTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Education_Form);
-            //    Rows = MainMenuForm.KPMetodicalActDataSet.Education_Form.Select("Name_Form ='" + ComboBoxEducationForm.Text + "'");
-            //    ID_Education_Form = Convert.ToUInt64(Rows[0]["ID_Education_Form"]);
-            //}
-            //else
-            //{
-            //    ID_Education_Form = Convert.ToUInt64(Rows[0]["ID_Education_Form"]);
-            //}
-
-            //Rows = MainMenuForm.KPMetodicalActDataSet.Speciality.Select("Name_Speciality ='" + ComboBoxSpeciality.Text + "'");
-            //if (Rows.Length == 0)
-            //{
-            //    MainMenuForm.SpecialityTableAdapter.Insert(ComboBoxSpeciality.Text);
-            //    MainMenuForm.SpecialityTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Speciality);
-            //    Rows = MainMenuForm.KPMetodicalActDataSet.Speciality.Select("Name_Speciality ='" + ComboBoxSpeciality.Text + "'");
-            //    ID_Speciality = Convert.ToUInt64(Rows[0]["ID_Speciality"]);
-            //}
-            //else
-            //{
-            //    ID_Speciality = Convert.ToUInt64(Rows[0]["ID_Speciality"]);
-            //}
-
-            //Rows = MainMenuForm.KPMetodicalActDataSet._Event.Select("Name_Event ='" + ComboBoxEvent.Text + "'");
-            //if (Rows.Length == 0)
-            //{
-            //    MainMenuForm.EventTableAdapter.Insert(ComboBoxEvent.Text);
-            //    MainMenuForm.EventTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet._Event);
-            //    Rows = MainMenuForm.KPMetodicalActDataSet._Event.Select("Name_Event ='" + ComboBoxEvent.Text + "'");
-            //    ID_Event = Convert.ToUInt64(Rows[0]["ID_Event"]);
-            //}
-            //else
-            //{
-            //    ID_Event = Convert.ToUInt64(Rows[0]["ID_Event"]);
-            //}
-
-            //if (AddOnChange == false)
-            //{
-            //    MainMenuForm.Activity_EmployeeTableAdapter.Insert(ID_Discipline, ID_Worker, ID_Education_Form, ID_Speciality, ID_Event, TextBoxNameAetEmp.Text, EventDateTimePicker.Value.Date);
-            //}
-
-            //MainMenuForm.Activity_EmployeeTableAdapter.Fill(MainMenuForm.KPMetodicalActDataSet.Activity_Employee);
-            //this.DialogResult = System.Windows.Forms.DialogResult.OK;
-            //this.Close();
-
-            //if (AddOnChange == true)
-            //{
-            //    DataRow OldWorkerRow = MainMenuForm.KPMetodicalActDataSet.Activity_Employee.Select("ID_Activity_Employee='" + OldRowID.ToString() + "'")[0];
-            //    MainMenuForm.Activity_EmployeeTableAdapter.Update(ID_Discipline, ID_Worker, ID_Education_Form, ID_Speciality, ID_Event, TextBoxNameAetEmp.Text, EventDateTimePicker.Value.Date, OldWorkerRow[0], OldWorkerRow[1], OldWorkerRow[2], OldWorkerRow[3], OldWorkerRow[4], OldWorkerRow[5], OldWorkerRow[6], OldWorkerRow[7]);
-            //}
-
             int InsertedRows = aCTIVITY_EMPLOYEETableAdapter.Insert( //Добавление данных в БД через поля приложения:
                 TextBoxActEmpID.Text, 
                 Convert.ToInt32(Discipline), 
@@ -255,8 +175,8 @@ namespace KoinovDiplom_ActEmpKPK
                     // Если произошла ошибка, отобразите сообщение об ошибке
                     MessageBox.Show("Не удалось добавить рабочую программу. Причина: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.aCTIVITY_EMPLOYEETableAdapter.Fill(this.user2DataSet.ACTIVITY_EMPLOYEE);
 
+            this.aCTIVITY_EMPLOYEETableAdapter.Fill(this.user2DataSet.ACTIVITY_EMPLOYEE);
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
         }

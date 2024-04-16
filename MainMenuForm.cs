@@ -20,7 +20,7 @@ namespace KoinovDiplom_ActEmpKPK
     partial class MainMenuForm : Form
     {
         private ClassUserInfo authorizedUser;
-
+       
         ListViewItem LastSelectedItem;                           
         DataRow CurrentRow;
         public MainMenuForm(ClassUserInfo authorizedUser)

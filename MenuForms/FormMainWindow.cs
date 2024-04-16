@@ -102,23 +102,29 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
                     }
                 }
             }
+            MainListViewActEmp.Items.Clear();
+            FillActEmpList();
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
 
             DataRow[] RowsActEmp;
-            foreach (ListViewItem item in MainListViewActEmp.CheckedItems)
+            try
             {
-                DialogResult reslt = MessageBox.Show("Вы действительно хотите удалить выделенные объекты? ", "Предупреждение!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (reslt == DialogResult.OK)
+
+                foreach (ListViewItem item in MainListViewActEmp.CheckedItems)
                 {
-                    RowsActEmp = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + item.Text + "'");
-                    aCTIVITY_EMPLOYEETableAdapter.Delete(Convert.ToString(RowsActEmp[0][0]), Convert.ToInt32(RowsActEmp[0][1]), Convert.ToInt32(RowsActEmp[0][2]), Convert.ToInt32(RowsActEmp[0][3]), Convert.ToInt32(RowsActEmp[0][4]), Convert.ToString(RowsActEmp[0][5]), Convert.ToInt32(RowsActEmp[0][6]));
-                    LastSelectedItem.Remove();
-                    MessageBox.Show("Успешное удаление!", "Процесс удаления: 100%", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult reslt = MessageBox.Show("Вы действительно хотите удалить выделенные объекты? ", "Предупреждение!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    if (reslt == DialogResult.OK)
+                    {
+                        RowsActEmp = user2DataSet.ACTIVITY_EMPLOYEE.Select("ActEmp_ID = '" + item.Text + "'");
+                        aCTIVITY_EMPLOYEETableAdapter.Delete(Convert.ToString(RowsActEmp[0][0]), Convert.ToInt32(RowsActEmp[0][1]), Convert.ToInt32(RowsActEmp[0][2]), Convert.ToInt32(RowsActEmp[0][3]), Convert.ToInt32(RowsActEmp[0][4]), Convert.ToString(RowsActEmp[0][5]), Convert.ToInt32(RowsActEmp[0][6]));
+                        item.Remove();
+                        
+                    }
                 }
-            }
+            } catch { MessageBox.Show("Успешное удаление!", "Процесс удаления: 100%", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             this.aCTIVITY_EMPLOYEETableAdapter.Fill(user2DataSet.ACTIVITY_EMPLOYEE);
         }
 
@@ -158,8 +164,8 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
 
         private void guna2Button2_Click_1(object sender, EventArgs e)
         {
-            PageViewForm pageViewForm = new PageViewForm();
-            pageViewForm.ShowDialog();
+            ActEmpPageViewForm actEmpPageViewForm = new ActEmpPageViewForm();
+            actEmpPageViewForm.ShowDialog();
         }
     }
 }

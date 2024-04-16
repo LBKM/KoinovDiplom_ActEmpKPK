@@ -58,6 +58,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.GradientPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.user2DataSet = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.aCCESS_LEVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
@@ -91,6 +92,7 @@
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
+            this.GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
@@ -491,8 +493,10 @@
             this.GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.GradientPanel1.AutoScroll = true;
             this.GradientPanel1.AutoSize = true;
             this.GradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.GradientPanel1.Controls.Add(this.richTextBox1);
             this.GradientPanel1.FillColor = System.Drawing.Color.White;
             this.GradientPanel1.Location = new System.Drawing.Point(9, 11);
             this.GradientPanel1.Name = "GradientPanel1";
@@ -500,6 +504,17 @@
             this.GradientPanel1.ShadowColor = System.Drawing.Color.Black;
             this.GradientPanel1.Size = new System.Drawing.Size(948, 560);
             this.GradientPanel1.TabIndex = 0;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox1.Location = new System.Drawing.Point(58, 117);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(823, 309);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // user2DataSet
             // 
@@ -639,6 +654,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            this.GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).EndInit();
@@ -707,5 +723,6 @@
         public user2DataSet user2DataSet;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ShadowPanel GradientPanel1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

@@ -1,7 +1,6 @@
-﻿
-namespace KoinovDiplom_ActEmpKPK
+﻿namespace KoinovDiplom_ActEmpKPK
 {
-    partial class PageViewForm
+    partial class ActEmpPageViewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,22 +29,23 @@ namespace KoinovDiplom_ActEmpKPK
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -65,34 +65,30 @@ namespace KoinovDiplom_ActEmpKPK
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label3 = new System.Windows.Forms.Label();
             this.user2DataSet = new KoinovDiplom_ActEmpKPK.user2DataSet();
             this.aCCESS_LEVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
             this.tableAdapterManager = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.TableAdapterManager();
-            this.aCTIVITY_EMPLOYEETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACTIVITY_EMPLOYEETableAdapter();
-            this.dISCIPLINETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.DISCIPLINETableAdapter();
-            this.eDUCATION_FORMTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EDUCATION_FORMTableAdapter();
-            this.eVENT_MATERIALSTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EVENT_MATERIALSTableAdapter();
-            this.eVENTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EVENTTableAdapter();
-            this.pOSTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.POSTTableAdapter();
-            this.sPECIALITYTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.SPECIALITYTableAdapter();
-            this.uSERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.USERTableAdapter();
-            this.wORKERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.WORKERTableAdapter();
             this.aCTIVITY_EMPLOYEEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aCTIVITY_EMPLOYEETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACTIVITY_EMPLOYEETableAdapter();
             this.dISCIPLINEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dISCIPLINETableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.DISCIPLINETableAdapter();
             this.eDUCATION_FORMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eDUCATION_FORMTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EDUCATION_FORMTableAdapter();
             this.eVENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eVENTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EVENTTableAdapter();
             this.eVENT_MATERIALSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eVENT_MATERIALSTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.EVENT_MATERIALSTableAdapter();
             this.pOSTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pOSTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.POSTTableAdapter();
             this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sPECIALITYTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.SPECIALITYTableAdapter();
             this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.USERTableAdapter();
             this.wORKERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guna2GradientPanel3.SuspendLayout();
+            this.wORKERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.WORKERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
@@ -114,11 +110,106 @@ namespace KoinovDiplom_ActEmpKPK
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2BorderlessForm1
+            // iconButton2
             // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ArrowDownZA;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 40;
+            this.iconButton2.Location = new System.Drawing.Point(221, 62);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(59, 36);
+            this.iconButton2.TabIndex = 25;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Мероприятие";
+            this.columnHeader13.Width = 158;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.Location = new System.Drawing.Point(18, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(907, 55);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "ПОСТРАНИЧНЫЙ ПРОСМОТР МЕТОД. АКТ.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox2.Image = global::KoinovDiplom_ActEmpKPK.Properties.Resources.Cifrovoe_masterstvo_____w400;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(341, 514);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(277, 125);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox2.TabIndex = 10;
+            this.guna2CirclePictureBox2.TabStop = false;
+            this.guna2CirclePictureBox2.UseTransparentBackground = true;
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
+            this.iconButton4.IconColor = System.Drawing.Color.Indigo;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 40;
+            this.iconButton4.Location = new System.Drawing.Point(521, 157);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Rotation = 180D;
+            this.iconButton4.Size = new System.Drawing.Size(75, 46);
+            this.iconButton4.TabIndex = 32;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
+            this.iconButton3.IconColor = System.Drawing.Color.Indigo;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 40;
+            this.iconButton3.Location = new System.Drawing.Point(307, 157);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(75, 46);
+            this.iconButton3.TabIndex = 31;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Описание";
+            this.columnHeader12.Width = 150;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowDownAZ;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 40;
+            this.iconButton1.Location = new System.Drawing.Point(221, 17);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(59, 36);
+            this.iconButton1.TabIndex = 24;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Специальность";
+            this.columnHeader11.Width = 158;
             // 
             // guna2GradientPanel3
             // 
@@ -135,7 +226,7 @@ namespace KoinovDiplom_ActEmpKPK
             this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(954, 642);
-            this.guna2GradientPanel3.TabIndex = 11;
+            this.guna2GradientPanel3.TabIndex = 12;
             // 
             // guna2CircleButton1
             // 
@@ -154,22 +245,6 @@ namespace KoinovDiplom_ActEmpKPK
             this.guna2CircleButton1.TabIndex = 11;
             this.guna2CircleButton1.Text = "X";
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox2.Image = global::KoinovDiplom_ActEmpKPK.Properties.Resources.Cifrovoe_masterstvo_____w400;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(341, 514);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(277, 125);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox2.TabIndex = 10;
-            this.guna2CirclePictureBox2.TabStop = false;
-            this.guna2CirclePictureBox2.UseTransparentBackground = true;
             // 
             // guna2GradientPanel4
             // 
@@ -216,37 +291,6 @@ namespace KoinovDiplom_ActEmpKPK
             this.label5.Text = "СТРАНИЦА:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // iconButton4
-            // 
-            this.iconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
-            this.iconButton4.IconColor = System.Drawing.Color.Indigo;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 40;
-            this.iconButton4.Location = new System.Drawing.Point(521, 157);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Rotation = 180D;
-            this.iconButton4.Size = new System.Drawing.Size(75, 46);
-            this.iconButton4.TabIndex = 32;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
-            this.iconButton3.IconColor = System.Drawing.Color.Indigo;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 40;
-            this.iconButton3.Location = new System.Drawing.Point(307, 157);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(75, 46);
-            this.iconButton3.TabIndex = 31;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
             // guna2GradientPanel6
             // 
             this.guna2GradientPanel6.BackColor = System.Drawing.Color.Transparent;
@@ -286,30 +330,6 @@ namespace KoinovDiplom_ActEmpKPK
             this.guna2GradientPanel7.Name = "guna2GradientPanel7";
             this.guna2GradientPanel7.Size = new System.Drawing.Size(283, 111);
             this.guna2GradientPanel7.TabIndex = 10;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ArrowDownZA;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.Location = new System.Drawing.Point(221, 62);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(59, 36);
-            this.iconButton2.TabIndex = 25;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowDownAZ;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(221, 17);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(59, 36);
-            this.iconButton1.TabIndex = 24;
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // guna2ComboBox1
             // 
@@ -412,6 +432,7 @@ namespace KoinovDiplom_ActEmpKPK
             this.ComboBoxEducationForm.Name = "ComboBoxEducationForm";
             this.ComboBoxEducationForm.Size = new System.Drawing.Size(247, 36);
             this.ComboBoxEducationForm.TabIndex = 20;
+            this.ComboBoxEducationForm.SelectionChangeCommitted += new System.EventHandler(this.ComboBoxEducationForm_SelectionChangeCommitted);
             // 
             // guna2Button1
             // 
@@ -492,6 +513,7 @@ namespace KoinovDiplom_ActEmpKPK
             this.TextBox1.SelectedText = "";
             this.TextBox1.Size = new System.Drawing.Size(229, 38);
             this.TextBox1.TabIndex = 17;
+            this.TextBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // guna2Button5
             // 
@@ -511,6 +533,7 @@ namespace KoinovDiplom_ActEmpKPK
             this.guna2Button5.Size = new System.Drawing.Size(229, 36);
             this.guna2Button5.TabIndex = 21;
             this.guna2Button5.Text = "Сбросить фильтрацию";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // MainListViewActEmpPage
             // 
@@ -566,35 +589,6 @@ namespace KoinovDiplom_ActEmpKPK
             this.columnHeader10.Text = "Форма обучения";
             this.columnHeader10.Width = 142;
             // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Специальность";
-            this.columnHeader11.Width = 158;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Описание";
-            this.columnHeader12.Width = 150;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Мероприятие";
-            this.columnHeader13.Width = 158;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(18, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(907, 55);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "ПОСТРАНИЧНЫЙ ПРОСМОТР МЕТОД. АКТ.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // user2DataSet
             // 
             this.user2DataSet.DataSetName = "user2DataSet";
@@ -624,99 +618,99 @@ namespace KoinovDiplom_ActEmpKPK
             this.tableAdapterManager.USERTableAdapter = this.uSERTableAdapter;
             this.tableAdapterManager.WORKERTableAdapter = this.wORKERTableAdapter;
             // 
-            // aCTIVITY_EMPLOYEETableAdapter
-            // 
-            this.aCTIVITY_EMPLOYEETableAdapter.ClearBeforeFill = true;
-            // 
-            // dISCIPLINETableAdapter
-            // 
-            this.dISCIPLINETableAdapter.ClearBeforeFill = true;
-            // 
-            // eDUCATION_FORMTableAdapter
-            // 
-            this.eDUCATION_FORMTableAdapter.ClearBeforeFill = true;
-            // 
-            // eVENT_MATERIALSTableAdapter
-            // 
-            this.eVENT_MATERIALSTableAdapter.ClearBeforeFill = true;
-            // 
-            // eVENTTableAdapter
-            // 
-            this.eVENTTableAdapter.ClearBeforeFill = true;
-            // 
-            // pOSTTableAdapter
-            // 
-            this.pOSTTableAdapter.ClearBeforeFill = true;
-            // 
-            // sPECIALITYTableAdapter
-            // 
-            this.sPECIALITYTableAdapter.ClearBeforeFill = true;
-            // 
-            // uSERTableAdapter
-            // 
-            this.uSERTableAdapter.ClearBeforeFill = true;
-            // 
-            // wORKERTableAdapter
-            // 
-            this.wORKERTableAdapter.ClearBeforeFill = true;
-            // 
             // aCTIVITY_EMPLOYEEBindingSource
             // 
             this.aCTIVITY_EMPLOYEEBindingSource.DataMember = "ACTIVITY_EMPLOYEE";
             this.aCTIVITY_EMPLOYEEBindingSource.DataSource = this.user2DataSet;
+            // 
+            // aCTIVITY_EMPLOYEETableAdapter
+            // 
+            this.aCTIVITY_EMPLOYEETableAdapter.ClearBeforeFill = true;
             // 
             // dISCIPLINEBindingSource
             // 
             this.dISCIPLINEBindingSource.DataMember = "DISCIPLINE";
             this.dISCIPLINEBindingSource.DataSource = this.user2DataSet;
             // 
+            // dISCIPLINETableAdapter
+            // 
+            this.dISCIPLINETableAdapter.ClearBeforeFill = true;
+            // 
             // eDUCATION_FORMBindingSource
             // 
             this.eDUCATION_FORMBindingSource.DataMember = "EDUCATION_FORM";
             this.eDUCATION_FORMBindingSource.DataSource = this.user2DataSet;
+            // 
+            // eDUCATION_FORMTableAdapter
+            // 
+            this.eDUCATION_FORMTableAdapter.ClearBeforeFill = true;
             // 
             // eVENTBindingSource
             // 
             this.eVENTBindingSource.DataMember = "EVENT";
             this.eVENTBindingSource.DataSource = this.user2DataSet;
             // 
+            // eVENTTableAdapter
+            // 
+            this.eVENTTableAdapter.ClearBeforeFill = true;
+            // 
             // eVENT_MATERIALSBindingSource
             // 
             this.eVENT_MATERIALSBindingSource.DataMember = "EVENT_MATERIALS";
             this.eVENT_MATERIALSBindingSource.DataSource = this.user2DataSet;
+            // 
+            // eVENT_MATERIALSTableAdapter
+            // 
+            this.eVENT_MATERIALSTableAdapter.ClearBeforeFill = true;
             // 
             // pOSTBindingSource
             // 
             this.pOSTBindingSource.DataMember = "POST";
             this.pOSTBindingSource.DataSource = this.user2DataSet;
             // 
+            // pOSTTableAdapter
+            // 
+            this.pOSTTableAdapter.ClearBeforeFill = true;
+            // 
             // sPECIALITYBindingSource
             // 
             this.sPECIALITYBindingSource.DataMember = "SPECIALITY";
             this.sPECIALITYBindingSource.DataSource = this.user2DataSet;
+            // 
+            // sPECIALITYTableAdapter
+            // 
+            this.sPECIALITYTableAdapter.ClearBeforeFill = true;
             // 
             // uSERBindingSource
             // 
             this.uSERBindingSource.DataMember = "USER";
             this.uSERBindingSource.DataSource = this.user2DataSet;
             // 
+            // uSERTableAdapter
+            // 
+            this.uSERTableAdapter.ClearBeforeFill = true;
+            // 
             // wORKERBindingSource
             // 
             this.wORKERBindingSource.DataMember = "WORKER";
             this.wORKERBindingSource.DataSource = this.user2DataSet;
             // 
-            // PageViewForm
+            // wORKERTableAdapter
+            // 
+            this.wORKERTableAdapter.ClearBeforeFill = true;
+            // 
+            // ActEmpPageViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 642);
             this.Controls.Add(this.guna2GradientPanel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PageViewForm";
-            this.Text = "PageViewForm";
-            this.Load += new System.EventHandler(this.PageViewForm_Load);
-            this.guna2GradientPanel3.ResumeLayout(false);
+            this.Name = "ActEmpPageViewForm";
+            this.Text = "ActEmpPageViewForm";
+            this.Load += new System.EventHandler(this.ActEmpPageViewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GradientPanel6.ResumeLayout(false);
@@ -742,17 +736,44 @@ namespace KoinovDiplom_ActEmpKPK
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.BindingSource aCCESS_LEVELBindingSource;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboBoxEducationForm;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
+        private Guna.UI2.WinForms.Guna2TextBox TextBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        internal System.Windows.Forms.ListView MainListViewActEmpPage;
+        internal System.Windows.Forms.ColumnHeader ColumnHeader1;
+        internal System.Windows.Forms.ColumnHeader ColumnHeader2;
+        internal System.Windows.Forms.ColumnHeader ColumnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
         private user2DataSet user2DataSet;
+        private System.Windows.Forms.BindingSource aCCESS_LEVELBindingSource;
         private user2DataSetTableAdapters.ACCESS_LEVELTableAdapter aCCESS_LEVELTableAdapter;
         private user2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private user2DataSetTableAdapters.ACTIVITY_EMPLOYEETableAdapter aCTIVITY_EMPLOYEETableAdapter;
@@ -773,35 +794,5 @@ namespace KoinovDiplom_ActEmpKPK
         private System.Windows.Forms.BindingSource uSERBindingSource;
         private user2DataSetTableAdapters.WORKERTableAdapter wORKERTableAdapter;
         private System.Windows.Forms.BindingSource wORKERBindingSource;
-        internal System.Windows.Forms.ListView MainListViewActEmpPage;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader1;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader2;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2ComboBox ComboBoxEducationForm;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
-        private Guna.UI2.WinForms.Guna2TextBox TextBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private System.Windows.Forms.Label label5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
     }
 }
