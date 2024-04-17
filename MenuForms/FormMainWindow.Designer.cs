@@ -85,6 +85,7 @@
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
             this.ChartActEmp = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ChartWorker = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.user2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCESS_LEVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVITY_EMPLOYEEBindingSource)).BeginInit();
@@ -246,7 +247,7 @@
             this.Countlabel.AutoSize = true;
             this.Countlabel.BackColor = System.Drawing.Color.Transparent;
             this.Countlabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Countlabel.Location = new System.Drawing.Point(796, 820);
+            this.Countlabel.Location = new System.Drawing.Point(796, 1106);
             this.Countlabel.Name = "Countlabel";
             this.Countlabel.Size = new System.Drawing.Size(59, 16);
             this.Countlabel.TabIndex = 21;
@@ -422,6 +423,7 @@
             this.guna2Button1.Text = "ДОБАВИТЬ НОВУЮ";
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.MouseHover += new System.EventHandler(this.guna2Button1_MouseHover);
             // 
             // MainListViewActEmp
             // 
@@ -562,6 +564,10 @@
             this.ChartWorker.TabIndex = 16;
             this.ChartWorker.Text = "Chart2";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.Color.Lavender;
+            // 
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,5 +653,6 @@
         internal System.Windows.Forms.DataGridView DataGridView1;
         internal System.Windows.Forms.DataVisualization.Charting.Chart ChartActEmp;
         internal System.Windows.Forms.DataVisualization.Charting.Chart ChartWorker;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

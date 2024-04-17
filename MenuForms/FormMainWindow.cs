@@ -210,5 +210,10 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
             MoreMenuForm moreMenuForm = new MoreMenuForm();
             moreMenuForm.ShowDialog();
         }
+
+        private void guna2Button1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1 = new ToolTip();
+        }
     }
 }

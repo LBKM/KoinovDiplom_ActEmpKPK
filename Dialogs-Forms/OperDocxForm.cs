@@ -55,7 +55,7 @@ namespace KoinovDiplom_ActEmpKPK
             var wordApp = new Microsoft.Office.Interop.Word.Application();
 
             // Открыть документ Word в режиме только для чтения
-            var doc = wordApp.Documents.Open(filePath, ReadOnly: true);
+            var doc = wordApp.Documents.Open(filePath, ReadOnly: true); 
 
             // Отобразить документ Word в форме приложения
             wordApp.Visible = true;
