@@ -34,7 +34,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.wORKERBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.wORKERBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -101,6 +100,7 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.wORKERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.WORKERTableAdapter();
             this.tableAdapterManager = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.TableAdapterManager();
             this.aCCESS_LEVELTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.ACCESS_LEVELTableAdapter();
@@ -111,6 +111,7 @@
             this.pOSTTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.POSTTableAdapter();
             this.sPECIALITYTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.SPECIALITYTableAdapter();
             this.uSERTableAdapter = new KoinovDiplom_ActEmpKPK.user2DataSetTableAdapters.USERTableAdapter();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wORKERBindingNavigator)).BeginInit();
@@ -197,23 +198,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "СОТРУДНИКИ";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton6.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.iconButton6.IconColor = System.Drawing.Color.Red;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 30;
-            this.iconButton6.Location = new System.Drawing.Point(1084, -1);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(35, 33);
-            this.iconButton6.TabIndex = 17;
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // wORKERBindingNavigator
             // 
@@ -403,7 +387,7 @@
             this.tabPage2.Location = new System.Drawing.Point(184, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(930, 622);
+            this.tabPage2.Size = new System.Drawing.Size(930, 623);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ДОЛЖНОСТИ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -445,7 +429,7 @@
             this.tabPage3.Controls.Add(this.eVENTDataGridView);
             this.tabPage3.Location = new System.Drawing.Point(184, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(930, 622);
+            this.tabPage3.Size = new System.Drawing.Size(930, 623);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "МЕРОПРИЯТИЯ И МАТЕРИАЛЫ";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -538,7 +522,7 @@
             this.tabPage4.Controls.Add(this.sPECIALITYDataGridView);
             this.tabPage4.Location = new System.Drawing.Point(184, 4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(930, 622);
+            this.tabPage4.Size = new System.Drawing.Size(930, 623);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "СПЕЦИАЛЬНОСТИ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -581,7 +565,7 @@
             this.tabPage5.Controls.Add(this.dISCIPLINEDataGridView);
             this.tabPage5.Location = new System.Drawing.Point(184, 4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(930, 622);
+            this.tabPage5.Size = new System.Drawing.Size(930, 623);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "ДИСЦИПЛИНА И ФОРМЫ ОБУЧЕНИЯ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -655,7 +639,7 @@
             this.tabPage6.Controls.Add(this.uSERDataGridView);
             this.tabPage6.Location = new System.Drawing.Point(184, 4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(930, 622);
+            this.tabPage6.Size = new System.Drawing.Size(930, 623);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "ДАННЫЕ ПОЛЬЗОВАТЕЛЕЙ";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -730,6 +714,7 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.guna2Button4);
             this.tabPage7.Controls.Add(this.guna2Button3);
             this.tabPage7.Controls.Add(this.guna2Button2);
             this.tabPage7.Controls.Add(this.guna2Button1);
@@ -798,6 +783,23 @@
             this.guna2Button1.Text = "ПРОСМОТР ВСЕХ ТАБЛИЦ";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // iconButton6
+            // 
+            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton6.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.iconButton6.IconColor = System.Drawing.Color.Red;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 30;
+            this.iconButton6.Location = new System.Drawing.Point(1084, -1);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(35, 33);
+            this.iconButton6.TabIndex = 17;
+            this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
             // wORKERTableAdapter
             // 
             this.wORKERTableAdapter.ClearBeforeFill = true;
@@ -848,6 +850,25 @@
             // uSERTableAdapter
             // 
             this.uSERTableAdapter.ClearBeforeFill = true;
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.Animated = true;
+            this.guna2Button4.AutoRoundedCorners = true;
+            this.guna2Button4.BorderRadius = 21;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.Indigo;
+            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(6, 161);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button4.TabIndex = 3;
+            this.guna2Button4.Text = "ОТЧЁТ";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // MoreMenuForm
             // 
@@ -978,5 +999,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
     }
 }

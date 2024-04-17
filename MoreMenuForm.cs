@@ -1,4 +1,5 @@
 ﻿using KoinovDiplom_ActEmpKPK.QueryForms;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,9 +11,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using ClosedXML.Excel;
+using OfficeOpenXml;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using LicenseContext = OfficeOpenXml.LicenseContext;
+
+
 
 namespace KoinovDiplom_ActEmpKPK
 {
+
     public partial class MoreMenuForm : Form
     {
         public MoreMenuForm()
@@ -58,7 +69,7 @@ namespace KoinovDiplom_ActEmpKPK
             connection.Open();
             SqlCommand sql = new SqlCommand("SELECT Worker.Worker_ID, Worker.Name, Worker.Surname, Worker.Lastname, Post.Name FROM Post INNER JOIN Worker ON Post.Post_ID = Worker.Post_ID WHERE Post.Name = 'Преподаватель';", connection);
             SqlDataAdapter da = new SqlDataAdapter();
-            DataTable DataSqlTable = new DataTable();
+            System.Data.DataTable DataSqlTable = new System.Data.DataTable();
             da.SelectCommand = sql;
             da.Fill(DataSqlTable);
             connection.Close();
@@ -102,13 +113,63 @@ namespace KoinovDiplom_ActEmpKPK
                 "ON WORKER.Worker_ID = ACTIVITY_EMPLOYEE.Worker_ID " +
                 "WHERE (((EDUCATION_FORM.Education_Form)='Очная'));", connection);
             SqlDataAdapter da = new SqlDataAdapter();
-            DataTable DataSqlTable = new DataTable();
+            System.Data.DataTable DataSqlTable = new System.Data.DataTable();
             da.SelectCommand = sql;
             da.Fill(DataSqlTable);
             connection.Close();
             WorkersGridViewForm workersGridViewForm = new WorkersGridViewForm();
             workersGridViewForm.guna2DataGridView1.DataSource = DataSqlTable;
             workersGridViewForm.ShowDialog();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            using (ExcelPackage package = new ExcelPackage())
+            {
+                // Создаем новый лист
+                ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("ACTIVITY_EMPLOYEE");
+
+                // Задаем заголовки столбцов
+                worksheet.Cells[1, 1].Value = "ActEmp_ID";
+                worksheet.Cells[1, 2].Value = "Discipline_ID";
+                worksheet.Cells[1, 3].Value = "Worker_ID";
+                worksheet.Cells[1, 4].Value = "EducationForm_ID";
+                worksheet.Cells[1, 5].Value = "Speciality_ID";
+                worksheet.Cells[1, 6].Value = "Description";
+                worksheet.Cells[1, 7].Value = "Event_ID";
+
+                // Получаем данные из таблицы ACTIVITY_EMPLOYEE
+                string connectionString = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True";
+                string query = "SELECT * FROM ACTIVITY_EMPLOYEE";
+                SqlConnection connection = new SqlConnection(connectionString);
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                System.Data.DataTable table = new System.Data.DataTable();
+                adapter.Fill(table);
+
+                // Выводим данные в эксель документ
+                int rowIndex = 2;
+                foreach (DataRow row in table.Rows)
+                {
+                    worksheet.Cells[rowIndex, 1].Value = row["ActEmp_ID"];
+                    worksheet.Cells[rowIndex, 2].Value = row["Discipline_ID"];
+                    worksheet.Cells[rowIndex, 3].Value = row["Worker_ID"];
+                    worksheet.Cells[rowIndex, 4].Value = row["EducationForm_ID"];
+                    worksheet.Cells[rowIndex, 5].Value = row["Speciality_ID"];
+                    worksheet.Cells[rowIndex, 6].Value = row["Description"];
+                    worksheet.Cells[rowIndex, 7].Value = row["Event_ID"];
+                    rowIndex++;
+                }
+
+                // Сохраняем эксель документ
+                string filePath = "ACTIVITY_EMPLOYEE.xlsx";
+                FileInfo file = new FileInfo(filePath);
+                package.SaveAs(file);
+
+            }
+
+
         }
     }
 }
