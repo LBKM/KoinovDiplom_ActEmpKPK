@@ -27,6 +27,19 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
 
         private void FormMainWindow_Load(object sender, EventArgs e)
         {
+
+            ToolTip toolTip1 = new ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.guna2ButtonAddActEmp, "Откроет новое диалоговое окно");
+
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Data Source=WIN-2J5GGL22MAA\\SQLEXPRESS;Initial Catalog=user2;Integrated Security=True";
             connection.Open();
@@ -209,11 +222,6 @@ namespace KoinovDiplom_ActEmpKPK.MenuForms
         {
             MoreMenuForm moreMenuForm = new MoreMenuForm();
             moreMenuForm.ShowDialog();
-        }
-
-        private void guna2Button1_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1 = new ToolTip();
         }
     }
 }

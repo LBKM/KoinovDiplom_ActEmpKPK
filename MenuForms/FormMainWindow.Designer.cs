@@ -65,11 +65,11 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.GradientPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonMore = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonQuery = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonPageView = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonAddActEmp = new Guna.UI2.WinForms.Guna2Button();
             this.MainListViewActEmp = new System.Windows.Forms.ListView();
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -247,7 +247,7 @@
             this.Countlabel.AutoSize = true;
             this.Countlabel.BackColor = System.Drawing.Color.Transparent;
             this.Countlabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Countlabel.Location = new System.Drawing.Point(796, 1106);
+            this.Countlabel.Location = new System.Drawing.Point(796, 1392);
             this.Countlabel.Name = "Countlabel";
             this.Countlabel.Size = new System.Drawing.Size(59, 16);
             this.Countlabel.TabIndex = 21;
@@ -301,11 +301,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.GradientPanel1.Controls.Add(this.guna2Button3);
+            this.GradientPanel1.Controls.Add(this.guna2ButtonMore);
             this.GradientPanel1.Controls.Add(this.guna2ButtonQuery);
-            this.GradientPanel1.Controls.Add(this.guna2Button2);
-            this.GradientPanel1.Controls.Add(this.guna2Button4);
-            this.GradientPanel1.Controls.Add(this.guna2Button1);
+            this.GradientPanel1.Controls.Add(this.guna2ButtonPageView);
+            this.GradientPanel1.Controls.Add(this.guna2ButtonDelete);
+            this.GradientPanel1.Controls.Add(this.guna2ButtonAddActEmp);
             this.GradientPanel1.FillColor = System.Drawing.Color.White;
             this.GradientPanel1.Location = new System.Drawing.Point(3, 30);
             this.GradientPanel1.Name = "GradientPanel1";
@@ -314,27 +314,27 @@
             this.GradientPanel1.Size = new System.Drawing.Size(916, 76);
             this.GradientPanel1.TabIndex = 7;
             // 
-            // guna2Button3
+            // guna2ButtonMore
             // 
-            this.guna2Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Button3.BorderRadius = 21;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Linen;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(550, 14);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(175, 45);
-            this.guna2Button3.TabIndex = 28;
-            this.guna2Button3.Text = "ДОПОЛНИТЕЛЬНО";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.guna2ButtonMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ButtonMore.Animated = true;
+            this.guna2ButtonMore.AutoRoundedCorners = true;
+            this.guna2ButtonMore.BorderColor = System.Drawing.Color.Gray;
+            this.guna2ButtonMore.BorderRadius = 21;
+            this.guna2ButtonMore.BorderThickness = 1;
+            this.guna2ButtonMore.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonMore.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonMore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonMore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonMore.FillColor = System.Drawing.Color.Linen;
+            this.guna2ButtonMore.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.guna2ButtonMore.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonMore.Location = new System.Drawing.Point(550, 14);
+            this.guna2ButtonMore.Name = "guna2ButtonMore";
+            this.guna2ButtonMore.Size = new System.Drawing.Size(175, 45);
+            this.guna2ButtonMore.TabIndex = 28;
+            this.guna2ButtonMore.Text = "ДОПОЛНИТЕЛЬНО";
+            this.guna2ButtonMore.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2ButtonQuery
             // 
@@ -358,72 +358,71 @@
             this.guna2ButtonQuery.TabIndex = 27;
             this.guna2ButtonQuery.Text = "СЛОЖНЫЕ ЗАПРОСЫ";
             // 
-            // guna2Button2
+            // guna2ButtonPageView
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Indigo;
-            this.guna2Button2.BorderRadius = 21;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.GhostWhite;
-            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Indigo;
-            this.guna2Button2.Location = new System.Drawing.Point(189, 14);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(171, 45);
-            this.guna2Button2.TabIndex = 26;
-            this.guna2Button2.Text = "ПОСТРАНИЧНЫЙ ПРОСМОТР";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_1);
+            this.guna2ButtonPageView.Animated = true;
+            this.guna2ButtonPageView.AutoRoundedCorners = true;
+            this.guna2ButtonPageView.BorderColor = System.Drawing.Color.Indigo;
+            this.guna2ButtonPageView.BorderRadius = 21;
+            this.guna2ButtonPageView.BorderThickness = 1;
+            this.guna2ButtonPageView.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonPageView.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonPageView.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonPageView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonPageView.FillColor = System.Drawing.Color.GhostWhite;
+            this.guna2ButtonPageView.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.guna2ButtonPageView.ForeColor = System.Drawing.Color.Indigo;
+            this.guna2ButtonPageView.Location = new System.Drawing.Point(189, 14);
+            this.guna2ButtonPageView.Name = "guna2ButtonPageView";
+            this.guna2ButtonPageView.Size = new System.Drawing.Size(171, 45);
+            this.guna2ButtonPageView.TabIndex = 26;
+            this.guna2ButtonPageView.Text = "ПОСТРАНИЧНЫЙ ПРОСМОТР";
+            this.guna2ButtonPageView.Click += new System.EventHandler(this.guna2Button2_Click_1);
             // 
-            // guna2Button4
+            // guna2ButtonDelete
             // 
-            this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.BorderColor = System.Drawing.Color.Red;
-            this.guna2Button4.BorderRadius = 21;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.SeaShell;
-            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(731, 14);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(171, 45);
-            this.guna2Button4.TabIndex = 20;
-            this.guna2Button4.Text = "УДАЛИТЬ ВЫДЕЛЕННОЕ";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.guna2ButtonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ButtonDelete.Animated = true;
+            this.guna2ButtonDelete.AutoRoundedCorners = true;
+            this.guna2ButtonDelete.BorderColor = System.Drawing.Color.Red;
+            this.guna2ButtonDelete.BorderRadius = 21;
+            this.guna2ButtonDelete.BorderThickness = 1;
+            this.guna2ButtonDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonDelete.FillColor = System.Drawing.Color.SeaShell;
+            this.guna2ButtonDelete.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.guna2ButtonDelete.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonDelete.Location = new System.Drawing.Point(731, 14);
+            this.guna2ButtonDelete.Name = "guna2ButtonDelete";
+            this.guna2ButtonDelete.Size = new System.Drawing.Size(171, 45);
+            this.guna2ButtonDelete.TabIndex = 20;
+            this.guna2ButtonDelete.Text = "УДАЛИТЬ ВЫДЕЛЕННОЕ";
+            this.guna2ButtonDelete.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // guna2Button1
+            // guna2ButtonAddActEmp
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.DarkGreen;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MintCream;
-            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 14);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(171, 45);
-            this.guna2Button1.TabIndex = 14;
-            this.guna2Button1.Text = "ДОБАВИТЬ НОВУЮ";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            this.guna2Button1.MouseHover += new System.EventHandler(this.guna2Button1_MouseHover);
+            this.guna2ButtonAddActEmp.Animated = true;
+            this.guna2ButtonAddActEmp.AutoRoundedCorners = true;
+            this.guna2ButtonAddActEmp.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonAddActEmp.BorderColor = System.Drawing.Color.DarkGreen;
+            this.guna2ButtonAddActEmp.BorderRadius = 21;
+            this.guna2ButtonAddActEmp.BorderThickness = 1;
+            this.guna2ButtonAddActEmp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAddActEmp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAddActEmp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonAddActEmp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonAddActEmp.FillColor = System.Drawing.Color.MintCream;
+            this.guna2ButtonAddActEmp.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.guna2ButtonAddActEmp.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonAddActEmp.Location = new System.Drawing.Point(12, 14);
+            this.guna2ButtonAddActEmp.Name = "guna2ButtonAddActEmp";
+            this.guna2ButtonAddActEmp.Size = new System.Drawing.Size(171, 45);
+            this.guna2ButtonAddActEmp.TabIndex = 14;
+            this.guna2ButtonAddActEmp.Text = "ДОБАВИТЬ НОВУЮ";
+            this.guna2ButtonAddActEmp.UseTransparentBackground = true;
+            this.guna2ButtonAddActEmp.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // MainListViewActEmp
             // 
@@ -605,7 +604,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonAddActEmp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Countlabel;
         private System.Windows.Forms.BindingSource aCCESS_LEVELBindingSource;
@@ -644,10 +643,10 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ShadowPanel GradientPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonPageView;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonQuery;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonMore;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonDelete;
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.DataGridView DataGridView2;
         internal System.Windows.Forms.DataGridView DataGridView1;
