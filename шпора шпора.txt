@@ -31,7 +31,7 @@ using (SqlConnection connection = new SqlConnection(ConnectionStg) )
 
 ----------------------------------------- ВЫВОД В LIST VIEW -----------------------------------------
 
-private  ыс 7\41oid MainForm_Load(object sender, EventArgs e) {
+private  void MainForm_Load(object sender, EventArgs e) {
 FillListView_KSV
 }
 
